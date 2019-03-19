@@ -3,6 +3,7 @@ import Prismic from 'prismic-javascript'
 import { RichText } from 'prismic-reactjs'
 import { linkResolver, apiEndpoint, accessToken } from '../prismic-configuration'
 import SliceZone from '../components/slices/SliceZone'
+import Header from '../components/Header'
 import Head from 'next/head'
 import Link from 'next/link'
 import DefaultLayout from '../layouts'
@@ -62,7 +63,7 @@ export default class extends React.Component {
           </title>
         </Head>
         <div className="homepage" data-wio-id={this.props.doc.id}>
-          {/* <Header /> */}
+          <Header />
           {this.homePageBanner(this.props.doc.data.homepage_banner[0])}
           <div className="container">
             <SliceZone sliceZone={this.props.doc.data.page_content} />
