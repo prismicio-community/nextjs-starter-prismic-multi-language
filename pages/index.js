@@ -2,6 +2,7 @@ import React from 'react'
 import Prismic from 'prismic-javascript'
 import { RichText } from 'prismic-reactjs'
 import { linkResolver, apiEndpoint, accessToken } from '../prismic-configuration'
+import SliceZone from '../components/slices/SliceZone'
 import Head from 'next/head'
 import Link from 'next/link'
 import DefaultLayout from '../layouts'
@@ -26,9 +27,7 @@ export default class extends React.Component {
   static async getHomePage(req) {
     try {
       const API = await Prismic.getApi(apiEndpoint, {req, accessToken });
-      const document = await API.getSingle('homepage');
-      console.log(document);
-      return document;
+      return await API.getSingle('homepage');
     } catch(error) {
       console.error(error);
       return error;
@@ -66,7 +65,7 @@ export default class extends React.Component {
           {/* <Header /> */}
           {this.homePageBanner(this.props.doc.data.homepage_banner[0])}
           <div className="container">
-            {/* <SliceZone sliceZone={this.props.doc.data.page_content} /> */}
+            <SliceZone sliceZone={this.props.doc.data.page_content} />
           </div>
         </div>
       </DefaultLayout>
