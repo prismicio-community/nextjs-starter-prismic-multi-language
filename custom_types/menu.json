@@ -1,0 +1,34 @@
+{
+  "Main" : {
+    "title" : {
+      "type" : "StructuredText",
+      "config" : {
+        "placeholder" : "Menu title...",
+        "single" : "heading1"
+      }
+    },
+    "menu_links" : {
+      "type" : "Group",
+      "config" : {
+        "fields" : {
+          "label" : {
+            "type" : "StructuredText",
+            "config" : {
+              "single" : "paragraph",
+              "label" : "Link Label",
+              "placeholder" : "Link Label..."
+            }
+          },
+          "link" : {
+            "type" : "Link",
+            "config" : {
+              "label" : "Link",
+              "placeholder" : "Select a Link..."
+            }
+          }
+        },
+        "label" : "Menu Links"
+      }
+    }
+  }
+}
