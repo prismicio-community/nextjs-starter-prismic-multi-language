@@ -1,21 +1,29 @@
 import React from 'react';
-import { Link, RichText } from 'prismic-reactjs';
+import Link from 'next/link';
+import { Link as PrismicLink, RichText } from 'prismic-reactjs';
 import { linkResolver } from '../../prismic-configuration';
-
-// WARNING! HANDLE INTERNAL LINKS WITH CLIENT SIDE ROUTING
 
 export default class ImageGallery extends React.Component {
   galleryItem() {
     return this.props.slice.items.map((item, index) => {
+      let internalLink = item.link.link_type == 'Document';
       return (
         <div className="gallery-item" key={index}>
           <img src={item.image.url} alt={item.image.alt} />
           {RichText.render(item.image_description, linkResolver)}
           {RichText.asText(item.link_label) !== "" ? (
             <p className="gallery-link">
-              <a href={Link.url(item.link, linkResolver)}>
-                {RichText.asText(item.link_label)}
-              </a>
+              <Link
+                as={ internalLink ?
+                    linkResolver(item.link)
+                    : ''} 
+                href={ internalLink ?
+                    `/page?uid=${item.link.uid}`
+                  : PrismicLink.url(item.link, linkResolver)} 
+                passHref
+              >
+                <a>{RichText.asText(item.link_label)}</a>
+              </Link>
             </p>
           ) : '' }
         </div>

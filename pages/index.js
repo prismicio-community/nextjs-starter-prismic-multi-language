@@ -1,6 +1,6 @@
 import React from 'react'
 import Prismic from 'prismic-javascript'
-import { RichText } from 'prismic-reactjs'
+import { Link as PrismicLink, RichText } from 'prismic-reactjs'
 import { linkResolver, apiEndpoint, accessToken } from '../prismic-configuration'
 import SliceZone from '../components/slices/SliceZone'
 import Header from '../components/Header'
@@ -40,6 +40,7 @@ export default class extends React.Component {
   }
 
   homePageBanner(banner) {
+    let internalLink = banner.button_link.link_type == 'Document';
     return (
       <React.Fragment>
         <section className="homepage-banner"
@@ -49,10 +50,20 @@ export default class extends React.Component {
             <p className="banner-description">{RichText.asText(banner.tagline)}</p>
             {RichText.asText(banner.button_label) !== "" ? (
               // Displays the button link only if it's been defined
-              <a className="banner-button" href={banner.button_link.url}>
-              {/* WARNING! Currently hardcoded to external links only. Learn how to handle all links */}
-                {RichText.asText(banner.button_label)}
-              </a>
+              <Link
+                as={internalLink ? 
+                  linkResolver(banner.button_link)
+                  : ''} 
+                href={internalLink ?
+                    `/page?uid=${banner.button_link.uid}`
+                  : PrismicLink.url(banner.button_link, linkResolver)} 
+                passHref
+              >
+              {/* Handles the link client-side if it's a Prismic document, otherwise it's just a regular href */}
+                <a className="banner-button">
+                  {RichText.asText(banner.button_label)}
+                </a>
+              </Link>
             ) : ''}
           </div>
         </section>

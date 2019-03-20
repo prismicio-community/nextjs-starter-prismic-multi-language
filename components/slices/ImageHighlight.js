@@ -1,11 +1,11 @@
 import React from 'react';
-import { Link, RichText } from 'prismic-reactjs';
+import Link from 'next/link';
+import { Link as PrismicLink, RichText } from 'prismic-reactjs';
 import { linkResolver } from '../../prismic-configuration';
-
-// WARNING! Needs to be able internal links as well
 
 export default class ImageHighlight extends React.Component {
   render() {
+    let internalLink = this.props.slice.primary.link.link_type == 'Document';
     return (
       <React.Fragment>
         <section className="highlight content-section">
@@ -14,9 +14,17 @@ export default class ImageHighlight extends React.Component {
             {RichText.render(this.props.slice.primary.headline, linkResolver)}
             {RichText.asText(this.props.slice.primary.link_label) !== "" ? (
               <p>
-                <a href={Link.url(this.props.slice.primary.link, linkResolver)}>
-                  {RichText.asText(this.props.slice.primary.link_label)}
-                </a>
+                <Link
+                  as={ internalLink ?
+                    linkResolver(this.props.slice.primary.link)
+                    : ''} 
+                  href={ internalLink ?
+                      `/page?uid=${this.props.slice.primary.link.uid}`
+                    : PrismicLink.url(this.props.slice.primary.link, linkResolver)} 
+                  passHref
+                >
+                  <a>{RichText.asText(this.props.slice.primary.link_label)}</a>
+                </Link>
               </p>
             ) : '' }
           </div>
