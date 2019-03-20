@@ -137,6 +137,66 @@ export default () => (
           max-width: 100%;
         }
       `}</style>
+      <style jsx global>{`
+        .container, header, footer {
+          max-width: 980px;
+          margin: auto;
+        }
+        .content-section {
+          margin-bottom: 3.75rem;
+        }
+        .wio-link {
+          background-color: #31a8fd !important;
+          color: white;
+          position: fixed;
+          z-index: 10000;
+          padding: 6px 10px;
+          -webkit-box-sizing: border-box;
+                  box-sizing: border-box;
+          border-radius: 50%;
+          bottom: 30px;
+          right: 30px;
+          height: 50px;
+          width: 50px !important;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-shadow: 0 2px 7px 0 rgba(90, 90, 140, 0.4);
+                  box-shadow: 0 2px 7px 0 rgba(90, 90, 140, 0.4); 
+        }
+        .wio-link img {
+          display: none;
+        }
+        .wio-link:after {
+          font-family: 'Material Icons';
+          content: '\\E3C9';
+          color: white;
+          font-size: 24px;
+        }
+      `}</style>
+      <style jsx global>{`
+        @media (max-width: 767px) {
+          h1 {
+            font-size: 32px;
+            line-height: 40px;
+          }
+          h2 {
+            font-size: 26px;
+          }
+          h3 {
+            font-size: 18px;
+          }
+          .content-section {
+            margin-bottom: 2rem;
+          }
+        }
+      `}</style>
     </Head>
   </React.Fragment>
 )
