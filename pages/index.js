@@ -19,16 +19,19 @@ export default class extends React.Component {
 
   static async getInitialProps(context) {
     const req = context.req;
-    const document = await this.getHomePage(req);
+    const home = await this.getHomePage(req);
     return {
-      doc: document
+      doc: home.document,
+      menu: home.menu
     };
   }
 
   static async getHomePage(req) {
     try {
       const API = await Prismic.getApi(apiEndpoint, {req, accessToken });
-      return await API.getSingle('homepage');
+      const document = await API.getSingle('homepage');
+      const menu = await API.getSingle('menu');
+      return { document, menu };
     } catch(error) {
       console.error(error);
       return error;
@@ -63,7 +66,7 @@ export default class extends React.Component {
           </title>
         </Head>
         <div className="homepage" data-wio-id={this.props.doc.id}>
-          <Header />
+          <Header menu={this.props.menu} />
           {this.homePageBanner(this.props.doc.data.homepage_banner[0])}
           <div className="container">
             <SliceZone sliceZone={this.props.doc.data.page_content} />
