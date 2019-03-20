@@ -111,7 +111,7 @@ export default class extends React.Component {
     return(
       <DefaultLayout>
         <Head>
-          <title key="title">
+          <title>
             {RichText.asText(this.props.doc.data.homepage_banner[0].title)}
           </title>
         </Head>

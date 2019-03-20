@@ -12,20 +12,21 @@ app
   .then(() => {
     const server = express();
 
-    server.get('/:uid', (req, res) => {
-      const nextJsPage = '/page';
-      const queryParams = { uid: req.params.uid };
-      app.render(req, res, nextJsPage, queryParams);
-    });
-
     server.get('/preview', (req, res) => {
       const token = req.query.token;
+      console.log(token);
 
       Prismic.getApi(apiEndpoint, {req})
         .then((api) => api.previewSession(token, linkResolver, '/'))
         .then((url) => {
           res.redirect(302, url);
         });
+    });
+
+    server.get('/:uid', (req, res) => {
+      const nextJsPage = '/page';
+      const queryParams = { uid: req.params.uid };
+      app.render(req, res, nextJsPage, queryParams);
     });
 
     server.get('*', (req, res) => handle(req, res));

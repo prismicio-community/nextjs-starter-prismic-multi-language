@@ -29,7 +29,7 @@ class Error extends React.Component {
           `}</style>
         </div>
       </DefaultLayout>
-    )
+    );
   }
 }
 

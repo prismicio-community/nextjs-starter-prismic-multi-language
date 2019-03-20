@@ -3,8 +3,8 @@ import Prismic from 'prismic-javascript'
 import { apiEndpoint, accessToken } from '../prismic-configuration'
 import SliceZone from '../components/slices/SliceZone'
 import Header from '../components/Header'
-import Head from 'next/head'
 import DefaultLayout from '../layouts'
+import Error from './_error';
 
 
 export default class Page extends React.Component {
@@ -28,7 +28,7 @@ export default class Page extends React.Component {
 
   static async getPage(uid, req) {
     try {
-      const API = await Prismic.getApi(apiEndpoint, {req, accessToken });
+      const API = await Prismic.getApi(apiEndpoint, { req, accessToken });
       const document = await API.getByUID('page', uid);
       const menu = await API.getSingle('menu');
       return { document, menu };
@@ -39,15 +39,22 @@ export default class Page extends React.Component {
   }
   
   render() {
-    return(
-      <DefaultLayout>
-        <div className="page" data-wio-id={this.state.doc.id}>
-          <Header menu={this.props.menu} />
-          <div className="container">
-            <SliceZone sliceZone={this.props.doc.data.page_content} />
+    if (!this.props.doc) {
+      return(
+        // Call the standard error page if the document was not found
+        <Error statusCode='404' />
+      );
+    } else {
+      return(
+        <DefaultLayout>
+          <div className="page" data-wio-id={this.state.doc.id}>
+            <Header menu={this.props.menu} />
+            <div className="container">
+              <SliceZone sliceZone={this.props.doc.data.page_content} />
+            </div>
           </div>
-        </div>
-      </DefaultLayout>
-    );
+        </DefaultLayout>
+      );
+    }
   }
 }
