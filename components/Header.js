@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, RichText } from 'prismic-reactjs'
+import Link from 'next/link'
+import { RichText } from 'prismic-reactjs'
 import { linkResolver } from '../prismic-configuration'
 
 export default class Header extends React.Component {
@@ -7,10 +8,13 @@ export default class Header extends React.Component {
     return this.props.menu.data.menu_links.map((menuLink) => {
       return (
         <li key={menuLink.link.id}>
-        {/* THIS DEF NEEDS TO BE LINK ROUTING NO CHANCE IT'S EXTERNAL */}
-          <a href={Link.url(menuLink.link, linkResolver)}>
-            {RichText.asText(menuLink.label)}
-          </a>
+          <Link
+            as={linkResolver(menuLink.link)}
+            href={`/page?uid=${menuLink.link.uid}`}
+            passHref
+          >
+            <a>{RichText.asText(menuLink.label)}</a>
+          </Link>
         </li>
       );
     });
@@ -19,9 +23,9 @@ export default class Header extends React.Component {
   render() {
     return(
       <header className="site-header">
-        <a href="./">
-          <div className="logo">Example Site</div>
-        </a>
+        <Link href="./">
+          <a><div className="logo">Example Site</div></a>
+        </Link>
         <nav>
           <ul>
             {this.menuLinks()}
