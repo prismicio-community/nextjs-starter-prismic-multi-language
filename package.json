@@ -16,9 +16,13 @@
     "react-dom": "^16.8.4"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start",
+    "now-build": "next build",
+
+    "server": "node server.js",
+    "prod": "NODE_ENV=production node server.js"
   },
   "license": "Apache-2.0"
 }

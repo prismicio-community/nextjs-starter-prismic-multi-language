@@ -22,7 +22,8 @@ export default class Page extends React.Component {
     const page = await this.getPage(uid, req);
     return {
       doc: page.document,
-      menu: page.menu
+      menu: page.menu,
+      uid: uid
     };
   }
 
@@ -42,7 +43,8 @@ export default class Page extends React.Component {
     if (!this.props.doc) {
       return(
         // Call the standard error page if the document was not found
-        <Error statusCode='404' />
+        // <Error statusCode='404' />
+        <div>UID: {this.props.uid}</div>
       );
     } else {
       return(
