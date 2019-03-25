@@ -20,8 +20,7 @@
     "build": "next build",
     "start": "next start",
     "now-build": "next build",
-    "server": "node server.js",
-    "prod": "NODE_ENV=production node server.js"
+    "local": "node server.js"
   },
   "license": "Apache-2.0"
 }
