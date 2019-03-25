@@ -18,8 +18,6 @@ app
       Prismic.getApi(apiEndpoint, {req})
         .then((api) => api.previewSession(token, linkResolver, '/'))
         .then((url) => {
-          console.log(url);
-          console.log(token);
           res.redirect(302, url);
         });
     });

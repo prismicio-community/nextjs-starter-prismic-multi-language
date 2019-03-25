@@ -43,8 +43,7 @@ export default class Page extends React.Component {
     if (!this.props.doc) {
       return(
         // Call the standard error page if the document was not found
-        // <Error statusCode='404' />
-        <div>UID: {this.props.uid}</div>
+        <Error statusCode='404' />
       );
     } else {
       return(
