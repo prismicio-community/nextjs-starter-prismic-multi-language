@@ -1,23 +1,15 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Prismic from 'prismic-javascript'
 import { Link as PrismicLink, RichText } from 'prismic-reactjs'
-import { linkResolver, apiEndpoint, accessToken } from '../prismic-configuration'
-import SliceZone from '../components/slices/SliceZone'
-import Header from '../components/Header'
+import { linkResolver, apiEndpoint, accessToken } from 'prismic-configuration'
+import SliceZone from 'components/slices/SliceZone'
+import Header from 'components/Header'
 import Head from 'next/head'
 import Link from 'next/link'
-import DefaultLayout from '../layouts'
+import DefaultLayout from 'layouts'
 
 
 export default class extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      doc: {},
-      menu: {}
-    }
-  }
-
   static async getInitialProps(context) {
     const req = context.req;
     const home = await this.getHomePage(req);
@@ -42,7 +34,7 @@ export default class extends React.Component {
   homePageBanner(banner) {
     let internalLink = banner.button_link.link_type == 'Document';
     return (
-      <React.Fragment>
+      <Fragment>
         <section className="homepage-banner"
           style={{backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(' + banner.image.url +')'}}>
           <div className="banner-content container">
@@ -114,7 +106,7 @@ export default class extends React.Component {
             }
           }
         `}</style>
-      </React.Fragment>
+      </Fragment>
     );
   }
 

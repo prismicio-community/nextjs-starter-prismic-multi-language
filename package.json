@@ -20,5 +20,9 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raulg/nextjs-website.git"
+  },
   "license": "Apache-2.0"
 }
