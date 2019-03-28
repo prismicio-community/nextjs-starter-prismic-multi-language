@@ -1,19 +1,9 @@
 # nextjs-website
-Website sample built using Next.js and Prismic
+Website sample built using Next.js and Prismic. Serverless and ready for deployment in Now
 
 ### Install dependencies
 ```
 > $ npm install
-```
-### Runs the app in the development mode
-Build and open your browser to http://localhost:3000. This method uses node to run `server.js` and provides the custom routing required for previews and loading pages directly. _This will be unnecesary once `now dev` is in production. However, if the focus is not on serverless, then node is still going to be a requirement, so no harm in keeping this around for now_
-```
-> $ npm run local
-```
-
-### Builds the app for production using Next.js
-```
-> $ npm run build
 ```
 
 ### Deploy to Now 2.0 serverless mode
@@ -23,21 +13,26 @@ Build and open your browser to http://localhost:3000. This method uses node to r
 ```
 
 ### Run serverless mode locally
-_This is still in development_ As of version 14.3.0-canary.21 of `now-cli` you can use the `now dev` command to run the project in your local machine. You can use this to set up and test your routing in `now.json` without having to deploy to Now for every small change.
+_This is still in development_ As of version 14.3.0-canary.21 of `now-cli` you can use the `now dev` command to run the project in your local machine. You can use this to set up and test your routing in `now.json` without having to deploy to Now for every modification.
 ```
 > $ now dev
 ```
-Do a hard refresh (Command + Shift + R in OSX) in your browser after making any changes to trigger a local rebuild.
+Do a hard refresh (Command + Shift + R in OSX) in your browser after making any changes to trigger a local rebuild. `now dev --debug` for verbose.
+
+### Builds the app for production using Next.js
+```
+> $ npm run build
+```
 
 ### Get started with Prismic
 
 You can find out how to get started with Prismic from [our React documentation](https://prismic.io/docs/reactjs/getting-started/getting-started-from-scratch).
 
-### Licence
+### License
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2017 Prismic.io (https://prismic.io).
+Copyright 2019 Prismic (https://prismic.io).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
