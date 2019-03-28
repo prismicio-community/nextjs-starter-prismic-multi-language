@@ -22,9 +22,7 @@ export default class Page extends React.Component {
   static async getPage(uid, req) {
     try {
       const API = await Prismic.getApi(apiEndpoint, { req, accessToken });
-      console.log("Trying to getByUID from Prismic");
       const document = await API.getByUID('page', uid);
-      console.log(document);
       const menu = await API.getSingle('menu');
       return { document, menu };
     } catch(error) {
