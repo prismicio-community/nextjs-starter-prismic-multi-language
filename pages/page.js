@@ -1,21 +1,13 @@
 import React from 'react'
 import Prismic from 'prismic-javascript'
-import { apiEndpoint, accessToken } from '../prismic-configuration'
-import SliceZone from '../components/slices/SliceZone'
-import Header from '../components/Header'
-import DefaultLayout from '../layouts'
+import { apiEndpoint, accessToken } from 'prismic-configuration'
+import SliceZone from 'components/slices/SliceZone'
+import Header from 'components/Header'
+import DefaultLayout from 'layouts'
 import Error from './_error';
 
 
-export default class Page extends React.Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      doc: {},
-      menu: {}
-    }
-  }
-  
+export default class Page extends React.Component {  
   static async getInitialProps(context) {
     const { uid } = context.query;
     const req = context.req;
@@ -50,7 +42,7 @@ export default class Page extends React.Component {
     } else {
       return(
         <DefaultLayout>
-          <div className="page" data-wio-id={this.state.doc.id}>
+          <div className="page" data-wio-id={this.props.doc.id}>
             <Header menu={this.props.menu} />
             <div className="container">
               <SliceZone sliceZone={this.props.doc.data.page_content} />

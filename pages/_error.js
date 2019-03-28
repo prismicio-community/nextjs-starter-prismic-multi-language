@@ -1,8 +1,8 @@
 import React from 'react'
-import DefaultLayout from '../layouts'
+import DefaultLayout from 'layouts'
 import Head from 'next/head'
 
-class Error extends React.Component {
+export default class Error extends React.Component {
   static getInitialProps({ res, err }) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
     return { statusCode }
@@ -32,5 +32,3 @@ class Error extends React.Component {
     );
   }
 }
-
-export default Error

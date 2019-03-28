@@ -1,9 +1,7 @@
 # nextjs-website
 Website sample built using Next.js and Prismic
 
-Ready for serverless Now deployments using the now-cli. Routing will work on server.
-To test on development environment, use npm run local instead.
-npm run dev will use next. Client side routing works, but custom routing will not.
-npm run start will fail until now dev is production ready.
+Follows the recommendations of https://nextjs.org/docs/#custom-server-and-routing and uses node to handle custom routing for the different pages, along with previews/drafts.
+Production ready and can be hosted in any service that can run node.
 
-This means server.js is a local development only necessity for now. Will be updated as soon as possible.
+This is ugly placeholder and will be more detailed once I figure how to merge both approaches at local custom routing (`now dev` and `node server.js`)
