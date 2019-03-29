@@ -6,6 +6,13 @@ Website sample built using Next.js and Prismic. Serverless and ready for deploym
 > $ npm install
 ```
 
+### Installing the Now canary release
+The official [https://zeit.co/guides/updating-now-cli](recommendation) is to install Now Desktop and check the Canary Releases option. This is will automatically update your now-cli package so it's always up to date.
+If you just wish to get started from terminal, specify the canary branch when installing the package.
+```
+> $ npm install -g now@canary
+```
+
 ### Deploy to Now 2.0 serverless mode
 [Install Now](https://zeit.co/download) and register in the Now platform for deploying your site using serverless features. The required routing and setup files are already included in the project. Just run the `now` command in your project folder.
 ```
