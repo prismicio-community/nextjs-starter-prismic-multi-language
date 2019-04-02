@@ -11,6 +11,7 @@ const MenuLinks = ({ menu }) => (
           as={linkResolver(menuLink.link)}
           href={`/page?uid=${menuLink.link.uid}`}
           passHref
+          prefetch
         >
           <a>{RichText.asText(menuLink.label)}</a>
         </Link>
@@ -22,7 +23,7 @@ const MenuLinks = ({ menu }) => (
 const Header = (menu) => (
   <Fragment>
     <header className="site-header">
-      <Link href="./">
+      <Link href="./" prefetch>
         <a><div className="logo">Example Site</div></a>
       </Link>
       <nav>
