@@ -1,15 +1,14 @@
 import React, { Fragment } from 'react';
 import { RichText } from 'prismic-reactjs';
 import { linkResolver } from 'prismic-configuration';
+import htmlSerializer from 'utils/htmlSerializer';
 
 const TextSection = ({ slice }) => {
   const sectionClass = slice.slice_label ? 'text-section-' + slice.slice_label : 'text-section-1col';
   return (
     <Fragment>
       <section className={`content-section ${sectionClass}`}>
-        <div>
-          {RichText.render(slice.primary.rich_text, linkResolver)}
-        </div>
+        {RichText.render(slice.primary.rich_text, linkResolver, htmlSerializer)}
       </section>
       <style jsx>{`
         .text-section-2col {
@@ -27,6 +26,9 @@ const TextSection = ({ slice }) => {
         }
         .text-section-1col p:last-child,
         .text-section-2col p:last-child {
+          margin-bottom: 0;
+        }
+        .content-section.text-section-2col {
           margin-bottom: 0;
         }
         @media (max-width: 767px) {

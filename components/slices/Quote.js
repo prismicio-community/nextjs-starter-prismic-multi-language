@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import {RichText} from 'prismic-reactjs';
+import { RichText } from 'prismic-reactjs';
 
 const Quote = ({ slice }) => (
   <Fragment>

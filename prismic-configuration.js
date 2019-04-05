@@ -16,5 +16,13 @@ module.exports = {
       return `/${doc.uid}`;
     }
     return '/';
+  },
+
+  // Additional helper function for Next/Link component
+  hrefResolver: function(doc) {
+    if (doc.type === 'page') {
+      return `/page?uid=${doc.uid}`;
+    }
+    return '/'
   }
 };
