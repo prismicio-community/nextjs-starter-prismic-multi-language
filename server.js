@@ -22,9 +22,15 @@ app
         });
     });
 
-    server.get('/:uid', (req, res) => {
+    server.get('/:locale', (req, res) => {
+      const nextJsPage = '/index';
+      const queryParams = { locale: req.params.locale };
+      app.render(req, res, nextJsPage, queryParams);
+    });
+
+    server.get('/:locale/:uid', (req, res) => {
       const nextJsPage = '/page';
-      const queryParams = { uid: req.params.uid };
+      const queryParams = { locale: req.params.locale, uid: req.params.uid };
       app.render(req, res, nextJsPage, queryParams);
     });
 

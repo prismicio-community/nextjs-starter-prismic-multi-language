@@ -9,28 +9,36 @@ import Error from './_error';
 export default class Page extends React.Component {  
   // Fetch relevant data from Prismic before rendering
   static async getInitialProps(context) {
-    const { uid } = context.query;
+    const { uid, locale } = context.query;
     const req = context.req;
-    const page = await this.getPage(uid, req);
+    const page = await this.getPage(locale, uid, req);
     // Extra call to render the edit button, in case we've been routed client-side
     if (process.browser) window.prismic.setupEditButton();
     return {
       doc: page.document,
       menu: page.menu,
-      uid: uid
+      uid: uid,
+      locale: locale
     };
   }
 
-  static async getPage(uid, req) {
+  static async getPage(locale, uid, req) {
     try {
       // Initializes the API, including the preview information and access token if there's any
       const API = await Prismic.getApi(apiEndpoint, { req, accessToken });
+      // Languages from API response
+      let languages = API.data.languages;
+      // Setting Master language as default language option
+      let lang = { lang : languages[0].id };
+      // If there is a langauge code in the URL set this as language option
+      if (locale !== undefined || null) { 
+        lang = { lang : locale }
+      };
       // Queries both the specific page and navigation menu documents
-      const document = await API.getByUID('page', uid);
-      const menu = await API.getSingle('menu');
+      const document = await API.getByUID('page', uid, lang);
+      const menu = await API.getSingle('menu', lang);
       return { document, menu };
     } catch(error) {
-      console.error(error);
       return error;
     }
   }
@@ -47,7 +55,7 @@ export default class Page extends React.Component {
       return(
         <DefaultLayout>
           <div className="page" data-wio-id={this.props.doc.id}>
-            <Header menu={this.props.menu} />
+            <Header menu={this.props.menu} altLangs={this.props.doc.alternate_languages}/>
             <SliceZone sliceZone={this.props.doc.data.page_content} />
           </div>
         </DefaultLayout>
