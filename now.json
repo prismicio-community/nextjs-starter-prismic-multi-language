@@ -5,6 +5,6 @@
   "routes": [
     { "src": "/preview\\?(?<query>.*)", "dest": "/preview?query=$query" },
     { "src": "/(?!preview)(?<locale>.*[^/]+)$", "dest": "/?locale=$1" },
-    { "src": "/(?<locale>.+)/(?!preview)(?<uid>[^/]+)$", "dest": "/?locale/page?uid=$1" }
+    { "src": "/(?!preview)(?<locale>[^/]+)$(?<uid>[^/]+)$", "dest": "/?locale=$locale/page?uid=$uid" }
   ]
 }
