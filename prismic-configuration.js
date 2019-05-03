@@ -13,10 +13,10 @@ module.exports = {
   // Modify as your project grows to handle any new routes you've made
   linkResolver: function(doc) {
     if (doc.type === 'page') {
-      return `/${doc.locale}/${doc.uid}`;
+      return `/${doc.lang}/${doc.uid}`;
     }
     if (doc.type === 'homepage') {
-      return `/${doc.locale}`;
+      return `/${doc.lang}`;
     }
     return '/';
   },
@@ -24,10 +24,10 @@ module.exports = {
   // Additional helper function for Next/Link component
   hrefResolver: function(doc) {
     if (doc.type === 'page') {
-      return `/page?locale=${doc.locale}&page?uid=${doc.uid}`;
+      return `/page?lang=${doc.lang}&page?uid=${doc.uid}`;
     }
     if (doc.type === 'homepage') {
-      return `/${doc.locale}`;
+      return `/${doc.lang}`;
     }
     return '/'
   }
