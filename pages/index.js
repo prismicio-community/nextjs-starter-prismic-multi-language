@@ -8,9 +8,9 @@ import Error from './_error';
 export default class homepage extends React.Component {
   // Fetch relevant data from Prismic before rendering
   static async getInitialProps(context) {
-    const { locale } = context.query;
+    const { lang } = context.query;
     const req = context.req;
-    const home = await this.getHomePage(locale, req);
+    const home = await this.getHomePage(lang, req);
     // Extra call to render the edit button, in case we've been routed client-side
     if (process.browser) window.prismic.setupEditButton();
     return {
