@@ -6,7 +6,7 @@ import DefaultLayout from 'layouts'
 import Error from './_error';
 
 
-export default class page extends React.Component {  
+export default class Page extends React.Component {  
   // Fetch relevant data from Prismic before rendering
   static async getInitialProps(context) {
     const { uid, locale } = context.query;
