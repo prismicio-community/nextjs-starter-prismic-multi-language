@@ -24,10 +24,10 @@ module.exports = {
   // Additional helper function for Next/Link component
   hrefResolver: function(doc) {
     if (doc.type === 'page') {
-      return `/${doc.lang}/${doc.uid}`;
+      return `/locale=${doc.lang}&page?uid=${doc.uid}`;
     }
     if (doc.type === 'homepage') {
-      return `/${doc.lang}`;
+      return `/locale=${doc.lang}`;
     }
     return '/'
   }
