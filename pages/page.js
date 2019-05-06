@@ -15,8 +15,8 @@ export default class Page extends React.Component {
     // Extra call to render the edit button, in case we've been routed client-side
     if (process.browser) window.prismic.setupEditButton();
     return {
+      ...page,
       doc: page.document,
-      menu: page.menu,
       uid: uid,
       locale: locale
     };
@@ -29,15 +29,15 @@ export default class Page extends React.Component {
       // Languages from API response
       let languages = API.data.languages;
       // Setting Master language as default language option
-      let lang = { lang : languages[0].id };
-      // If there is a langauge code in the URL set this as language option
-      if (locale !== undefined || null) { 
-        lang = { lang : locale }
-      };
+      const mainLanguage = languages[0].id;
+      // Sets current language based on the locale
+      const currentLang = locale !== undefined ? locale : mainLanguage;
+      const isMyMainLanguage = mainLanguage === currentLang;
+
       // Queries both the specific page and navigation menu documents
-      const document = await API.getByUID('page', uid, lang);
-      const menu = await API.getSingle('menu', lang);
-      return { document, menu };
+      const document = await API.getByUID('page', uid, { lang: currentLang });
+      const menu = await API.getSingle('menu', { lang: currentLang });
+      return { document, menu, currentLang, isMyMainLanguage };
     } catch(error) {
       return error;
     }
@@ -55,7 +55,12 @@ export default class Page extends React.Component {
       return(
         <DefaultLayout>
           <div className="page" data-wio-id={this.props.doc.id}>
-            <Header menu={this.props.menu} altLangs={this.props.doc.alternate_languages}/>
+            <Header 
+              altLangs={this.props.doc.alternate_languages}
+              currentLang={this.props.currentLang}
+              isMyMainLanguage={this.props.isMyMainLanguage}
+              menu={this.props.menu}
+            />
             <SliceZone sliceZone={this.props.doc.data.page_content} />
           </div>
         </DefaultLayout>

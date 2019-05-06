@@ -3,10 +3,10 @@ import { default as NextLink } from 'next/link'
 import { Navigation, LanguageSwitcher } from 'components'
 import { header } from 'styles'
 
-const Header = ({ menu, altLangs }) => (
+const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (
   <Fragment>
     <header className="site-header">
-      <NextLink href="./" passHref prefetch>
+      <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref prefetch>
         <a><div className="logo">Example Site</div></a>
       </NextLink>
       <nav>
