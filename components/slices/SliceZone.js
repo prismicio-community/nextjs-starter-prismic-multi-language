@@ -1,10 +1,10 @@
 import React from 'react';
 import { 
-  TextSection, 
-  Quote, 
-  FullWidthImage, 
-  ImageGallery, 
-  ImageHighlight,
+  EmailSignup,
+  FullWidthImage,
+  HeadlineWithButton,
+  InfoWithImage,
+  TextInfo,
 } from './';
 
 const SliceZone = ({ sliceZone }) => {
@@ -12,16 +12,16 @@ const SliceZone = ({ sliceZone }) => {
     <div className="container">
       {sliceZone.map((slice, index) => {
         switch (slice.slice_type) {
-          case ("text_section"):
-            return <TextSection slice={slice} key={'slice-' + index} />
-          case ("quote"):
-            return <Quote slice={slice} key={'slice-' + index} />
+          case ("text_info"):
+            return <TextInfo slice={slice} key={'slice-' + index} />
+          case ("info_with_image"):
+            return <InfoWithImage slice={slice} key={'slice-' + index} />
           case ("full_width_image"):
             return <FullWidthImage slice={slice} key={'slice-' + index} />
-          case ("image_gallery"):
-            return <ImageGallery slice={slice} key={'slice-' + index} />
-          case ("image_highlight"):
-            return <ImageHighlight slice={slice} key={'slice-' + index} />
+          case ("headline_with_button"):
+            return <HeadlineWithButton slice={slice} key={'slice-' + index} />
+          case ("email_signup"):
+            return <EmailSignup slice={slice} key={'slice-' + index} />
           default:
             return null;
         }

@@ -5,7 +5,7 @@ import { linkResolver, hrefResolver } from 'prismic-configuration'
 const MenuLinks = ({ links = [] }) => (
   links.map((menuLink) => {
     return (
-      <li key={menuLink.link.id}>
+      <li className="language-switcher" key={menuLink.link.id}>
         <NextLink
           as={linkResolver(menuLink.link)}
           href={hrefResolver(menuLink.link)}

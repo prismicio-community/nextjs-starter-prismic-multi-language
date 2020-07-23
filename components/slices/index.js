@@ -1,6 +1,6 @@
-export { default as TextSection } from './TextSection';
-export { default as Quote } from './Quote';
+export { default as EmailSignup } from './EmailSignup';
 export { default as FullWidthImage } from './FullWidthImage';
-export { default as ImageGallery } from './ImageGallery';
-export { default as ImageHighlight } from './ImageHighlight';
+export { default as HeadlineWithButton } from './HeadlineWithButton';
+export { default as InfoWithImage } from './InfoWithImage';
+export { default as TextInfo } from './TextInfo';
 export { default as SliceZone } from './SliceZone';

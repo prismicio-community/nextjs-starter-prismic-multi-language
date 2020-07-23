@@ -1,7 +1,7 @@
 import React from 'react'
 import Prismic from 'prismic-javascript'
 import { apiEndpoint, accessToken } from 'prismic-configuration'
-import { Header, HomeBanner, SliceZone } from 'components'
+import { Header, SliceZone } from 'components'
 import DefaultLayout from 'layouts'
 import Error from './_error';
 
@@ -34,7 +34,7 @@ export default class homepage extends React.Component {
 
       // Queries both the homepage and navigation menu documents
       const document = await API.getSingle('homepage', { lang: currentLang });
-      const menu = await API.getSingle('menu', { lang: currentLang });
+      const menu = await API.getSingle('top_menu', { lang: currentLang });
       return { document, menu, currentLang, isMyMainLanguage };
     } catch(error) {
       return error;
@@ -52,15 +52,14 @@ export default class homepage extends React.Component {
     } else {
       return(
         <DefaultLayout>
-          <div className="homepage" data-wio-id={this.props.doc.id}>
+          <div data-wio-id={this.props.doc.id}>
             <Header
               altLangs={this.props.doc.alternate_languages}
               currentLang={this.props.currentLang}
               isMyMainLanguage={this.props.isMyMainLanguage}
               menu={this.props.menu}
             />
-            <HomeBanner banner={this.props.doc.data.homepage_banner[0]} />
-            <SliceZone sliceZone={this.props.doc.data.page_content} />
+            <SliceZone sliceZone={this.props.doc.data.body} />
           </div>
         </DefaultLayout>
       );

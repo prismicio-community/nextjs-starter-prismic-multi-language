@@ -1,0 +1,70 @@
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+*,
+html {
+  /* -webkit-font-smoothing: antialiased; */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+::selection {
+  background: #fff7c7; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #fff7c7; /* Gecko Browsers */
+}
+
+body {
+  font-family: $font-sans-serif;
+  letter-spacing: 0;
+}
+
+button:focus {
+  outline: 0;
+}
+
+.auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 2rem;
+  max-width: inherit;
+}
+
+main,
+header,
+footer {
+  padding: 30px 60px;
+  margin: 0 auto;
+}
+
+main {
+  section {
+    padding-bottom: 8%;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: $min-width-l) {
+  header,
+  footer {
+    padding: 38px 80px;
+  }
+}
+
+/* Medium Devices, Desktops, Large Devices, Wide Screens */
+
+@media only screen and (min-width: $min-width-xl) {
+  header,
+  footer {
+    padding: 38px 7%;
+  }
+  main {
+    max-width: 1080px;
+    margin: auto;
+  }
+}

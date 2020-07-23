@@ -1,0 +1,51 @@
+.headline-with-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  @media only screen and (min-width: $min-width-l) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 40px;
+    text-align: inherit;
+  }
+
+  h1 {
+    line-height: 4rem;
+    font-size: 43px;
+
+    @media only screen and (min-width: $min-width-l) {
+      max-width: 645px;
+      line-height: inherit;
+      font-size: 100px;
+      letter-spacing: 0;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    max-width: 691px;
+    margin-top: 20px;
+    line-height: 40px;
+    font-size: 23px;
+    font-weight: 500;
+
+    @media only screen and (min-width: $min-width-l) {
+      max-width: 617px;
+    }
+  }
+
+  .button {
+    display: flex;
+    align-self: center;
+    padding-top: 20px;
+
+    @media only screen and (min-width: $min-width-l) {
+      display: flex;
+      align-self: flex-end;
+      justify-content: flex-end;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+footer {
+  font-style: italic;
+  text-align: center;
+  border-top: 1px solid #dadada;
+  display: flex;
+  flex-direction: column;
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social {
+    padding-top: 4%;
+    display: flex;
+    justify-content: center;
+    img {
+      padding: 5px 16px;
+      width: 19px;
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: $min-width-md) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .social {
+      padding-top: 0;
+    }
+  }
+}

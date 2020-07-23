@@ -1,0 +1,100 @@
+a {
+  text-decoration: none;
+  background-repeat: repeat-x;
+  background-size: 0.125rem 0.125rem;
+  background-position: 0 1.4375rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-sans-serif;
+  margin: 1rem 0;
+  line-height: 1.5;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 4.75rem;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 45px;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.25rem;
+  line-height: 2.6875rem;
+}
+
+h4 {
+  line-height: 2rem;
+  font-size: 2.625rem;
+}
+
+h5 {
+  line-height: 2.25rem;
+  font-size: 1.5rem;
+}
+
+h6 {
+  line-height: 1.875rem;
+  font-size: 1.25rem;
+}
+
+p {
+  line-height: 1.875rem;
+  font-size: 1.25rem;
+}
+
+pre {
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word;  /* Internet Explorer 5.5+ */
+}
+
+ol,
+ul {
+  margin: 20px 0 20px 30px;
+
+  li {
+    margin-bottom: 8px;
+  }
+}
+
+ol {
+  list-style: disc;
+}
+
+ul {
+  list-style: decimal;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: $min-width-l) {
+  h1 {
+    font-size: 4rem;
+    line-height: 4.75rem;
+  }
+
+  h2 {
+    line-height: 67px;
+    font-size: 48px;
+    font-weight: 600;
+  }
+}

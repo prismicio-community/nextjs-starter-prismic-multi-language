@@ -1,0 +1,50 @@
+.full-width-image {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0;
+
+  @media only screen and (min-width: $min-width-xl) {
+    position: relative;
+    margin-top: 50px;
+    padding-top: 110px;
+  }
+
+  .main-img {
+    z-index: 1;
+  
+    img {
+      width: 100%;
+    }
+  }
+
+  .background {
+    display: none;
+    position: absolute;
+    top: 0;
+
+    @media only screen and (min-width: $min-width-xl) {
+      display: flex;
+      
+      &.left-bg {
+        display: flex;
+        justify-self: start;
+        left: -100px;
+      }
+
+      &.right-bg {
+        display: flex;
+        justify-self: end;
+        right: -100px;
+
+        img {
+          transform: scaleX(-1);
+        }
+      }
+    }
+  
+    img {
+      width: 790px;
+      height: 608px;
+    }
+  }
+}

@@ -2,36 +2,12 @@ import React from 'react'
 
 const Footer = () => (
   <footer>
-    <p>
-      Proudly published with &nbsp;<a href="https://prismic.io" target="_blank" rel="noopener noreferrer">Prismic</a>
-      <br />
-      <a href="https://prismic.io" target="_blank" rel="noopener noreferrer">
-        <img className="footer-logo" src="/static/images/logo-prismic.svg" alt="Gray Prismic logo" />
-      </a>
-    </p>
-    <style jsx>{`
-      footer {
-        max-width: 700px;
-        margin: 0 auto;
-        color: #9A9A9A;
-        font-family: 'Lato', sans-serif;
-        font-size: 16px;
-        font-style: italic;
-        text-align: center;
-      }
-      footer p {
-        border-top: 1px solid #DADADA;
-        padding: 2rem 0;
-        margin-bottom: 0;
-      }
-      footer a {
-        font-weight: bold;
-      }
-      .footer-logo {
-        width: 30px;
-        margin-top: 10px;
-      }
-    `}</style>
+    <p className="copyright">© 2019 Todoapp-Powered by Prismic</p>
+    <div className="social">
+      <img src='/static/images/facebook.png' alt="Facebook social icon" />
+      <img src='/static/images/instagram.png' alt="Instagram social icon" />
+      <img src='/static/images/twitter.png' alt="Twitter social icon" />
+    </div>
   </footer>
 );
 

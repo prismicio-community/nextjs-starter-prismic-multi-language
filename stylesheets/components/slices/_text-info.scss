@@ -1,0 +1,50 @@
+.text-info {
+  @media only screen and (min-width: $min-width-l) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .left-column {
+    h1,
+    h2 {
+      max-width: 415px;
+      margin: 30px 0px 20px 0px;
+    }
+
+    p {
+      max-width: 1075px;
+      line-height: 40px;
+      font-size: 23px;
+      font-weight: 500;
+    }
+  }
+
+  .right-column,
+  .left-column {
+    h3 {
+      font-size: 20px;
+      line-height: 36px;
+
+      @media only screen and (min-width: $min-width-l) {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+
+    p {
+      max-width: 1075px;
+      margin: 10px 0 20px;
+      line-height: 30px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .right-column {
+    margin-left: 0;
+
+    @media only screen and (min-width: $min-width-l) {
+      margin-left: 135px;
+    }
+  }
+}

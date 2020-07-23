@@ -36,7 +36,7 @@ export default class Page extends React.Component {
 
       // Queries both the specific page and navigation menu documents
       const document = await API.getByUID('page', uid, { lang: currentLang });
-      const menu = await API.getSingle('menu', { lang: currentLang });
+      const menu = await API.getSingle('top_menu', { lang: currentLang });
       return { document, menu, currentLang, isMyMainLanguage };
     } catch(error) {
       return error;
@@ -54,14 +54,14 @@ export default class Page extends React.Component {
     } else {
       return(
         <DefaultLayout>
-          <div className="page" data-wio-id={this.props.doc.id}>
+          <div data-wio-id={this.props.doc.id}>
             <Header 
               altLangs={this.props.doc.alternate_languages}
               currentLang={this.props.currentLang}
               isMyMainLanguage={this.props.isMyMainLanguage}
               menu={this.props.menu}
             />
-            <SliceZone sliceZone={this.props.doc.data.page_content} />
+            <SliceZone sliceZone={this.props.doc.data.body} />
           </div>
         </DefaultLayout>
       );

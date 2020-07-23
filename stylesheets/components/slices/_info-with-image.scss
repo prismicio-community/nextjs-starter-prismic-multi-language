@@ -1,0 +1,53 @@
+.info-with-image {
+  display: flex;
+  align-items: unset;
+  flex-direction: column;
+  margin: auto;
+  padding-bottom: 30px;
+  
+  @media only screen and (min-width: $min-width-l) {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 110px;
+  }
+
+  .featured-image {
+    order: 2;
+    margin: 0;
+    padding-top: 20px;
+
+    @media only screen and (min-width: $min-width-l) {
+      margin-right: 60px;
+    }
+  
+    img {
+      width: 100%;
+
+      @media only screen and (min-width: $min-width-l) {
+        width: 516px;
+      }
+    }
+  }
+  
+  .text-content {
+    margin-bottom: 30px;
+    text-align: left;
+    
+    h1,
+    h2 {
+      margin-top: 20px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      line-height: 36px;
+      font-size: 20px;
+    }
+
+    p {
+      margin-top: 20px;
+      line-height: 30px;
+      font-size: 16px;
+    }
+  }
+}
