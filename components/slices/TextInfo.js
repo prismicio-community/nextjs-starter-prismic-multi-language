@@ -7,10 +7,13 @@ const TextInfo = ({ slice }) => (
     <div className="left-column">
       <img src='/static/images/top-icon.png' alt="Checkbox icon" />
       {RichText.render(slice.primary.section_title || [])}
-      {RichText.render(slice.primary.left_column_text || [], linkResolver, hrefResolver)}
+      {RichText.render(slice.primary.left_column_text || [])}
+      {/* {RichText.render(slice.primary.left_column_text || [], linkResolver, hrefResolver)} */}
+
     </div>
     <div className="right-column">
-      {RichText.render(slice.primary.right_column_text || [], linkResolver, hrefResolver)}
+      {RichText.render(slice.primary.right_column_text || [])}
+      {/* {RichText.render(slice.primary.right_column_text || [], linkResolver, hrefResolver)} */}
     </div>
   </section>
 );

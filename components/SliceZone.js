@@ -5,7 +5,7 @@ import {
   HeadlineWithButton,
   InfoWithImage,
   TextInfo,
-} from './';
+} from './slices';
 
 const SliceZone = ({ sliceZone }) => {
   return (

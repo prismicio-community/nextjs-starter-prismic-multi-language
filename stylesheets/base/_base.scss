@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: $font-sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0;
 }
 
@@ -48,7 +48,6 @@ main {
   }
 }
 
-/* Small Devices, Tablets */
 @media only screen and (min-width: $min-width-l) {
   header,
   footer {
@@ -56,7 +55,6 @@ main {
   }
 }
 
-/* Medium Devices, Desktops, Large Devices, Wide Screens */
 
 @media only screen and (min-width: $min-width-xl) {
   header,

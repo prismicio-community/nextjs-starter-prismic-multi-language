@@ -4,19 +4,20 @@ import { Navigation, LanguageSwitcher } from 'components'
 
 const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (
   <Fragment>
-    <header className="menu">
-      <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref prefetch>
-        <a>
-          <img className="white-asset" src='/static/images/check1.png' alt="Site logo" />
-          <h3 className="logo-text">Todoop</h3>
-        </a>
-      </NextLink>
-      <nav className="menu">
-        <ul>  
+    <header >
+      <div className="menu">
+        <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref prefetch>
+          <a>
+            <img className="logo" src={"./../static/images/logo.png"} alt="Site logo" />
+          </a>
+        </NextLink>
+      </div>
+      <div className="menu">
+        <ul>
           <Navigation menu={menu} />
           <LanguageSwitcher altLangs={altLangs} />
         </ul>
-      </nav>
+      </div>
     </header>
   </Fragment>
 );

@@ -1,5 +1,5 @@
 import React from 'react'
-import DefaultLayout from 'layouts'
+import Layout from '../components/Layout'
 import Head from 'next/head'
 
 export default class Error extends React.Component {
@@ -10,7 +10,7 @@ export default class Error extends React.Component {
 
   render() {
     return (
-      <DefaultLayout>
+      <Layout>
         <div className="not-found">
           <Head><title>Error!</title></Head>
           <h1>{this.props.statusCode
@@ -28,7 +28,7 @@ export default class Error extends React.Component {
             }
           `}</style>
         </div>
-      </DefaultLayout>
+      </Layout>
     );
   }
 }

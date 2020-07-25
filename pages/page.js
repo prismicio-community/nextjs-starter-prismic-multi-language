@@ -1,8 +1,9 @@
 import React from 'react'
 import Prismic from 'prismic-javascript'
 import { apiEndpoint, accessToken } from 'prismic-configuration'
-import { Header, SliceZone } from 'components'
-import DefaultLayout from 'layouts'
+import SliceZone from './../components/SliceZone'
+
+import Layout from '../components/Layout'
 import Error from './_error';
 
 
@@ -53,17 +54,16 @@ export default class Page extends React.Component {
       );
     } else {
       return(
-        <DefaultLayout>
+        <Layout
+        altLangs={this.props.doc.alternate_languages}
+        currentLang={this.props.currentLang}
+        isMyMainLanguage={this.props.isMyMainLanguage}
+        menu={this.props.menu}
+        >
           <div data-wio-id={this.props.doc.id}>
-            <Header 
-              altLangs={this.props.doc.alternate_languages}
-              currentLang={this.props.currentLang}
-              isMyMainLanguage={this.props.isMyMainLanguage}
-              menu={this.props.menu}
-            />
             <SliceZone sliceZone={this.props.doc.data.body} />
           </div>
-        </DefaultLayout>
+        </Layout>
       );
     }
   }

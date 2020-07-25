@@ -3,7 +3,10 @@ import Head from 'next/head'
 import { apiEndpoint } from 'prismic-configuration';
 import "../stylesheets/main.scss"
 
-export default () => (
+import Header from './Header'
+import Footer from './Footer'
+
+export default ({ children, altLangs, currentLang, isMyMainLanguage, menu }) => (
   <Fragment>
     <Head>
       <meta charSet="utf-8" />
@@ -19,5 +22,13 @@ export default () => (
       `}} />
       <script src="//static.cdn.prismic.io/prismic.min.js?new=true" />
     </Head>
+    <Header 
+      altLangs={altLangs}
+      currentLang={currentLang}
+      isMyMainLanguage={isMyMainLanguage}
+      menu={menu}
+    />
+    <main>{children}</main>
+    <Footer />
   </Fragment>
 )
