@@ -1,23 +1,17 @@
-import React from 'react';
-import Prismic from 'prismic-javascript';
-import { apiEndpoint, linkResolver } from 'prismic-configuration';
+import { useEffect } from 'react';
+import qs from 'qs';
+import { linkResolver } from "prismic-configuration";
+import { Client } from "utils/prismicHelpers";
 
-export default class Preview extends React.Component {
-  // Get preview token and redirect to the proper page
-  // Ready for serverless deployment in Now 2.0 if routes are configured in now.json
-  static async getInitialProps(context) {
-    const token = context.query.token;
-    const { req, res } = context;
+const Preview = ({ history, location }) => {
+  useEffect(() => {
+    const {token, documentId} = qs.parse(location.search.slice(1));
+    if (!token) {
+      return console.warn(`No token available, check your configuration`);
+    }
+    Client.getPreviewResolver(token, documentId).resolve(linkResolver, '/').then(url => history.push(url));
+    });
+  return null;
+};
 
-    const API = await Prismic.getApi(apiEndpoint, {req});
-    const url = await API.previewSession(token, linkResolver, '/');
-    
-    res.writeHead(302, { Location: url });
-    res.end();
-    return {}
-  }
-
-  render() {
-    return <div>Preview</div>
-  }
-}
+export default Preview;

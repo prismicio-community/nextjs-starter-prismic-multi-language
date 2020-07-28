@@ -8,23 +8,27 @@ import {
 } from 'prismic-configuration'
 
 // Helper function to convert Prismic Rich Text links to Next/Link components
-export const customLink = (type, element, content, children, index) => (
-  <Link
+export const customLink = (type, element, content, children, index) => {
+  console.log(element)
+  return(<Link
     key={index}
     href={hrefResolver(element.data)}
     as={linkResolver(element.data)}
   >
     <a>{content}</a>
-  </Link>
+  </Link>)
+}
+
+export const Client = (req = null) => (
+  Prismic.client(apiEndpoint, createClientOptions(req, accessToken))
 )
 
-// Client method to query documents from the Prismic repo
-let frontClient
-export const Client = (req = null) => {
-  if (!req && frontClient) return frontClient // prevents generating a new instance for client side since we don't need the refreshed request object.
-  else {
-    const options = Object.assign({}, req ? { req } : {}, accessToken ? { accessToken: accessToken } : {})
-    return Prismic.client(apiEndpoint, options)
+const createClientOptions = (req = null, prismicAccessToken = null) => {
+  const reqOption = req ? { req } : {}
+  const accessTokenOption = prismicAccessToken ? { accessToken: prismicAccessToken } : {}
+  return {
+    ...reqOption,
+    ...accessTokenOption,
   }
 }
 

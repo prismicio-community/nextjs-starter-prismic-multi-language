@@ -8,15 +8,7 @@ const HeadlineWithButton = ({ slice }) => {
     <section className="headline-with-button">
       <div>
         {RichText.render(slice.primary.headline || [])} 
-        {RichText.render(slice.primary.description || [])} 
-
-        {/* {RichText.render(slice.primary.description || [], linkResolver, hrefResolver)} */}
-
-        {/* <RichText
-          render={slice.primary.description}
-          linkResolver={linkResolver}
-          serializeHyperlink={customLink}
-        /> */}
+        {RichText.render(slice.primary.description || [])}
       </div>
       <div className="button">
         <img
