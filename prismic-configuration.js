@@ -6,7 +6,7 @@ module.exports = {
 
   // -- Access Token if the repository is not public
   // Generate a token in your dashboard and configure it here if your repository is private
-  //accessToken: '########',
+  accessToken: '',
   
   // -- Link resolution rules
   // Manages links to internal Prismic documents

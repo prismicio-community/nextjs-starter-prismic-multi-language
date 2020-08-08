@@ -25,11 +25,9 @@
     "react-dom": "^16.13.1"
   },
   "scripts": {
-    "dev": "nodemon server.js",
-    "now-dev": "now dev",
+    "dev": "next dev",
     "now-build": "next build",
-    "deploy": "now",
-    "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js"
+    "deploy": "now"
   },
   "repository": {
     "type": "git",
