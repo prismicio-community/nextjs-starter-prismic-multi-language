@@ -8,7 +8,7 @@ const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (
       <div className="menu">
         <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref prefetch>
           <a>
-            <img className="logo" src={"./../static/images/logo.png"} alt="Site logo" />
+            <img className="logo" src={"/images/logo.png"} alt="Site logo" />
           </a>
         </NextLink>
       </div>

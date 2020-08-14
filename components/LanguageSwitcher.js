@@ -9,7 +9,6 @@ const AltLangs = ({ altLangs = [] }) => (
           as={linkResolver(altLang)}
           href={hrefResolver(altLang)}
           passHref
-          prefetch
         >
           <a className={"flag-icon flag-icon-" + altLang.lang.slice(-2)}></a>
         </NextLink>

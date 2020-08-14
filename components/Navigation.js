@@ -11,7 +11,6 @@ const MenuLinks = ({ links = [] }) => {
             as={linkResolver(menuLink.link)}
             href={hrefResolver(menuLink.link)}
             passHref
-            prefetch
           >
             <a>{RichText.asText(menuLink.label)}</a>
           </NextLink>

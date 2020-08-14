@@ -25,7 +25,7 @@ const InfoWithImage = ({ slice }) => {
         </picture>
       </div>
       <div className="text-content">
-        <img src='/static/images/top-icon.png' alt="Checkbox icon" />
+        <img src='/images/top-icon.png' alt="Checkbox icon" />
         {RichText.render(slice.primary.section_title || [])}
         {RichText.render(slice.primary.text || [], linkResolver)}
       </div>
