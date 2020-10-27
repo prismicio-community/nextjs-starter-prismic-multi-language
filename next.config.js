@@ -8,24 +8,12 @@ module.exports = withStyles({
     config.resolve.modules.push(path.resolve("./"));
     return config;
   },
-  // async rewrites() {
-  //   return [
-  //     { source: "/blog/about-us", destination: "/about-us" },
-  //     { source: "/", destination: "/en-us" },
-  //   ];
-  // },
-  // async redirects() {
-  //   return [
-  //     {
-  //       source: "/blog/about-us",
-  //       destination: "/about-us",
-  //       permanent: true,
-  //     },
-  //     {
-  //       source: "/",
-  //       destination: "/en-us",
-  //       permanent: true,
-  //     },
-  //   ];
-  // },
+  i18n: {
+    // These are all the locales you want to support in
+    // your application
+    locales: ['en-US', 'fr-FR'],
+    // This is the default locale you want to be used when visiting
+    // a non-locale prefixed path e.g. `/hello`
+    defaultLocale: 'en-US',
+  },
 });
