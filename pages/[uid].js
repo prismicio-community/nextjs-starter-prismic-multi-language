@@ -1,12 +1,15 @@
 import React from "react";
+import { queryRepeatableDocuments } from './../utils/queries'
 import { Client } from "./../utils/prismicHelpers";
 
 import SliceZone from './../components/SliceZone'
 import Layout from '../components/Layout'
+
+
 /**
- * Homepage component
+ * posts component
  */
-const Homepage = ({ doc, menu, currentLang, isMyMainLanguage }) => {
+const Page = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   if (doc && doc.data) {
     return (
       <Layout
@@ -24,11 +27,10 @@ const Homepage = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   return null;
 };
 
-
 export async function getStaticProps({ params, preview = null, previewData = {}, locale, locales }) {
   const { ref } = previewData
   const client = Client()
-  const doc = await client.getSingle('homepage', ref ? { ref } : null) || {}
+  const doc = await client.getByUID('page', params.uid, ref ? { ref } : null) || {}
   const menu = await client.getSingle('top_menu', ref ? { ref } : null) || {}
   // Languages from API response
   // // Setting Master language as default language option
@@ -48,6 +50,20 @@ export async function getStaticProps({ params, preview = null, previewData = {},
       isMyMainLanguage
     }
   }
-}; 
+};
 
-export default Homepage
+
+export async function getStaticPaths({ locales }) {
+  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  return {
+    paths: documents.map(doc => { return { params: { uid: doc.uid }, locale: doc.lang } }),
+    fallback: true,
+  }
+}
+
+export default Page
+
+
+
+
+

@@ -18,8 +18,7 @@
   "dependencies": {
     "@webdeb/next-styles": "^1.1.0",
     "i18next": "^19.8.3",
-    "next": "^9.5.5",
-    "node-sass": "^4.14.1",
+    "next": "^10.0.0",
     "prismic-javascript": "3.0.1",
     "prismic-reactjs": "0.3.2",
     "react": "^16.14.0",

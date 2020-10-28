@@ -1,4 +1,3 @@
-  
 import { Client } from './prismicHelpers'
 
 async function fetchDocs(page = 1, routes = []) {
