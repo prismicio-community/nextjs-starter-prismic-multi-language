@@ -6,10 +6,10 @@ const AltLangs = ({ altLangs = [] }) => (
     return (
       <li key={altLang.id}>
         <NextLink
+          locale={altLang.lang}
           as={linkResolver(altLang)}
           href={hrefResolver(altLang)}
           passHref
-          prefetch
         >
           <a className={"flag-icon flag-icon-" + altLang.lang.slice(-2)}></a>
         </NextLink>

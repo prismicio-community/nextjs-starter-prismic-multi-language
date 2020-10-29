@@ -11,25 +11,24 @@
     "css-loader": "^3.6.0",
     "express": "^4.17.1",
     "nodemon": "^1.19.4",
-    "sass": "^1.26.10",
+    "sass": "^1.27.0",
     "sass-loader": "^9.0.2",
-    "webpack": "^4.44.0"
+    "webpack": "^4.44.2"
   },
   "dependencies": {
     "@webdeb/next-styles": "^1.1.0",
-    "next": "8.1.0",
-    "node-sass": "^4.14.1",
+    "i18next": "^19.8.3",
+    "next": "^10.0.0",
     "prismic-javascript": "3.0.1",
     "prismic-reactjs": "0.3.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "react-i18next": "^11.7.3"
   },
   "scripts": {
-    "dev": "nodemon server.js",
-    "now-dev": "now dev",
+    "dev": "next dev",
     "now-build": "next build",
-    "deploy": "now",
-    "watch": "./node_modules/.bin/webpack --watch --config webpack.dev.js"
+    "deploy": "now"
   },
   "repository": {
     "type": "git",

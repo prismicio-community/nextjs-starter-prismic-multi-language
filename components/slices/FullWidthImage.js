@@ -12,7 +12,7 @@ const FullWidthImage = ({ slice }) => {
         />
       </div>
       <div className={`background ${imagePosition}`}>
-        <img src='/static/images/full-width-image-background.png' alt="Background pattern" />
+        <img src='/images/full-width-image-background.png' alt="Background pattern" />
       </div>
     </section>
   )

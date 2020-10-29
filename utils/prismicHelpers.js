@@ -8,16 +8,13 @@ import {
 } from 'prismic-configuration'
 
 // Helper function to convert Prismic Rich Text links to Next/Link components
-export const customLink = (type, element, content, children, index) => {
-  console.log(element)
-  return(<Link
-    key={index}
-    href={hrefResolver(element.data)}
-    as={linkResolver(element.data)}
-  >
+export const customLink = (type, element, content, children, index) => (
+  <Link key={element.data.id} href={hrefResolver(element.data)} as={linkResolver(element.data)}>
     <a>{content}</a>
-  </Link>)
-}
+  </Link>
+)
+
+// Client method to query documents from the Prismic repo
 
 export const Client = (req = null) => (
   Prismic.client(apiEndpoint, createClientOptions(req, accessToken))
