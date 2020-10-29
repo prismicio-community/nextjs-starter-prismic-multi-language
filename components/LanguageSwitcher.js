@@ -6,6 +6,7 @@ const AltLangs = ({ altLangs = [] }) => (
     return (
       <li key={altLang.id}>
         <NextLink
+          locale={altLang.lang}
           as={linkResolver(altLang)}
           href={hrefResolver(altLang)}
           passHref

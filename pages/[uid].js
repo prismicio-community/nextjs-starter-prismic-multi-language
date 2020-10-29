@@ -1,8 +1,8 @@
 import React from "react";
-import { queryRepeatableDocuments } from './../utils/queries'
-import { Client } from "./../utils/prismicHelpers";
+import { queryRepeatableDocuments } from '../utils/queries'
+import { Client } from "../utils/prismicHelpers";
 
-import SliceZone from './../components/SliceZone'
+import SliceZone from '../components/SliceZone'
 import Layout from '../components/Layout'
 
 
@@ -27,12 +27,12 @@ const Page = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   return null;
 };
 
-export async function getStaticProps({ params, preview = null, previewData = {}, locale, locales }) {
+export async function getStaticProps({ preview = null, previewData = {}, params, locale, locales }) {
   const { ref } = previewData
   const client = Client()
-  const doc = await client.getByUID('page', params.uid, ref ? { ref } : null) || {}
-  const menu = await client.getSingle('top_menu', ref ? { ref } : null) || {}
-  // Languages from API response
+  const doc = await client.getByUID('page', params.uid, ref ? { ref } : { lang: locale }) || {}
+  const menu = await client.getSingle('top_menu', ref ? { ref } : { lang: locale }) || {}
+  
   // // Setting Master language as default language option
   const mainLanguage = locales[0];
   // // Sets current language based on the locale
@@ -53,11 +53,11 @@ export async function getStaticProps({ params, preview = null, previewData = {},
 };
 
 
-export async function getStaticPaths({ locales }) {
+export async function getStaticPaths() {
   const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
   return {
-    paths: documents.map(doc => { return { params: { uid: doc.uid }, locale: doc.lang } }),
-    fallback: true,
+    paths: documents.map((doc, i) => { return { params: { uid: doc.uid, }, locale: doc.lang, } }),
+    fallback: false,
   }
 }
 

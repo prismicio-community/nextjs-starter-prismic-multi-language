@@ -6,7 +6,7 @@ const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (
   <Fragment>
     <header >
       <div className="menu">
-        <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref prefetch>
+        <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref>
           <a>
             <img className="logo" src={"/images/logo.png"} alt="Site logo" />
           </a>
