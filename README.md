@@ -26,6 +26,9 @@ Then you can access it at [http://localhost:3000](http://localhost:3000).
 ## Deploys made easy with Vercel
 [Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
 
+## Next.js Internationalized Routing 
+
+This project uses Next.js Internationalized Routing. [Read the official Next.js documentation to learn more](https://nextjs.org/docs/advanced-features/i18n-routing).
 
 ### Learn more about using Prismic with Nextjs
 
