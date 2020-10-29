@@ -1,58 +1,35 @@
-[![Dependency Status](https://david-dm.org/raulg/nextjs-website.svg)](https://david-dm.org/raulg/nextjs-website)
+# Multi-language website example with Gatsby.js
+> [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
-# nextjs-website
-This project is an implementation of the Prismic multi-page website demo using Next.js. Built up from the starter project, it's meant to provide you with an idea of how to build your own sites using the Prismic features. Read our user guide if you need guidance on how to use this repository.
-This project is serverless and ready for deployment in Now v2.
-
-### Getting started quickly with Prismic Themes
-You can use our [Prismic-CLI](https://github.com/prismicio/prismic-cli) tool to quickly install this project in your machine, as well as setting up a Prismic repository with the required Custom Types. Just follow the instructions in your terminal to get started!
-
-```
-> $ npm install -g prismic-cli
-> $ prismic theme https://github.com/raulg/nextjs-website/archive/master.zip
-```
-
-### Install dependencies
-```
-> $ npm install
-```
-
-### Installing Now globally
-The official [recommendation](https://zeit.co/guides/updating-now-cli) is to install Now Desktop and check the Canary Releases option. This is will automatically update your now-cli package so it's always up to date. You can also install the package using NPM if you're not concerned about updates.
-```
-> $ npm install -g now
-```
-
-### Run serverless mode locally
-As of version 15.0.0 of `now` you can use the `now dev` command to run the project in your local machine in serverless mode. You can use this to set up and test your routing in `now.json` without having to deploy to Now for every small change. Development server will be running in `http://localhost:3000/`
-```
-> $ now dev
-```
-or 
-```
-> $ npm run now-dev
-```
-
-### Alternative local development mode
-If you find required rebuild process with `now dev` slows down your development workflow, you can run the included Express server file which will handle the same custom routing needs. Keep in mind that the routes defined here are different from the ones defined in `now.json`, always check your routes with `now dev` before deploying live to production. Development server will be running in `http://localhost:3000/` 
-```
-> $ npm run dev
-```
-
-### Deploy to Now 2.0 serverless mode
-[Signup for Now](https://zeit.co/now) for deploying your site using serverless features. The required routing and setup files are already included in the project. Just run the `now` command in your project folder if you have installed it, or try the included package.
-```
-> $ now
-```
-or
-```
-> $ npm run deploy
-```
+## Check out our article for a step by step guide to getting this project up and running
+> [Prismic project guide: Multi-language website with Prismic and Next.js](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js)
 
 
-### Get started with Prismic
+## Install the prismic-cli
+```
+npm install -g prismic-cli
+```
 
-You can find out how to get started with Prismic from [our React documentation](https://prismic.io/docs/reactjs/getting-started/getting-started-from-scratch).
+## Run the theme command
+This will create a new Prismic content repository, setup the custom types, and install the project code
+```
+prismic theme --theme-url https://github.com/prismicio/nextjs-multi-language-site --conf prismic-configuration.js
+
+```
+## Run the project
+```
+npm run dev
+```
+Then you can access it at [http://localhost:3000](http://localhost:3000).
+
+
+## Deploys made easy with Vercel
+[Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
+
+
+### Learn more about using Prismic with Nextjs
+
+[Prismic + Next.js documentation](https://prismic.io/docs/reactjs/getting-started/prismic-nextjs).
 
 ### License
 
@@ -62,4 +39,4 @@ Copyright 2019 Prismic (https://prismic.io).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
