@@ -1,5 +1,5 @@
-import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import React from 'react';
+import { RichText } from 'prismic-reactjs';
 
 const HeadlineWithButton = ({ slice }) => {
   return (
@@ -9,9 +9,14 @@ const HeadlineWithButton = ({ slice }) => {
         {RichText.render(slice.primary.description || [])}
       </div>
       <div className="button">
-        {slice.primary.button ? (<img
-          src={slice.primary.button.url} alt={slice.primary.button.alt || ''}
-        />) : <img />}
+        {slice.primary.button ? (
+          <img
+            src={slice.primary.button.url}
+            alt={slice.primary.button.alt || ''}
+          />
+        ) : (
+          <img alt="" />
+        )}
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
-import React from 'react'
-import { Client } from './../utils/prismicHelpers'
+import React from 'react';
+import { Client } from '../utils/prismicHelpers';
 
-import SliceZone from './../components/SliceZone'
-import Layout from '../components/Layout'
+import SliceZone from '../components/SliceZone';
+import Layout from '../components/Layout';
 
 /**
  * Homepage component
@@ -25,13 +25,21 @@ const Homepage = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   return null;
 };
 
+export async function getStaticProps({
+  preview = null,
+  previewData = {},
+  locale,
+  locales,
+}) {
+  const { ref } = previewData;
+  const client = Client();
+  const doc =
+    (await client.getSingle('homepage', ref ? { ref } : { lang: locale })) ||
+    {};
+  const menu =
+    (await client.getSingle('top_menu', ref ? { ref } : { lang: locale })) ||
+    {};
 
-export async function getStaticProps({ params, preview = null, previewData = {}, locale, locales }) {
-  const { ref } = previewData
-  const client = Client()
-  const doc = await client.getSingle('homepage', ref ? { ref } : { lang: locale }) || {}
-  const menu = await client.getSingle('top_menu', ref ? { ref } : { lang: locale }) || {}
-  
   // Languages from API response
   // // Setting Master language as default language option
   const mainLanguage = locales[0];
@@ -47,9 +55,9 @@ export async function getStaticProps({ params, preview = null, previewData = {},
       locales,
       mainLanguage,
       currentLang,
-      isMyMainLanguage
-    }
-  }
-}; 
+      isMyMainLanguage,
+    },
+  };
+}
 
-export default Homepage
+export default Homepage;

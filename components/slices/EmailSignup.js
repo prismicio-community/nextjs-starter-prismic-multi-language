@@ -1,5 +1,5 @@
-import React from 'react'
-import { RichText } from 'prismic-reactjs'
+import React from 'react';
+import { RichText } from 'prismic-reactjs';
 
 const EmailSignup = ({ slice }) => (
   <section className="email-signup">
