@@ -1,4 +1,4 @@
-# Multi-language website example with Gatsby.js
+# Multi-language website example with Next.js
 > [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
 ## Check out our article for a step by step guide to getting this project up and running
