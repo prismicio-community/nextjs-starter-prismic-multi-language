@@ -2,8 +2,8 @@ import React from 'react';
 import { queryRepeatableDocuments } from '../utils/queries';
 import { Client } from '../utils/prismicHelpers';
 
-import SliceZone from '../components/SliceZone';
-import Layout from '../components/Layout';
+// import SliceZone from '../components/SliceZone';
+import { Layout, SetupRepo, SliceZone } from '../components';
 
 /**
  * posts component
@@ -23,7 +23,7 @@ const Page = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   }
 
   // Message when repository has not been setup yet
-  return null;
+  return <SetupRepo />;
 };
 
 export async function getStaticProps({

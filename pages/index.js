@@ -1,8 +1,8 @@
 import React from 'react';
-import { Client } from '../utils/prismicHelpers';
+import { Client, manageLocal } from '../utils/prismicHelpers';
 
 import SliceZone from '../components/SliceZone';
-import Layout from '../components/Layout';
+import  { Layout, SetupRepo } from '../components';
 
 /**
  * Homepage component
@@ -22,7 +22,7 @@ const Homepage = ({ doc, menu, currentLang, isMyMainLanguage }) => {
   }
 
   // Message when repository has not been setup yet
-  return null;
+  return <SetupRepo />;
 };
 
 export async function getStaticProps({

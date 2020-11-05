@@ -22,3 +22,4 @@ export const homePageQuery = async () => {
   const allRoutes = await fetchDocs();
   return allRoutes.filter((doc) => doc.type === 'homepage').slice(0, 5);
 };
+

@@ -1,7 +1,7 @@
 {
   "name": "nextjs-website",
   "version": "0.0.2",
-  "private": true,
+  "private": false,
   "description": "Multi-language website example with Next.js using Prismic headless CMS",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
