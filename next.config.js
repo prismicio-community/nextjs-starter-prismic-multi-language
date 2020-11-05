@@ -1,13 +1,6 @@
-const path = require("path");
-const withStyles = require("@webdeb/next-styles");
-
-module.exports = withStyles({
+module.exports = {
   sass: true,
   modules: true,
-  webpack(config) {
-    config.resolve.modules.push(path.resolve("./"));
-    return config;
-  },
   i18n: {
     // These are all the locales you want to support in
     // your application
@@ -16,4 +9,4 @@ module.exports = withStyles({
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-us',
   },
-});
+};

@@ -28,7 +28,9 @@ Then you can access it at [http://localhost:3000](http://localhost:3000).
 
 ## Next.js Internationalized Routing 
 
-This project uses Next.js Internationalized Routing. [Read the official Next.js documentation to learn more](https://nextjs.org/docs/advanced-features/i18n-routing).
+This sample is compatible with Next 10, which introduces support for i18n. It implements the sub-path routing strategy allowing you to build routes like /blog, /fr/blog /nl-nl/blog 
+
+To learn more about Next.js Internationalized Routing, [read the official Next.js documentation](https://nextjs.org/docs/advanced-features/i18n-routing).
 
 ### Learn more about using Prismic with Nextjs
 

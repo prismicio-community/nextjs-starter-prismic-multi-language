@@ -1,9 +1,8 @@
 import React from 'react';
-import { queryRepeatableDocuments } from '../utils/queries';
-import { Client } from '../utils/prismicHelpers';
+import { queryRepeatableDocuments } from 'utils/queries';
+import { Client, manageLocal } from 'utils/prismicHelpers';
 
-// import SliceZone from '../components/SliceZone';
-import { Layout, SetupRepo, SliceZone } from '../components';
+import { Layout, SetupRepo, SliceZone } from 'components';
 
 /**
  * posts component
@@ -45,11 +44,15 @@ export async function getStaticProps({
     (await client.getSingle('top_menu', ref ? { ref } : { lang: locale })) ||
     {};
 
-  // // Setting Master language as default language option
-  const mainLanguage = locales[0];
-  // // Sets current language based on the locale
-  const currentLang = locale !== undefined ? locale : mainLanguage;
-  const isMyMainLanguage = mainLanguage === currentLang;
+  // // // Setting Master language as default language option
+  // const mainLanguage = locales[0];
+  // // // Sets current language based on the locale
+  // const currentLang = locale !== undefined ? locale : mainLanguage;
+  // const isMyMainLanguage = mainLanguage === currentLang;
+
+  const {mainLanguage, currentLang, isMyMainLanguage} = manageLocal(locales, locale)
+
+  console.log(mainLanguage, currentLang, isMyMainLanguage, 'here!!!!')
 
   return {
     props: {

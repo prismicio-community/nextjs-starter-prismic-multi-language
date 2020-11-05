@@ -1,8 +1,7 @@
 import React from 'react';
 
 const FullWidthImage = ({ slice }) => {
-  const imagePosition =
-    slice.primary.background_image_position === 'Left' ? 'left-bg' : 'right-bg';
+  const imagePosition = slice.primary.background_image_position === 'Left' ? 'left-bg' : 'right-bg';
   return (
     <section className="full-width-image auto-grid">
       <div className="main-img">

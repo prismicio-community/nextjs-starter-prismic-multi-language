@@ -9,10 +9,10 @@ async function fetchDocs(page = 1, routes = []) {
   return [...new Set(allRoutes)];
 }
 
-/** Fetches all Prismic documents and filters them.
+/* Fetches all Prismic documents and filters them.
  *  In production, you would probably query documents
  *  by type instead of filtering them.
- * */
+ */
 export const queryRepeatableDocuments = async (filter) => {
   const allRoutes = await fetchDocs();
   return allRoutes.filter(filter);

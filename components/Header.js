@@ -1,5 +1,5 @@
 import React from 'react';
-import { default as NextLink } from 'next/link';
+import NextLink from 'next/link';
 import { Navigation, LanguageSwitcher } from '.';
 
 const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (

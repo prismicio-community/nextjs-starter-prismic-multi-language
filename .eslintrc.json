@@ -1,59 +1,23 @@
 {
-  "extends": [
-    "airbnb"
-  ],
   "env": {
     "browser": true,
-    "commonjs": true,
-    "es6": true,
-    "jest": true,
-    "node": true
+    "es2021": true
   },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react"
+  ],
   "rules": {
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "packageDir": "./"
-      }
-    ],
-    "jsx-a11y/anchor-is-valid": [
-      "error",
-      {
-        "components": [
-          "Link"
-        ],
-        "specialLink": [
-          "hrefLeft",
-          "hrefRight"
-        ],
-        "aspects": [
-          "invalidHref",
-          "preferButton"
-        ]
-      }
-    ],
-    "jsx-a11y/media-has-caption": "off",
-    "no-use-before-define": [
-      "error",
-      {
-        "variables": false
-      }
-    ],
-    "object-curly-newline": [
-      "error",
-      {
-        "ObjectPattern": {
-          "multiline": true
-        }
-      }
-    ],
-    "prefer-destructuring": "off",
-    "devDependencies": {
-      "eslint": "^7.5.0",
-      "eslint-config-airbnb": "^18.2.0",
-      "eslint-plugin-import": "^2.22.0",
-      "eslint-plugin-jsx-a11y": "^6.3.1",
-      "eslint-plugin-react": "^7.20.5"
-    }
+    "import/no-extraneous-dependencies": [ "error", { "packageDir": "./" } ],
   }
 }

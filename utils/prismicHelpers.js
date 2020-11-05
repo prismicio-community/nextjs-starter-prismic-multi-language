@@ -34,10 +34,8 @@ const createClientOptions = (req = null, prismicAccessToken = null) => {
   };
 };
 
-export default Client;
 
-
-export const manageLocal = async (Locales, locale) => {
+export const manageLocal = (Locales, locale) => {
   // Languages from API response
 // // Setting Master language as default language option
 const mainLanguage = Locales[0];
@@ -45,5 +43,5 @@ const mainLanguage = Locales[0];
 const currentLang = locale !== undefined ? locale : mainLanguage;
 const isMyMainLanguage = mainLanguage === currentLang;
 
-return [mainLanguage, currentLang, isMyMainLanguage]
+return { mainLanguage, currentLang, isMyMainLanguage }
 }
