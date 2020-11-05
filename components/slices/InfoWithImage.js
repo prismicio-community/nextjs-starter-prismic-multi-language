@@ -7,22 +7,22 @@ const InfoWithImage = ({ slice }) => {
   return (
     <section className="info-with-image">
       <div className="featured-image">
-        <picture>
+        {featuredImage ? (<picture>
           <source
-            srcSet={featuredImage ? featuredImage.mobile.url : ''}
-            alt={featuredImage ? featuredImage.mobile.alt : ''}
+            srcSet={featuredImage.mobile.url}
+            alt={featuredImage.mobile.alt || ''}
             media="(max-width: 500px)"
           />
           <source
-            srcSet={featuredImage ? featuredImage.tablet.url : ''}
-            alt={featuredImage ? featuredImage.tablet.alt : ''}
+            srcSet={featuredImage.tablet.url}
+            alt={featuredImage.tablet.alt || ''}
             media="(max-width: 1100px)"
           />
           <img
-            src={featuredImage ? featuredImage.url : ''}
-            alt={featuredImage ? featuredImage.alt : ''}
+            src={featuredImage.url}
+            alt={featuredImage.alt || ''}
           />
-        </picture>
+        </picture>) : <img />}
       </div>
       <div className="text-content">
         <img src='/images/top-icon.png' alt="Checkbox icon" />

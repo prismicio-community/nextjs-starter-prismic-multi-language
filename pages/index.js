@@ -1,5 +1,5 @@
-import React from "react";
-import { Client } from "./../utils/prismicHelpers";
+import React from 'react'
+import { Client } from './../utils/prismicHelpers'
 
 import SliceZone from './../components/SliceZone'
 import Layout from '../components/Layout'

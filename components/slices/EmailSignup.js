@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import { RichText } from 'prismic-reactjs'
 
 const EmailSignup = ({ slice }) => (

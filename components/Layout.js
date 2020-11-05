@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'
 import Head from 'next/head'
-import { apiEndpoint } from 'prismic-configuration';
+import { apiEndpoint } from 'prismic-configuration'
 
 import Header from './Header'
 import Footer from './Footer'
 
-const [, repoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
+const [, repoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/)
 
 
 const Layout = ({ children, altLangs, currentLang, isMyMainLanguage, menu }) => (

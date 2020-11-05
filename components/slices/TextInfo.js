@@ -1,6 +1,5 @@
 import React from 'react'
 import { RichText } from 'prismic-reactjs'
-import { linkResolver, hrefResolver } from 'prismic-configuration'
 
 const TextInfo = ({ slice }) => (
   <section className="text-info">

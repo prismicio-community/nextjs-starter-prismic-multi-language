@@ -2,11 +2,7 @@
   "name": "nextjs-website",
   "version": "0.0.2",
   "private": true,
-  "description": "Sample website built with Next.js using Prismic headless CMS",
-  "author": {
-    "name": "Raul Gonzalez",
-    "email": "raul.gonzalez@prismic.io"
-  },
+  "description": "Multi-language website example with Next.js using Prismic headless CMS",
   "devDependencies": {
     "css-loader": "^3.6.0",
     "express": "^4.17.1",
@@ -27,13 +23,13 @@
     "react-i18next": "^11.7.3"
   },
   "scripts": {
-    "dev": "next dev",
-    "now-build": "next build",
-    "deploy": "now"
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/raulg/nextjs-website.git"
+    "url": "https://github.com/prismicio/nextjs-multi-language-site"
   },
   "license": "Apache-2.0"
 }

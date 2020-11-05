@@ -1,6 +1,6 @@
-import { default as NextLink } from "next/link";
-import { RichText } from "prismic-reactjs";
-import { linkResolver, hrefResolver } from "prismic-configuration";
+import { default as NextLink } from 'next/link'
+import { RichText } from 'prismic-reactjs'
+import { linkResolver, hrefResolver } from 'prismic-configuration'
 
 const MenuLinks = ({ links = [] }) => {
   if (links) {
