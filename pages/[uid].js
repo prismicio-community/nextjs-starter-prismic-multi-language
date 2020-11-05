@@ -44,15 +44,7 @@ export async function getStaticProps({
     (await client.getSingle('top_menu', ref ? { ref } : { lang: locale })) ||
     {};
 
-  // // // Setting Master language as default language option
-  // const mainLanguage = locales[0];
-  // // // Sets current language based on the locale
-  // const currentLang = locale !== undefined ? locale : mainLanguage;
-  // const isMyMainLanguage = mainLanguage === currentLang;
-
   const {mainLanguage, currentLang, isMyMainLanguage} = manageLocal(locales, locale)
-
-  console.log(mainLanguage, currentLang, isMyMainLanguage, 'here!!!!')
 
   return {
     props: {
