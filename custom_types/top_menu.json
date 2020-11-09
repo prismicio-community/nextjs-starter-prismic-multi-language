@@ -1,0 +1,1 @@
+{"Main":{"display_title":{"type":"StructuredText","config":{"single":"heading1","label":"display_title"}},"menu_links":{"type":"Group","config":{"fields":{"label":{"type":"StructuredText","config":{"single":"paragraph","label":"label"}},"link":{"type":"Link","config":{"label":"link","placeholder":"Select a Link..."}}},"label":"menu_links"}}}}
