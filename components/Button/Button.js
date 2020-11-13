@@ -1,5 +1,5 @@
 import React from 'react'
-import DocLink from './../../components/DocLink'
+import DocLink from 'components/DocLink'
 import styles from './Button.module.scss'
 
 export default function Button({ children, className, link, staticLink, secondary }) {
