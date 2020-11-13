@@ -1,17 +1,18 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import { apiEndpoint } from 'prismic-configuration';
 
 import Header from './Header';
 import Footer from './Footer';
+import ExitPreviewButton from './ExitPreviewButton'
 
 const [, repoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
 
 const Layout = ({
+  isPreview,
   children,
   altLangs,
-  currentLang,
-  isMyMainLanguage,
+  lang,
   menu,
 }) => (
   <>
@@ -43,11 +44,12 @@ const Layout = ({
     </Head>
     <Header
       altLangs={altLangs}
-      currentLang={currentLang}
-      isMyMainLanguage={isMyMainLanguage}
+      currentLang={lang.currentLang}
+      isMyMainLanguage={lang.isMyMainLanguage}
       menu={menu}
     />
     <main>{children}</main>
+    {isPreview ? <ExitPreviewButton /> : null}
     <Footer />
   </>
 );

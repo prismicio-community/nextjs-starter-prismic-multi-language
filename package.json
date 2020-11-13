@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "i18next": "^19.8.3",
+    "js-cookie": "^2.2.1",
     "next": "^10.0.1",
     "prismic-javascript": "3.0.1",
     "prismic-reactjs": "0.3.2",
