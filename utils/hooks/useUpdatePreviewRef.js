@@ -1,11 +1,10 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
-import { apiEndpoint } from 'prismic-configuration';
+import { prismicRepoName } from 'utils/prismicHelpers';
 
 export default function useUpdatePreviewRef(preview, documentId) {
   const router = useRouter()
-  const [, prismicRepoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
 
   useEffect(() => {
     if (preview.isActive) {

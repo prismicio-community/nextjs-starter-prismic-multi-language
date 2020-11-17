@@ -1,6 +1,6 @@
 import React from 'react'
 import { withRouter } from 'next/router'
-import Button from 'Button'
+import Button from './../Button'
 import styles from './ExitPreviewButton.module.scss'
 
 function ExitPreviewButton({ router }) {
