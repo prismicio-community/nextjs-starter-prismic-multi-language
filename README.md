@@ -2,12 +2,12 @@
 > [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
 ## Check out our article for a step by step guide to getting this project up and running
-> [Prismic project guide: Multi-language website with Prismic and Next.js](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js)
+> [Prismic project guide: Multi-language website with Prismic and Next.js](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js-10)
 
 
 ## Install the prismic-cli
 ```
-npm install -g prismic-cli
+npm install -g prismic-cli@3.8.3-beta.0
 ```
 
 ## Run the theme command
@@ -40,7 +40,7 @@ To learn more about Next.js Internationalized Routing, [read the official Next.j
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2020 Prismic (https://prismic.io).
+Copyright 2020 [Prismic](https://prismic.io).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
