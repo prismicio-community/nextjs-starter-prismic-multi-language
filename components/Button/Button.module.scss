@@ -1,0 +1,48 @@
+@mixin svg-color($color) {
+  svg,
+  svg rect,
+  svg path,
+  svg polygon {
+    fill: $color;
+    opacity: 1;
+    fill-opacity: 1;
+  }
+}
+
+.button {
+  display: inline-flex;
+  min-width: 120px;
+  margin-right: 20px; 
+  margin-bottom: 20px; 
+  padding: 10px 20px;
+  box-sizing: border-box;
+
+  align-items: baseline;
+  justify-content: center;
+
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #262629;
+  @include svg-color(#262629);
+
+  border: 1px solid #262629;
+  border-radius: 4px;
+
+  &:hover {
+    border-color: #3F3F43;
+    color: #3F3F43;
+    @include svg-color(#3F3F43);
+  }
+
+  &.secondary {
+    color: #ffffff;
+    background-color: #262629;
+    @include svg-color(#ffffff);
+
+    &:hover {
+      background-color: #3F3F43;
+    }
+  }
+}

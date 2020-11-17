@@ -1,17 +1,15 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Head from 'next/head';
-import { apiEndpoint } from 'prismic-configuration';
-
+import { prismicRepoName } from 'utils/prismicHelpers';
 import Header from './Header';
 import Footer from './Footer';
-
-const [, repoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
+import ExitPreviewButton from './ExitPreviewButton'
 
 const Layout = ({
+  isPreview,
   children,
   altLangs,
-  currentLang,
-  isMyMainLanguage,
+  lang,
   menu,
 }) => (
   <>
@@ -38,16 +36,17 @@ const Layout = ({
       <script
         async
         defer
-        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repoName}`}
+        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${prismicRepoName}`}
       />
     </Head>
     <Header
       altLangs={altLangs}
-      currentLang={currentLang}
-      isMyMainLanguage={isMyMainLanguage}
+      currentLang={lang.currentLang}
+      isMyMainLanguage={lang.isMyMainLanguage}
       menu={menu}
     />
     <main>{children}</main>
+    {isPreview ? <ExitPreviewButton /> : null}
     <Footer />
   </>
 );
