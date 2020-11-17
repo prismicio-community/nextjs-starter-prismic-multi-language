@@ -7,6 +7,9 @@ import {
   hrefResolver,
 } from 'prismic-configuration';
 
+// Helper function to get the Prismic repository name from the URL
+export const [, prismicRepoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
+
 // Helper function to convert Prismic Rich Text links to Next/Link components
 export const customLink = (type, element, content) => (
   <Link

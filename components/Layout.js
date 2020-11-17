@@ -1,12 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
-import { apiEndpoint } from 'prismic-configuration';
-
+import { prismicRepoName } from 'utils/prismicHelpers';
 import Header from './Header';
 import Footer from './Footer';
 import ExitPreviewButton from './ExitPreviewButton'
-
-const [, repoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
 
 const Layout = ({
   isPreview,
@@ -39,7 +36,7 @@ const Layout = ({
       <script
         async
         defer
-        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repoName}`}
+        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${prismicRepoName}`}
       />
     </Head>
     <Header
