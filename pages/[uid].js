@@ -75,7 +75,7 @@ export async function getStaticPaths() {
     paths: documents.map((doc) => {
       return { params: { uid: doc.uid }, locale: doc.lang };
     }),
-    fallback: false,
+    fallback: true,
   };
 }
 
