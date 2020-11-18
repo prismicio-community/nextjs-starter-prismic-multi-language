@@ -7,6 +7,7 @@ export default function useUpdatePreviewRef(preview, documentId) {
   const router = useRouter()
 
   useEffect(() => {
+   async function updatePreview() {
     if (preview.isActive) {
       const rawPreviewCookie = Cookies.get('io.prismic.preview')
       if (rawPreviewCookie) {
@@ -23,6 +24,7 @@ export default function useUpdatePreviewRef(preview, documentId) {
         return router.push('/api/exit-preview')
       }
     }
-    return undefined
+   }
+    updatePreview();
   }, [])
 }
