@@ -1,13 +1,13 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
-import { apiEndpoint } from 'prismic-configuration';
+import { prismicRepoName } from 'utils/prismicHelpers';
 
 export default function useUpdatePreviewRef(preview, documentId) {
   const router = useRouter()
-  const [, prismicRepoName] = apiEndpoint.match(/https?:\/\/([^.]+)?\.(cdn\.)?.+/);
 
   useEffect(() => {
+    async function updatePreview() {
     if (preview.isActive) {
       const rawPreviewCookie = Cookies.get('io.prismic.preview')
       if (rawPreviewCookie) {
@@ -24,6 +24,7 @@ export default function useUpdatePreviewRef(preview, documentId) {
         return router.push('/api/exit-preview')
       }
     }
-    return undefined
+  }
+  updatePreview();
   }, [])
 }
