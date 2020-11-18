@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-underscore-dangle */
 import React from 'react'
 import Link from 'next/link'
 import { Link as PrismicLink } from 'prismic-reactjs'
@@ -27,7 +25,7 @@ export default function DocLink({ children, link, linkClass, onClick, ariaLabel 
       )
     }
 
-    if (linkUrl.indexOf('http') === 0 || linkUrl.indexOf('mailto') === 0) {
+    if (linkUrl.indexOf('http') === 0 || linkUrl.indexOf('https') === 0 || linkUrl.indexOf('mailto') === 0) {
       const target = link.target && link.target === '_blank' ? '_blank' : null
       const rel = target ? 'noreferrer noopener' : null
 
