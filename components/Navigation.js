@@ -1,6 +1,6 @@
 import { default as NextLink } from 'next/link';
 import { RichText } from 'prismic-reactjs';
-import { linkResolver, hrefResolver } from 'prismic-configuration';
+import { hrefResolver } from 'prismic-configuration';
 
 const MenuLinks = ({ links = [] }) => {
   if (links) {
@@ -8,7 +8,6 @@ const MenuLinks = ({ links = [] }) => {
       return (
         <li className="language-switcher" key={menuLink.link.id}>
           <NextLink
-            as={linkResolver(menuLink.link)}
             href={hrefResolver(menuLink.link)}
             passHref
           >

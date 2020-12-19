@@ -48,7 +48,6 @@ export default function DocLink({ children, link, linkClass, onClick, ariaLabel 
 
     return (
       <Link
-        as={linkUrl}
         href={hrefUrl}
         passHref
       >

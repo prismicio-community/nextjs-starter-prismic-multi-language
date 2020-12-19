@@ -3,7 +3,6 @@ import Link from 'next/link';
 import {
   apiEndpoint,
   accessToken,
-  linkResolver,
   hrefResolver,
 } from 'prismic-configuration';
 
@@ -15,7 +14,6 @@ export const customLink = (type, element, content) => (
   <Link
     key={element.data.id}
     href={hrefResolver(element.data)}
-    as={linkResolver(element.data)}
   >
     <a>{content}</a>
   </Link>

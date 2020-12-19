@@ -4,14 +4,14 @@ import { linkResolver, hrefResolver } from 'prismic-configuration';
 const AltLangs = ({ altLangs = [] }) =>
   altLangs.map((altLang) => {
     return (
-      <li key={altLang.id}>
+      <li className="language-switcher" key={altLang.id}>
         <NextLink
           locale={altLang.lang}
           as={linkResolver(altLang)}
           href={hrefResolver(altLang)}
           passHref
         >
-          <a className={`flag-icon flag-icon-${altLang.lang.slice(-2)}`} />
+          <a className={`flag-icon-${altLang.lang.slice(-2)}`}>/</a>
         </NextLink>
       </li>
     );

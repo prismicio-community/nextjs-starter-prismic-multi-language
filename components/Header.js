@@ -2,11 +2,11 @@ import React from 'react';
 import NextLink from 'next/link';
 import { Navigation, LanguageSwitcher } from '.';
 
-const Header = ({ menu, altLangs, currentLang, isMyMainLanguage }) => (
+const Header = ({ menu, altLangs }) => (
   <>
     <header>
       <div className="menu">
-        <NextLink href={isMyMainLanguage ? '/' : `/${currentLang}`} passHref>
+        <NextLink href={'/'} passHref>
           <a>
             <img className="logo" src="/images/logo.png" alt="Site logo" />
           </a>
