@@ -1,22 +1,22 @@
-# Multi-language website example with Next.js
-> [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
+# Prismic & NextJS Multi-language website example
+> [NextJS](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
-## Check out our article for a step by step guide to getting this project up and running
-> [Prismic project guide: Multi-language website with Prismic and Next.js](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js-10)
+## Check out the dedicated article to get this project up and running
+> [Prismic project guide](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js-10)
 
 
-## Install the prismic-cli
+## 1. Install the prismic-cli
 ```
-npm install -g prismic-cli@3.8.3-beta.0
+npm install -g prismic-cli
 ```
 
-## Run the theme command
+## 2. Run the theme command
 This will create a new Prismic content repository, setup the custom types, and install the project code
 ```
 prismic theme --theme-url https://github.com/prismicio/nextjs-multi-language-site --conf prismic-configuration.js
 
 ```
-## Run the project
+## 3. Run the project
 ```
 npm run dev
 ```
@@ -32,15 +32,15 @@ This sample is compatible with Next 10, which introduces support for i18n. It im
 
 To learn more about Next.js Internationalized Routing, [read the official Next.js documentation](https://nextjs.org/docs/advanced-features/i18n-routing).
 
-### Learn more about using Prismic with Nextjs
+### Learn more about using Prismic with Next.js
 
-[Prismic + Next.js documentation](https://prismic.io/docs/reactjs/getting-started/prismic-nextjs).
+[Prismic + Next.js documentation](https://prismic.io/docs/technologies/getting-started-nextjs).
 
 ### License
 
 This software is licensed under the Apache 2 license, quoted below.
 
-Copyright 2020 [Prismic](https://prismic.io).
+Copyright 2021 [Prismic](https://prismic.io).
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
 
