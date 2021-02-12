@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-multi-language",
-  "private": false,
+  "name": "nextjs-multi-language-website",
   "description": "Multi-language website example with Next.js using Prismic headless CMS",
+  "author": "Prismic",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "css-loader": "^3.6.0",
@@ -21,10 +21,10 @@
     "webpack": "^4.44.2"
   },
   "dependencies": {
+    "@prismicio/client": "^4.0.0",
     "i18next": "^19.8.3",
     "js-cookie": "^2.2.1",
     "next": "^10.0.1",
-    "prismic-javascript": "3.0.1",
     "prismic-reactjs": "0.3.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
@@ -38,6 +38,5 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/prismicio/nextjs-multi-language-site"
-  },
-  "license": "Apache-2.0"
+  }
 }
