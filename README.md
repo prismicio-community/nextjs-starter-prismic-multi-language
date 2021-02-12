@@ -1,30 +1,8 @@
-# Prismic & NextJS Multi-language website example
-> [NextJS](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
+# Prismic & Next.js Multi-language website example
+> [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
 ## Check out the dedicated article to get this project up and running
 > [Prismic project guide](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js-10)
-
-
-## 1. Install the prismic-cli
-```
-npm install -g prismic-cli
-```
-
-## 2. Run the theme command
-This will create a new Prismic content repository, setup the custom types, and install the project code
-```
-prismic theme --theme-url https://github.com/prismicio/nextjs-multi-language-site --conf prismic-configuration.js
-
-```
-## 3. Run the project
-```
-npm run dev
-```
-Then you can access it at [http://localhost:3000](http://localhost:3000).
-
-
-## Deploys made easy with Vercel
-[Sign up to Vercel](https://vercel.com/login) and follow the [deployment documentation](https://vercel.com/docs/platform/deployments) to quickly deploy your project.
 
 ## Next.js Internationalized Routing 
 
