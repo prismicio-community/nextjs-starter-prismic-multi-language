@@ -2,7 +2,7 @@
 > [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
 ## Check out the dedicated article to get this project up and running
-> [Prismic project guide](https://user-guides.prismic.io/en/articles/2933718-multi-language-website-with-prismic-and-next-js-10)
+> [Prismic project guide](https://prismic.io/docs/technologies/getting-started-examples-simple-nextjs)
 
 ## Next.js Internationalized Routing 
 
@@ -12,7 +12,7 @@ To learn more about Next.js Internationalized Routing, [read the official Next.j
 
 ### Learn more about using Prismic with Next.js
 
-[Prismic + Next.js documentation](https://prismic.io/docs/technologies/getting-started-nextjs).
+[Prismic + Next.js documentation](https://prismic.io/docs/technologies/home-prismic-and-nextjs).
 
 ### License
 
