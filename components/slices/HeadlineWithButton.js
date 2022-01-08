@@ -1,11 +1,11 @@
-import React from 'react';
-import { RichText } from 'prismic-reactjs';
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
 
 const HeadlineWithButton = ({ slice }) => (
   <section className="headline-with-button">
     <div>
-      {RichText.render(slice.primary.headline || [])}
-      {RichText.render(slice.primary.description || [])}
+      <PrismicRichText field={slice.primary.headline} />
+      <PrismicRichText field={slice.primary.description} />
     </div>
     <div className="button">
       {slice.primary.button ? (
@@ -18,6 +18,6 @@ const HeadlineWithButton = ({ slice }) => (
       )}
     </div>
   </section>
-);
+)
 
-export default HeadlineWithButton;
+export default HeadlineWithButton

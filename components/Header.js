@@ -1,6 +1,6 @@
-import React from 'react';
-import NextLink from 'next/link';
-import { Navigation, LanguageSwitcher } from '.';
+import React from 'react'
+import NextLink from 'next/link'
+import { Navigation, LanguageSwitcher } from '.'
 
 const Header = ({ menu, altLangs }) => (
   <>
@@ -20,6 +20,6 @@ const Header = ({ menu, altLangs }) => (
       </div>
     </header>
   </>
-);
+)
 
-export default Header;
+export default Header

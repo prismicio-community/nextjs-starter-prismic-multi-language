@@ -1,8 +1,8 @@
-import React from 'react';
-import { RichText } from 'prismic-reactjs';
+import React from 'react'
+import { PrismicRichText } from '@prismicio/react'
 
 const InfoWithImage = ({ slice }) => {
-  const featuredImage = slice.primary.featured_image;
+  const featuredImage = slice.primary.featured_image
   return (
     <section className="info-with-image">
       <div className="featured-image">
@@ -26,11 +26,11 @@ const InfoWithImage = ({ slice }) => {
       </div>
       <div className="text-content">
         <img src="/images/top-icon.png" alt="Checkbox icon" />
-        {RichText.render(slice.primary.section_title || [])}
-        {RichText.render(slice.primary.text || [])}
+        <PrismicRichText field={slice.primary.section_title} />
+        <PrismicRichText field={slice.primary.text} />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default InfoWithImage;
+export default InfoWithImage

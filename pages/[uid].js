@@ -1,21 +1,22 @@
-import React from 'react';
-import { queryRepeatableDocuments } from 'utils/queries';
-import { Client, manageLocal } from 'utils/prismicHelpers';
+import React from 'react'
+import { queryRepeatableDocuments } from 'utils/queries'
+import { Client, manageLocal } from 'utils/prismicHelpers'
 import { pageToolbarDocs } from 'utils/prismicToolbarQueries'
-import useUpdatePreviewRef from 'utils/hooks/useUpdatePreviewRef';
-import useUpdateToolbarDocs from 'utils/hooks/useUpdateToolbarDocs';
-import { Layout, SliceZone } from 'components';
+import useUpdatePreviewRef from 'utils/hooks/useUpdatePreviewRef'
+import useUpdateToolbarDocs from 'utils/hooks/useUpdateToolbarDocs'
+import { Layout, SliceZone } from 'components'
 
 /**
  * posts component
  */
 const Page = ({ doc, menu, lang, preview }) => {
-
   if (doc && doc.data) {
-
     useUpdatePreviewRef(preview, doc.id)
-    useUpdateToolbarDocs(pageToolbarDocs(doc.uid, preview.activeRef, doc.lang), [doc])
-   
+    useUpdateToolbarDocs(
+      pageToolbarDocs(doc.uid, preview.activeRef, doc.lang),
+      [doc]
+    )
+
     return (
       <Layout
         altLangs={doc.alternate_languages}
@@ -25,12 +26,12 @@ const Page = ({ doc, menu, lang, preview }) => {
       >
         <SliceZone sliceZone={doc.data.body} />
       </Layout>
-    );
+    )
   }
-};
+}
 
 export async function getStaticProps({
-  preview, 
+  preview,
   previewData,
   params,
   locale,
@@ -38,16 +39,17 @@ export async function getStaticProps({
 }) {
   const ref = previewData ? previewData.ref : null
   const isPreview = preview || false
-  const client = Client();
   const doc =
-    (await client.getByUID(
+    (await Client().getByUID(
       'page',
       params.uid,
       ref ? { ref, lang: locale } : { lang: locale }
-    )) || {};
+    )) || {}
   const menu =
-    (await client.getSingle('top_menu', ref ? { ref, lang: locale } : { lang: locale })) ||
-    {};
+    (await Client().getSingle(
+      'top_menu',
+      ref ? { ref, lang: locale } : { lang: locale }
+    )) || {}
 
   const { currentLang, isMyMainLanguage } = manageLocal(locales, locale)
 
@@ -59,24 +61,22 @@ export async function getStaticProps({
         isActive: isPreview,
         activeRef: ref,
       },
-      lang:{
+      lang: {
         currentLang,
         isMyMainLanguage,
-      }
+      },
     },
-  };
+  }
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments(
-    (doc) => doc.type === 'page'
-  );
+  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
   return {
     paths: documents.map((doc) => {
-      return { params: { uid: doc.uid }, locale: doc.lang };
+      return { params: { uid: doc.uid }, locale: doc.lang }
     }),
     fallback: false,
-  };
+  }
 }
 
-export default Page;
+export default Page

@@ -1,25 +1,20 @@
-import { default as NextLink } from 'next/link';
-import { RichText } from 'prismic-reactjs';
-import { hrefResolver } from 'prismic-configuration';
+import { PrismicLink, PrismicRichText } from '@prismicio/react'
 
 const MenuLinks = ({ links = [] }) => {
   if (links) {
     return links.map((menuLink) => {
       return (
-        <li className="language-switcher" key={menuLink.link.id}>
-          <NextLink
-            href={hrefResolver(menuLink.link)}
-            passHref
-          >
-            <a>{RichText.asText(menuLink.label)}</a>
-          </NextLink>
+        <li key={menuLink.link.id}>
+          <PrismicLink field={menuLink.link}>
+            <PrismicRichText field={menuLink.label} />
+          </PrismicLink>
         </li>
-      );
-    });
+      )
+    })
   }
-};
+}
 
 const Navigation = ({ menu }) =>
-  menu ? <MenuLinks links={menu.data.menu_links} /> : null;
+  menu ? <MenuLinks links={menu.data.menu_links} /> : null
 
-export default Navigation;
+export default Navigation

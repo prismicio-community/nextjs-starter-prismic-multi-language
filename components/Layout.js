@@ -1,17 +1,11 @@
-import React from 'react';
-import Head from 'next/head';
-import { prismicRepoName } from 'utils/prismicHelpers';
-import Header from './Header';
-import Footer from './Footer';
+import React from 'react'
+import Head from 'next/head'
+import { prismicRepoName } from 'utils/prismicHelpers'
+import Header from './Header'
+import Footer from './Footer'
 import ExitPreviewButton from './ExitPreviewButton'
 
-const Layout = ({
-  isPreview,
-  children,
-  altLangs,
-  lang,
-  menu,
-}) => (
+const Layout = ({ isPreview, children, altLangs, lang, menu }) => (
   <>
     <Head>
       <meta charSet="utf-8" />
@@ -23,15 +17,11 @@ const Layout = ({
         src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${prismicRepoName}`}
       />
     </Head>
-    <Header
-      altLangs={altLangs}
-      currentLang={lang.currentLang}
-      menu={menu}
-    />
+    <Header altLangs={altLangs} currentLang={lang.currentLang} menu={menu} />
     <main>{children}</main>
     {isPreview ? <ExitPreviewButton /> : null}
     <Footer />
   </>
-);
+)
 
-export default Layout;
+export default Layout

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Footer = () => (
   <footer>
@@ -9,6 +9,6 @@ const Footer = () => (
       <img src="/images/twitter.png" alt="Twitter social icon" />
     </div>
   </footer>
-);
+)
 
-export default Footer;
+export default Footer

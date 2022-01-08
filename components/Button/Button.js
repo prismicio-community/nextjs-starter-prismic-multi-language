@@ -2,7 +2,13 @@ import React from 'react'
 import DocLink from 'components/DocLink'
 import styles from './Button.module.scss'
 
-export default function Button({ children, className, link, staticLink, secondary }) {
+export default function Button({
+  children,
+  className,
+  link,
+  staticLink,
+  secondary,
+}) {
   const secondaryClass = secondary ? styles.secondary : null
 
   if (link) {
