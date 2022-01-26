@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import { prismicRepoName } from 'utils/prismicHelpers'
+import { repoName } from '../prismic'
 import Header from './Header'
 import Footer from './Footer'
-import ExitPreviewButton from './ExitPreviewButton'
 
 const Layout = ({ isPreview, children, altLangs, lang, menu }) => (
   <>
@@ -14,12 +13,11 @@ const Layout = ({ isPreview, children, altLangs, lang, menu }) => (
       <script
         async
         defer
-        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${prismicRepoName}`}
+        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repoName}`}
       />
     </Head>
     <Header altLangs={altLangs} currentLang={lang.currentLang} menu={menu} />
     <main>{children}</main>
-    {isPreview ? <ExitPreviewButton /> : null}
     <Footer />
   </>
 )

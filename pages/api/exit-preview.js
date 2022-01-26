@@ -1,6 +1,5 @@
-export default async (_, res) => {
-  res.clearPreviewData()
+import { exitPreview } from '@prismicio/next'
 
-  res.writeHead(307, { Location: '/' })
-  res.end()
+export default async function exit(req, res) {
+  await exitPreview({ res, req })
 }

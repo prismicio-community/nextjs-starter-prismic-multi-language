@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
-import { prismicRepoName } from 'utils/prismicHelpers'
+import { repoName } from '../../prismic'
 
 export default function useUpdatePreviewRef(preview, documentId) {
   const router = useRouter()
@@ -12,8 +12,7 @@ export default function useUpdatePreviewRef(preview, documentId) {
         const rawPreviewCookie = Cookies.get('io.prismic.preview')
         if (rawPreviewCookie) {
           const previewCookie = JSON.parse(rawPreviewCookie)
-          const previewCookieObject =
-            previewCookie[`${prismicRepoName}.prismic.io`]
+          const previewCookieObject = previewCookie[`${repoName}.prismic.io`]
           const previewCookieRef =
             previewCookieObject && previewCookieObject.preview
               ? previewCookieObject.preview

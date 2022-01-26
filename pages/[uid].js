@@ -1,55 +1,24 @@
 import React from 'react'
 import { queryRepeatableDocuments } from 'utils/queries'
-import { Client, manageLocal } from 'utils/prismicHelpers'
-import { pageToolbarDocs } from 'utils/prismicToolbarQueries'
-import useUpdatePreviewRef from 'utils/hooks/useUpdatePreviewRef'
-import useUpdateToolbarDocs from 'utils/hooks/useUpdateToolbarDocs'
+import { client, manageLocal } from 'prismic'
 import { Layout, SliceZone } from 'components'
 
 /**
  * posts component
  */
-const Page = ({ doc, menu, lang, preview }) => {
-  if (doc && doc.data) {
-    useUpdatePreviewRef(preview, doc.id)
-    useUpdateToolbarDocs(
-      pageToolbarDocs(doc.uid, preview.activeRef, doc.lang),
-      [doc]
-    )
-
+const Page = ({ doc, menu, lang }) => {
+  if (doc?.data) {
     return (
-      <Layout
-        altLangs={doc.alternate_languages}
-        lang={lang}
-        menu={menu}
-        isPreview={preview.isActive}
-      >
+      <Layout altLangs={doc.alternate_languages} lang={lang} menu={menu}>
         <SliceZone sliceZone={doc.data.body} />
       </Layout>
     )
   }
 }
 
-export async function getStaticProps({
-  preview,
-  previewData,
-  params,
-  locale,
-  locales,
-}) {
-  const ref = previewData ? previewData.ref : null
-  const isPreview = preview || false
-  const doc =
-    (await Client().getByUID(
-      'page',
-      params.uid,
-      ref ? { ref, lang: locale } : { lang: locale }
-    )) || {}
-  const menu =
-    (await Client().getSingle(
-      'top_menu',
-      ref ? { ref, lang: locale } : { lang: locale }
-    )) || {}
+export async function getStaticProps({ params, locale, locales }) {
+  const doc = await client.getByUID('page', params.uid, { lang: locale })
+  const menu = await client.getSingle('top_menu', { lang: locale })
 
   const { currentLang, isMyMainLanguage } = manageLocal(locales, locale)
 
@@ -57,10 +26,6 @@ export async function getStaticProps({
     props: {
       menu,
       doc,
-      preview: {
-        isActive: isPreview,
-        activeRef: ref,
-      },
       lang: {
         currentLang,
         isMyMainLanguage,

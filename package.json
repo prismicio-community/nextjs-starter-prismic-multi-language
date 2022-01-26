@@ -23,6 +23,7 @@
   "dependencies": {
     "@prismicio/client": "^6.0.0",
     "@prismicio/helpers": "^2.0.0",
+    "@prismicio/next": "0.0.1",
     "@prismicio/react": "^2.0.2",
     "flag-icons": "^5.0.3",
     "i18next": "^21.6.5",

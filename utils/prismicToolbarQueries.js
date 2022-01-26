@@ -1,14 +1,14 @@
-import { Client } from './prismicHelpers'
+import { client } from 'prismic'
 
 export const pageToolbarDocs =
   (uid, ref = null, lang) =>
   async () => {
-    const page = await Client().getByUID('page', uid, {
+    const page = await client.getByUID('page', uid, {
       ref,
       lang,
       fetch: 'page.display_title',
     })
-    const menu = await Client().getSingle('top_menu', {
+    const menu = await client.getSingle('top_menu', {
       ref,
       lang,
       fetch: 'top_menu.display_title',
@@ -23,12 +23,12 @@ export const pageToolbarDocs =
 export const homepageToolbarDocs =
   (ref = null, lang) =>
   async () => {
-    const homepage = await Client().getSingle('homepage', {
+    const homepage = await client.getSingle('homepage', {
       ref,
       lang,
       fetch: 'homepage.display_title',
     })
-    const menu = await Client().getSingle('top_menu', {
+    const menu = await client.getSingle('top_menu', {
       ref,
       lang,
       fetch: 'top_menu.display_title',

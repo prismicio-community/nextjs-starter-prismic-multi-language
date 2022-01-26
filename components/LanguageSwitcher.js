@@ -1,5 +1,5 @@
 import { PrismicLink } from '@prismicio/react'
-import { linkResolver } from './../prismic-configuration'
+import { linkResolver } from '../prismic'
 
 const AltLangs = ({ altLangs = [] }) =>
   altLangs.map((altLang) => {

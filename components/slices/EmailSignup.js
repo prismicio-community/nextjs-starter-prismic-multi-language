@@ -1,5 +1,6 @@
 import React from 'react'
 import { PrismicRichText } from '@prismicio/react'
+import * as prismicH from '@prismicio/helpers'
 
 const EmailSignup = ({ slice }) => (
   <section className="email-signup">
@@ -13,9 +14,13 @@ const EmailSignup = ({ slice }) => (
         className="email-input"
         type="text"
         name="FirstName"
-        placeholder={slice.primary.input_placeholder}
+        placeholder={prismicH.asText(slice.primary.input_placeholder)}
       />
-      <input className="btn" type="submit" value={slice.primary.button_text} />
+      <input
+        className="btn"
+        type="submit"
+        value={prismicH.asText(slice.primary.button_text)}
+      />
     </div>
   </section>
 )

@@ -1,7 +1,7 @@
-import { Client } from './prismicHelpers'
+import { client } from 'prismic'
 
 async function fetchDocs(page = 1, routes = []) {
-  const response = await Client().get({ pageSize: 100, lang: '*', page })
+  const response = await client.get({ pageSize: 100, lang: '*', page })
   const allRoutes = routes.concat(response.results)
   if (response.results_size + routes.length < response.total_results_size) {
     return fetchDocs(page + 1, allRoutes)
