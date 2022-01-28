@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { repoName } from '../prismic'
+import { repositoryName } from '../prismic'
 import Header from './Header'
 import Footer from './Footer'
 
@@ -13,7 +13,7 @@ const Layout = ({ isPreview, children, altLangs, lang, menu }) => (
       <script
         async
         defer
-        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repoName}`}
+        src={`https://static.cdn.prismic.io/prismic.js?new=true&repo=${repositoryName}`}
       />
     </Head>
     <Header altLangs={altLangs} currentLang={lang.currentLang} menu={menu} />

@@ -1,6 +1,5 @@
 import React from 'react'
 import { client, manageLocal } from 'prismic'
-import { homepageToolbarDocs } from 'utils/prismicToolbarQueries'
 import { Layout, SliceZone } from 'components'
 
 /**

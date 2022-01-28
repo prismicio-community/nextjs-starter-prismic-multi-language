@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
-import { linkResolver, repoName as repositoryName } from '../prismic'
+import { linkResolver, repositoryName as repositoryName } from '../prismic'
 import { PrismicPreview } from '@prismicio/next'
 
 import 'styles/main.scss'

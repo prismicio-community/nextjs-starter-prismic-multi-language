@@ -1,5 +1,4 @@
 import React from 'react'
-import { queryRepeatableDocuments } from 'utils/queries'
 import { client, manageLocal } from 'prismic'
 import { Layout, SliceZone } from 'components'
 
@@ -35,7 +34,7 @@ export async function getStaticProps({ params, locale, locales }) {
 }
 
 export async function getStaticPaths() {
-  const documents = await queryRepeatableDocuments((doc) => doc.type === 'page')
+  const documents = await client.getAllByType('page')
   return {
     paths: documents.map((doc) => {
       return { params: { uid: doc.uid }, locale: doc.lang }

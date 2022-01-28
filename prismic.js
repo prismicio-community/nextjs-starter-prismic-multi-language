@@ -1,10 +1,10 @@
 import * as prismic from '@prismicio/client'
 import { enableAutoPreviews } from '@prismicio/next'
 
-export const repoName = 'multilanguage-examples-sam'
+export const repositoryName = 'multilanguage-examples-sam'
 export const accessToken = ''
 
-const apiEndpoint = prismic.getEndpoint(repoName)
+const apiEndpoint = prismic.getEndpoint(repositoryName)
 
 export const client = prismic.createClient(apiEndpoint, { accessToken })
 
