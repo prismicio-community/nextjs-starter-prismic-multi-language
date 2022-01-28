@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-import { repositoryName } from '../prismic'
+import { repositoryName } from '../prismic.config'
 import Header from './Header'
 import Footer from './Footer'
 

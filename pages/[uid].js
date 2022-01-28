@@ -1,5 +1,5 @@
 import React from 'react'
-import { client, manageLocal } from 'prismic'
+import { client, manageLocal } from 'prismic.config'
 import { Layout, SliceZone } from 'components'
 
 /**
