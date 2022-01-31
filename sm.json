@@ -1,0 +1,7 @@
+{
+  "apiEndpoint": "https://nextjs-sm-multilang.prismic.io/api/v2",
+  "libraries": [
+    "@/slices"
+  ],
+  "_latest": "0.1.0"
+}

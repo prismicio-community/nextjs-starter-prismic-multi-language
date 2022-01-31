@@ -1,0 +1,33 @@
+{
+  "id": "FullWidthImage",
+  "type": "SharedSlice",
+  "name": "FullWidthImage",
+  "description": "Full page width featured image",
+  "variations": [
+    {
+      "id": "defaultSlice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FullWidthImage",
+      "primary": {
+        "backgroundPosition": {
+          "type": "Select",
+          "config": {
+            "options": ["Left", "Right"],
+            "default_value": "Left",
+            "label": "backgroundPosition"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "constraint": { "width": 1080, "height": 580 },
+            "thumbnails": [],
+            "label": "image"
+          }
+        }
+      }
+    }
+  ]
+}

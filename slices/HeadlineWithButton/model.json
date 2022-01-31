@@ -1,0 +1,43 @@
+{
+  "id": "headline_with_button",
+  "type": "SharedSlice",
+  "name": "HeadlineWithButton",
+  "description": "Text section with featured image",
+  "variations": [
+    {
+      "id": "default-slice",
+      "name": "Default slice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Text section with featured image",
+      "primary": {
+        "featuredImage": {
+          "type": "Image",
+          "config": {
+            "constraint": { "width": 600, "height": 690 },
+            "thumbnails": [
+              { "name": "tablet", "width": 800, "height": 400 },
+              { "name": "mobile", "width": 400, "height": 300 }
+            ],
+            "label": "featuredImage"
+          }
+        },
+        "section_title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1, heading2",
+            "label": "sectionTitle"
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item",
+            "allowTargetBlank": true,
+            "label": "text"
+          }
+        }
+      }
+    }
+  ]
+}

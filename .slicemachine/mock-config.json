@@ -1,0 +1,37 @@
+{
+  "_cts": {
+    "new-custom-type": {}
+  },
+  "slices": {
+    "NewSlice": {},
+    "HeadlineWithButton": {},
+    "FullWidthImage": {},
+    "InfoWithImage": {},
+    "TextInfo": {},
+    "EmailSignup": {},
+    "TextInfoTwo": {
+      "default-slice": {
+        "primary": {
+          "sectionTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "leftColumnText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "rightColumnText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,434 @@
+{
+  "slices": {
+    "components": {
+      "EmailSignup": {
+        "library": "slices",
+        "id": "EmailSignup",
+        "name": "EmailSignup",
+        "description": "Email signup form",
+        "model": {
+          "id": "EmailSignup",
+          "type": "SharedSlice",
+          "name": "EmailSignup",
+          "description": "Email signup form",
+          "variations": [
+            {
+              "id": "DefaultSlice",
+              "name": "DefaultSlice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "EmailSignup",
+              "primary": {
+                "sectionTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1, heading2",
+                    "label": "sectionTitle"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "multi": "paragraph, strong, em, hyperlink, list-item, o-list-item",
+                    "allowTargetBlank": true,
+                    "label": "description"
+                  }
+                },
+                "inputLabel": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "input_label"
+                  }
+                },
+                "inputPlaceholder": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "inputPlaceholder"
+                  }
+                },
+                "buttonText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "button_text"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "email_signup",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Engage open-source metrics",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ipsum velit excepteur ullamco ex ut culpa aliquip qui ex laborum.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "FullWidthImage": {
+        "library": "slices",
+        "id": "FullWidthImage",
+        "name": "FullWidthImage",
+        "description": "Full page width featured image",
+        "model": {
+          "id": "FullWidthImage",
+          "type": "SharedSlice",
+          "name": "FullWidthImage",
+          "description": "Full page width featured image",
+          "variations": [
+            {
+              "id": "defaultSlice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FullWidthImage",
+              "primary": {
+                "backgroundPosition": {
+                  "type": "Select",
+                  "config": {
+                    "options": [
+                      "Left",
+                      "Right"
+                    ],
+                    "default_value": "Left",
+                    "label": "backgroundPosition"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {
+                      "width": 1080,
+                      "height": 580
+                    },
+                    "thumbnails": [],
+                    "label": "image"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "full_width_image",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Innovate leading-edge infomediaries",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ea eiusmod ipsum tempor deserunt irure. Et in aliqua officia.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "headline_with_button": {
+        "library": "slices",
+        "id": "headline_with_button",
+        "name": "HeadlineWithButton",
+        "description": "Text section with featured image",
+        "model": {
+          "id": "headline_with_button",
+          "type": "SharedSlice",
+          "name": "HeadlineWithButton",
+          "description": "Text section with featured image",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Text section with featured image",
+              "primary": {
+                "featuredImage": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {
+                      "width": 600,
+                      "height": 690
+                    },
+                    "thumbnails": [
+                      {
+                        "name": "tablet",
+                        "width": 800,
+                        "height": 400
+                      },
+                      {
+                        "name": "mobile",
+                        "width": 400,
+                        "height": 300
+                      }
+                    ],
+                    "label": "featuredImage"
+                  }
+                },
+                "section_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1, heading2",
+                    "label": "sectionTitle"
+                  }
+                },
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item",
+                    "allowTargetBlank": true,
+                    "label": "text"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "headline_with_button",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Orchestrate leading-edge synergies",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ipsum labore esse pariatur amet cupidatat laborum. In adipisicing exercitation non nisi et id magna Lorem veniam aute exercitation sit aliquip. Laboris veniam deserunt excepteur ad nulla deserunt minim veniam ullamco cupidatat id commodo ullamco officia.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "info_with_image": {
+        "library": "slices",
+        "id": "info_with_image",
+        "name": "InfoWithImage",
+        "description": "InfoWithImage",
+        "model": {
+          "id": "info_with_image",
+          "type": "SharedSlice",
+          "name": "InfoWithImage",
+          "description": "InfoWithImage",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "InfoWithImage",
+              "primary": {
+                "featuredImage": {
+                  "type": "Image",
+                  "config": {
+                    "constraint": {
+                      "width": 600,
+                      "height": 690
+                    },
+                    "thumbnails": [
+                      {
+                        "name": "tablet",
+                        "width": 800,
+                        "height": 400
+                      },
+                      {
+                        "name": "mobile",
+                        "width": 400,
+                        "height": 300
+                      }
+                    ],
+                    "label": "Featured Image"
+                  }
+                },
+                "sectionTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "placeholder": "A title for the section",
+                    "single": "heading1, heading2",
+                    "label": "section_title"
+                  }
+                },
+                "text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "placeholder": "Content",
+                    "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item",
+                    "allowTargetBlank": true,
+                    "label": "text"
+                  }
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "info_with_image",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Engineer frictionless e-commerce",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Deserunt magna non deserunt fugiat dolor amet enim mollit nisi minim in dolore. Consectetur non dolor ad sint. Elit pariatur commodo consequat in minim cupidatat proident cillum anim culpa cupidatat exercitation aute enim aliquip.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "text_info": {
+        "library": "slices",
+        "id": "text_info",
+        "name": "TextInfo",
+        "description": "2 column text section",
+        "model": {
+          "id": "text_info",
+          "type": "SharedSlice",
+          "name": "TextInfo",
+          "description": "2 column text section",
+          "variations": [
+            {
+              "id": "default-slice",
+              "name": "Default slice",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TextInfo",
+              "primary": {
+                "sectionTitle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Section Title",
+                    "placeholder": "Title",
+                    "allowTargetBlank": true,
+                    "single": "heading1, heading2"
+                  }
+                },
+                "leftColumnText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item",
+                    "allowTargetBlank": true,
+                    "label": "Left column text",
+                    "placeholder": "Text in the left column"
+                  }
+                },
+                "rightColumnText": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "richColumnText",
+                    "placeholder": "Text in the right column",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item"
+                  }
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default-slice": {
+            "variation": "default-slice",
+            "name": "Default slice",
+            "slice_type": "text_info",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Grow out-of-the-box partnerships",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ut cupidatat aute nostrud laboris Lorem aliquip elit. Anim duis velit dolor officia ea culpa quis aliquip veniam laborum est laboris elit sunt.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
+  }
+}
