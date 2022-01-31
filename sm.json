@@ -1,7 +1,6 @@
 {
   "apiEndpoint": "https://nextjs-sm-multilang.prismic.io/api/v2",
-  "libraries": [
-    "@/slices"
-  ],
+  "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
+  "libraries": ["@/slices"],
   "_latest": "0.1.0"
 }

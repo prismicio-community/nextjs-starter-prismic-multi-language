@@ -1,31 +1,28 @@
 import React from 'react'
-import { RichText } from 'prismic-reactjs'
 
-const FullWidthImage = ({ slice }) => (
-  <section>
-    <span className="title">
-      {
-        slice.primary.title ?
-        <RichText render={slice.primary.title}/>
-        : <h2>Template slice, update me!</h2>
-      }
-    </span>
-    {
-      slice.primary.description ?
-      <RichText render={slice.primary.description}/>
-      : <p>start by editing this slice from inside Prismic builder!</p>
-    }
-    <style jsx>{`
-        section {
-          max-width: 600px;
-          margin: 4em auto;
-          text-align: center;
-        }
-        .title {
-          color: #8592e0;
-        }
-    `}</style>
-  </section>
-)
+const FullWidthImage = ({ slice }) => {
+  const imagePosition =
+    slice.primary.background_image_position === 'Left' ? 'left-bg' : 'right-bg'
+  return (
+    <section className="full-width-image auto-grid">
+      <div className="main-img">
+        {slice.primary.image ? (
+          <img
+            src={slice.primary.image.url}
+            alt={slice.primary.image.alt || ''}
+          />
+        ) : (
+          <img alt="" />
+        )}
+      </div>
+      <div className={`background ${imagePosition}`}>
+        <img
+          src="/images/full-width-image-background.png"
+          alt="Background pattern"
+        />
+      </div>
+    </section>
+  )
+}
 
 export default FullWidthImage

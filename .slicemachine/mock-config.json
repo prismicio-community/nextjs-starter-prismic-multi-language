@@ -8,23 +8,10 @@
     "FullWidthImage": {},
     "InfoWithImage": {},
     "TextInfo": {},
-    "EmailSignup": {},
-    "TextInfoTwo": {
-      "default-slice": {
+    "EmailSignup": {
+      "DefaultSlice": {
         "primary": {
-          "sectionTitle": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          },
-          "leftColumnText": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          },
-          "rightColumnText": {
+          "inputLabel": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1

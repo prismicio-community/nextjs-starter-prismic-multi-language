@@ -1,6 +1,22 @@
 import React from 'react'
 import { client, manageLocal } from 'prismic.config'
-import { Layout, SliceZone } from 'components'
+import { Layout } from 'components'
+import { SliceZone } from '@prismicio/react'
+import {
+  EmailSignup,
+  FullWidthImage,
+  HeadlineWithButton,
+  InfoWithImage,
+  TextInfo,
+} from 'slices'
+
+const components = {
+  email_signup: EmailSignup,
+  full_width_image: FullWidthImage,
+  headline_with_button: HeadlineWithButton,
+  info_with_image: InfoWithImage,
+  text_info: TextInfo,
+}
 
 /**
  * posts component
@@ -9,7 +25,7 @@ const Page = ({ doc, menu, lang }) => {
   if (doc?.data) {
     return (
       <Layout altLangs={doc.alternate_languages} lang={lang} menu={menu}>
-        <SliceZone sliceZone={doc.data.body} />
+        <SliceZone slices={doc.data.body} components={components} />
       </Layout>
     )
   }
