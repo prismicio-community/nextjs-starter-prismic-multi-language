@@ -283,7 +283,13 @@
           "isDirectory": true,
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/samlittlefair/Documents/boilerplates-examples/nextjs-multi-language-site/.slicemachine/assets/slices/HeadlineWithButton/default-slice/preview.png",
+            "width": 800,
+            "height": 200
+          }
+        }
       },
       "info_with_image": {
         "library": "slices",
@@ -376,7 +382,13 @@
           "isDirectory": true,
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/samlittlefair/Documents/boilerplates-examples/nextjs-multi-language-site/.slicemachine/assets/slices/InfoWithImage/default-slice/preview.png",
+            "width": 800,
+            "height": 165
+          }
+        }
       },
       "text_info": {
         "library": "slices",
@@ -457,7 +469,13 @@
           "isDirectory": true,
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/samlittlefair/Documents/boilerplates-examples/nextjs-multi-language-site/.slicemachine/assets/slices/TextInfo/default-slice/preview.png",
+            "width": 800,
+            "height": 66
+          }
+        }
       }
     }
   }
