@@ -1,52 +1,34 @@
-import React from 'react'
-import { client, manageLocal } from 'prismic.config'
-import { Layout } from 'components'
-import { SliceZone } from '@prismicio/react'
-import {
-  EmailSignup,
-  FullWidthImage,
-  HeadlineWithButton,
-  InfoWithImage,
-  TextInfo,
-} from 'slices'
+import { SliceZone } from "@prismicio/react";
 
-const components = {
-  email_signup: EmailSignup,
-  full_width_image: FullWidthImage,
-  headline_with_button: HeadlineWithButton,
-  info_with_image: InfoWithImage,
-  text_info: TextInfo,
-}
+import { createClient } from "../prismicio";
+import { Layout } from "../components/Layout";
+import { components } from "../slices/components";
 
 /**
  * Homepage component
  */
-const Homepage = ({ doc, menu, lang }) => {
+const Homepage = ({ doc, menu }) => {
   if (doc && doc.data) {
     return (
-      <Layout altLangs={doc.alternate_languages} lang={lang} menu={menu}>
+      <Layout altLangs={doc.alternate_languages} menu={menu}>
         <SliceZone slices={doc.data.body} components={components} />
       </Layout>
-    )
+    );
   }
-}
+};
 
-export async function getStaticProps({ locale, locales }) {
-  const doc = await client.getSingle('homepage', { lang: locale })
-  const menu = await client.getSingle('top_menu', { lang: locale })
+export async function getStaticProps({ locale }) {
+  const client = createClient();
 
-  const { currentLang, isMyMainLanguage } = manageLocal(locales, locale)
+  const doc = await client.getSingle("homepage", { lang: locale });
+  const menu = await client.getSingle("top_menu", { lang: locale });
 
   return {
     props: {
       menu,
       doc,
-      lang: {
-        currentLang,
-        isMyMainLanguage,
-      },
     },
-  }
+  };
 }
 
-export default Homepage
+export default Homepage;

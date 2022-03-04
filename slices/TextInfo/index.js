@@ -1,17 +1,39 @@
-import React from 'react'
-import { PrismicRichText } from '@prismicio/react'
+import { PrismicRichText, PrismicText } from "@prismicio/react";
 
-const TextInfo = ({ slice }) => (
-  <section className="text-info">
-    <div className="left-column">
-      <img src="/images/top-icon.png" alt="Checkbox icon" />
-      <PrismicRichText field={slice.primary.section_title} />
-      <PrismicRichText field={slice.primary.left_column_text} />
-    </div>
-    <div className="right-column">
-      <PrismicRichText field={slice.primary.right_column_text} />
-    </div>
-  </section>
-)
-
-export default TextInfo
+const TextInfo = ({ slice }) => {
+  return (
+    <section className="collapsible bg-white px-6 py-12">
+      <div className="mx-auto grid max-w-5xl items-start gap-7 lg:grid-cols-2">
+        <div className="grid gap-7">
+          <img
+            src="/images/top-icon.png"
+            alt="Checkbox icon"
+            className="h-14 w-14 md:h-16 md:w-16"
+          />
+          <h2 className="text-3xl font-bold leading-snug lg:text-5xl lg:leading-tight">
+            <PrismicText field={slice.primary.section_title} />
+          </h2>
+          <div className="max-w-prose leading-relaxed">
+            <PrismicRichText field={slice.primary.left_column_text} />
+          </div>
+        </div>
+        <div className="max-w-prose leading-relaxed">
+          <PrismicRichText
+            field={slice.primary.right_column_text}
+            components={{
+              heading3: ({ children }) => (
+                <h3 className="mb-2 text-xl font-bold leading-relaxed last:mb-0">
+                  {children}
+                </h3>
+              ),
+              paragraph: ({ children }) => (
+                <p className="mb-7 last:mb-0">{children}</p>
+              ),
+            }}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+export default TextInfo;
