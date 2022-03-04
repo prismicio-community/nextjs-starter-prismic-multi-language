@@ -1,29 +1,18 @@
 {
   "name": "nextjs-multi-language-website",
   "description": "Multi-language website example with Next.js using Prismic headless CMS",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prismicio/nextjs-multi-language-site"
+  },
   "author": "Prismic",
-  "devDependencies": {
-    "autoprefixer": "^10.4.2",
-    "babel-eslint": "^10.1.0",
-    "css-loader": "^3.6.0",
-    "eslint": "^7.12.1",
-    "eslint-config-airbnb": "^18.2.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.28.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "express": "^4.17.1",
-    "nodemon": "^1.19.4",
-    "postcss": "^8.4.7",
-    "prettier": "^2.5.1",
-    "prettier-plugin-tailwindcss": "^0.1.8",
-    "sass": "^1.46.0",
-    "sass-loader": "^9.0.2",
-    "slice-machine-ui": "^0.2.1",
-    "tailwindcss": "^3.0.23",
-    "webpack": "^4.44.2"
+  "scripts": {
+    "build": "next build",
+    "dev": "next",
+    "export": "next export",
+    "format": "prettier --write .",
+    "slicemachine": "start-slicemachine",
+    "start": "next start"
   },
   "dependencies": {
     "@fontsource/inter": "^4.5.4",
@@ -31,26 +20,17 @@
     "@prismicio/helpers": "^2.2.0",
     "@prismicio/next": "0.1.0",
     "@prismicio/react": "^2.1.1",
-    "@prismicio/slice-simulator-react": "^0.2.0",
-    "flag-icons": "^5.0.3",
-    "i18next": "^21.6.5",
-    "js-cookie": "^2.2.1",
     "next": "^12.1.0",
-    "next-slicezone": "^0.2.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-i18next": "^11.15.3"
+    "react-dom": "^17.0.2"
   },
-  "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
-    "export": "next export",
-    "slicemachine": "start-slicemachine",
-    "format": "prettier --write ."
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/prismicio/nextjs-multi-language-site"
+  "devDependencies": {
+    "@prismicio/slice-simulator-react": "^0.2.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.7",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwindcss": "^0.1.8",
+    "slice-machine-ui": "^0.2.1",
+    "tailwindcss": "^3.0.23"
   }
 }
