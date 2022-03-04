@@ -2,7 +2,7 @@ import { SliceZone } from "@prismicio/react";
 
 import { createClient } from "../prismicio";
 import { Layout } from "../components/Layout";
-import { components } from "../slices/components";
+import { components } from "../slices";
 
 /**
  * posts component
