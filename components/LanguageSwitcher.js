@@ -2,19 +2,10 @@ import { PrismicLink } from "@prismicio/react";
 
 import { linkResolver } from "../prismicio";
 
-const langIconURLs = {
-  "fr-fr": "/images/fr.svg",
-  "en-us": "/images/us.svg",
-};
-
 const LangIcon = ({ lang }) => {
-  const iconURL = langIconURLs[lang];
+  const code = lang.substring(3).toLowerCase();
 
-  if (iconURL) {
-    return <img src={iconURL} width="200" height="150" className="w-7" />;
-  }
-
-  return null;
+  return <span className={`fi fi-${code}`} />;
 };
 
 export const LanguageSwitcher = ({ altLangs = [] }) => {
