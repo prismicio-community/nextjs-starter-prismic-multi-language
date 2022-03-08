@@ -1,0 +1,55 @@
+{
+  "id": "260c180b-5eff-4d7f-bdfb-0a1a98be01b2",
+  "uid": "itaque-fugit-nobis",
+  "type": "menu",
+  "data": {
+    "displayTitle": [
+      {
+        "type": "heading1",
+        "text": "Deploy transparent markets",
+        "spans": []
+      }
+    ],
+    "menuLinks": [
+      {
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Veniam duis nisi sint mollit sint reprehenderit cupidatat sunt occaecat aliquip enim tempor. Aute non ex sunt officia incididunt proident ea consequat dolor Lorem in exercitation nisi labore aute.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Cillum non incididunt aute commodo ad veniam labore.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "paragraph",
+            "text": "Do ea eu qui excepteur tempor adipisicing cillum sit aliquip minim non. Fugiat eiusmod minim non exercitation officia cillum consequat. Ut eu eu Lorem exercitation do.",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ]
+  }
+}

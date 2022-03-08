@@ -2,10 +2,9 @@
 
 > [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
 
-## Check out the dedicated article to get this project up and running
+## Check out the article to get this project up and running
 
-> [Prismic project guide](https://prismic.io/docs/technologies/getting-started-examples-simple-nextjs)
-
+> [Prismic project guide](https://prismic.io/docs/technologies/prismic-example-projects-nextjs)
 ## Next.js Internationalized Routing
 
 This sample is compatible with Next 10, which introduces support for i18n. It implements the sub-path routing strategy allowing you to build routes like /blog, /fr/blog /nl-nl/blog
@@ -14,7 +13,7 @@ To learn more about Next.js Internationalized Routing, [read the official Next.j
 
 ### Learn more about using Prismic with Next.js
 
-[Prismic + Next.js documentation](https://prismic.io/docs/technologies/home-prismic-and-nextjs).
+[Prismic + Next.js documentation](https://prismic.io/docs/technologies/nextjs).
 
 ### License
 

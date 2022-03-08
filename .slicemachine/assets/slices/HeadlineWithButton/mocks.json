@@ -5,20 +5,29 @@
     "slice_type": "headline_with_button",
     "items": [],
     "primary": {
-      "title": [
+      "headline": [
         {
           "type": "heading1",
-          "text": "Orchestrate leading-edge synergies",
+          "text": "Empower viral partnerships",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Ipsum labore esse pariatur amet cupidatat laborum. In adipisicing exercitation non nisi et id magna Lorem veniam aute exercitation sit aliquip. Laboris veniam deserunt excepteur ad nulla deserunt minim veniam ullamco cupidatat id commodo ullamco officia.",
+          "text": "Tempor laboris culpa qui et dolore reprehenderit ullamco nulla magna cillum et esse consequat proident. Officia sit do mollit nostrud tempor in tempor velit labore magna. Dolor aliquip anim laborum ad adipisicing quis aute mollit tempor irure aliqua aute dolore duis.",
           "spans": []
         }
-      ]
+      ],
+      "button": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": "Placeholder image",
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+      }
     }
   }
 ]

@@ -11,7 +11,7 @@ const Page = ({ doc, menu }) => {
   if (doc?.data) {
     return (
       <Layout altLangs={doc.alternate_languages} menu={menu}>
-        <SliceZone slices={doc.data.body} components={components} />
+        <SliceZone slices={doc.data.slices} components={components} />
       </Layout>
     );
   }
@@ -21,7 +21,7 @@ export async function getStaticProps({ params, locale }) {
   const client = createClient();
 
   const page = await client.getByUID("page", params.uid, { lang: locale });
-  const menu = await client.getSingle("top_menu", { lang: locale });
+  const menu = await client.getSingle("menu", { lang: locale });
 
   return {
     props: {

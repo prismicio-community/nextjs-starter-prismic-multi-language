@@ -1,12 +1,63 @@
 {
   "_cts": {
-    "new-custom-type": {}
+    "new-custom-type": {},
+    "homepage": {
+      "displayTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "menu": {
+      "displayTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "page": {
+      "displayTitle": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
   },
   "slices": {
     "NewSlice": {},
-    "HeadlineWithButton": {},
-    "FullWidthImage": {},
-    "InfoWithImage": {},
+    "HeadlineWithButton": {
+      "default-slice": {
+        "primary": {
+          "headline": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "FullWidthImage": {
+      "defaultSlice": {
+        "primary": {
+          "image": {
+            "content": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
+          }
+        }
+      }
+    },
+    "InfoWithImage": {
+      "default-slice": {
+        "primary": {
+          "featuredImage": {
+            "content": "https://images.unsplash.com/photo-1585399000684-d2f72660f092"
+          }
+        }
+      }
+    },
     "TextInfo": {},
     "EmailSignup": {
       "DefaultSlice": {

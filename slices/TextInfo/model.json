@@ -1,5 +1,5 @@
 {
-  "id": "text_info",
+  "id": "TextInfo",
   "type": "SharedSlice",
   "name": "TextInfo",
   "description": "2 column text section",

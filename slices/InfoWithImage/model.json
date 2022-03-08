@@ -1,5 +1,5 @@
 {
-  "id": "info_with_image",
+  "id": "InfoWithImage",
   "type": "SharedSlice",
   "name": "InfoWithImage",
   "description": "InfoWithImage",
@@ -14,12 +14,23 @@
         "featuredImage": {
           "type": "Image",
           "config": {
-            "constraint": { "width": 600, "height": 690 },
+            "label": "Featured Image",
+            "constraint": {
+              "width": 600,
+              "height": 690
+            },
             "thumbnails": [
-              { "name": "tablet", "width": 800, "height": 400 },
-              { "name": "mobile", "width": 400, "height": 300 }
-            ],
-            "label": "Featured Image"
+              {
+                "name": "tablet",
+                "width": 800,
+                "height": 400
+              },
+              {
+                "name": "mobile",
+                "width": 400,
+                "height": 300
+              }
+            ]
           }
         },
         "sectionTitle": {

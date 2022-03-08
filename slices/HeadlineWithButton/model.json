@@ -1,5 +1,5 @@
 {
-  "id": "headline_with_button",
+  "id": "HeadlineWithButton",
   "type": "SharedSlice",
   "name": "HeadlineWithButton",
   "description": "Text section with featured image",
@@ -11,33 +11,34 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Text section with featured image",
       "primary": {
-        "featuredImage": {
-          "type": "Image",
+        "headline": {
           "config": {
-            "constraint": { "width": 600, "height": 690 },
-            "thumbnails": [
-              { "name": "tablet", "width": 800, "height": 400 },
-              { "name": "mobile", "width": 400, "height": 300 }
-            ],
-            "label": "featuredImage"
-          }
-        },
-        "section_title": {
-          "type": "StructuredText",
-          "config": {
-            "single": "heading1, heading2",
-            "label": "sectionTitle"
-          }
-        },
-        "text": {
-          "type": "StructuredText",
-          "config": {
-            "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item",
+            "label": "Headline",
+            "placeholder": "",
             "allowTargetBlank": true,
-            "label": "text"
-          }
+            "single": "heading1,heading2,heading3,heading4,heading5,heading6"
+          },
+          "type": "StructuredText"
+        },
+        "description": {
+          "config": {
+            "label": "Description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          },
+          "type": "StructuredText"
+        },
+        "button": {
+          "config": {
+            "label": "Button",
+            "constraint": {},
+            "thumbnails": []
+          },
+          "type": "Image"
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

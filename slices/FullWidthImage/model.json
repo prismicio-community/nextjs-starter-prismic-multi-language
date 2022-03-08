@@ -14,7 +14,10 @@
         "backgroundPosition": {
           "type": "Select",
           "config": {
-            "options": ["Left", "Right"],
+            "options": [
+              "Left",
+              "Right"
+            ],
             "default_value": "Left",
             "label": "backgroundPosition"
           }
@@ -22,12 +25,16 @@
         "image": {
           "type": "Image",
           "config": {
-            "constraint": { "width": 1080, "height": 580 },
-            "thumbnails": [],
-            "label": "image"
+            "label": "image",
+            "constraint": {
+              "width": 1080,
+              "height": 580
+            },
+            "thumbnails": []
           }
         }
-      }
+      },
+      "items": {}
     }
   ]
 }

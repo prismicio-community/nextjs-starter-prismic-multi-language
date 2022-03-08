@@ -12,7 +12,7 @@ const FullWidthImage = ({ slice }) => {
           height={1380}
           className={[
             "absolute -top-24 hidden w-8/12 lg:block",
-            slice.primary.background_image_position === "Left"
+            slice.primary.backgroundPosition === "Left"
               ? "-left-24"
               : "-right-24",
           ].join(" ")}

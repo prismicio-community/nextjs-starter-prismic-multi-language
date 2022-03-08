@@ -2,7 +2,7 @@ import { PrismicRichText, PrismicText } from "@prismicio/react";
 import Image from "next/image";
 
 const InfoWithImage = ({ slice }) => {
-  const featuredImage = slice.primary.featured_image;
+  const featuredImage = slice.primary.featuredImage;
 
   return (
     <section className="collapsible bg-white px-6 py-12">
@@ -14,7 +14,7 @@ const InfoWithImage = ({ slice }) => {
             className="h-14 w-14 md:h-16 md:w-16"
           />
           <h2 className="text-3xl font-bold leading-snug lg:text-5xl lg:leading-tight">
-            <PrismicText field={slice.primary.section_title} />
+            <PrismicText field={slice.primary.sectionTitle} />
           </h2>
           <div className="max-w-prose leading-relaxed">
             <PrismicRichText
