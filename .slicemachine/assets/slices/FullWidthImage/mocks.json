@@ -1,0 +1,24 @@
+[
+  {
+    "variation": "default-slice",
+    "name": "Default slice",
+    "slice_type": "full_width_image",
+    "items": [],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Innovate leading-edge infomediaries",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Ea eiusmod ipsum tempor deserunt irure. Et in aliqua officia.",
+          "spans": []
+        }
+      ]
+    }
+  }
+]

@@ -1,7 +1,27 @@
-import 'styles/main.scss';
+import Link from "next/link";
+import { PrismicProvider } from "@prismicio/react";
+import { PrismicPreview } from "@prismicio/next";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import { repositoryName, linkResolver } from "../prismicio";
 
-export default MyApp;
+import "../styles.css";
+
+const App = ({ Component, pageProps }) => {
+  return (
+    <>
+      <PrismicProvider
+        linkResolver={linkResolver}
+        internalLinkComponent={({ href, locale, ...props }) => (
+          <Link href={href} locale={locale}>
+            <a {...props} />
+          </Link>
+        )}
+      >
+        <Component {...pageProps} />
+      </PrismicProvider>
+      <PrismicPreview repositoryName={repositoryName} />
+    </>
+  );
+};
+
+export default App;

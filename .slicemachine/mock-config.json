@@ -1,0 +1,24 @@
+{
+  "_cts": {
+    "new-custom-type": {}
+  },
+  "slices": {
+    "NewSlice": {},
+    "HeadlineWithButton": {},
+    "FullWidthImage": {},
+    "InfoWithImage": {},
+    "TextInfo": {},
+    "EmailSignup": {
+      "DefaultSlice": {
+        "primary": {
+          "inputLabel": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

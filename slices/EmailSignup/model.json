@@ -1,0 +1,56 @@
+{
+  "id": "EmailSignup",
+  "type": "SharedSlice",
+  "name": "EmailSignup",
+  "description": "Email signup form",
+  "variations": [
+    {
+      "id": "DefaultSlice",
+      "name": "DefaultSlice",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "EmailSignup",
+      "primary": {
+        "sectionTitle": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1, heading2",
+            "label": "sectionTitle"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "multi": "paragraph, strong, em, hyperlink, list-item, o-list-item",
+            "allowTargetBlank": true,
+            "label": "description"
+          }
+        },
+        "inputLabel": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Input Label",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
+          }
+        },
+        "inputPlaceholder": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "inputPlaceholder"
+          }
+        },
+        "buttonText": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "button_text"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

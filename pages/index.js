@@ -1,63 +1,32 @@
-import React from 'react';
-import { Client, manageLocal } from 'utils/prismicHelpers';
-import { homepageToolbarDocs } from 'utils/prismicToolbarQueries'
-import useUpdatePreviewRef from 'utils/hooks/useUpdatePreviewRef';
-import useUpdateToolbarDocs from 'utils/hooks/useUpdateToolbarDocs';
-import { Layout, SliceZone } from 'components'
+import { SliceZone } from "@prismicio/react";
+
+import { createClient } from "../prismicio";
+import { Layout } from "../components/Layout";
+import { components } from "../slices";
 
 /**
  * Homepage component
  */
-const Homepage = ({ doc, menu, lang, preview }) => {
-
+const Homepage = ({ doc, menu }) => {
   if (doc && doc.data) {
-
-    useUpdatePreviewRef(preview, doc.id)
-    useUpdateToolbarDocs(homepageToolbarDocs(preview.activeRef, doc.lang), [doc])
-    
     return (
-      <Layout
-        altLangs={doc.alternate_languages}
-        lang={lang}
-        menu={menu}
-        isPreview={preview.isActive}
-      >
-        <SliceZone sliceZone={doc.data.body} />
+      <Layout altLangs={doc.alternate_languages} menu={menu}>
+        <SliceZone slices={doc.data.body} components={components} />
       </Layout>
     );
-  } 
+  }
 };
 
-export async function getStaticProps({
-  preview, 
-  previewData,
-  locale,
-  locales,
-}) {
-  const ref = previewData ? previewData.ref : null
-  const isPreview = preview || false
-  const client = Client();
-  const doc =
-    (await client.getSingle('homepage', ref ? { ref, lang: locale } : { lang: locale })) ||
-    {};
-  const menu =
-    (await client.getSingle('top_menu', ref ? { ref, lang: locale } : { lang: locale })) ||
-    {};
+export async function getStaticProps({ locale }) {
+  const client = createClient();
 
-  const { currentLang, isMyMainLanguage} = manageLocal(locales, locale)
+  const doc = await client.getSingle("homepage", { lang: locale });
+  const menu = await client.getSingle("top_menu", { lang: locale });
 
   return {
     props: {
       menu,
       doc,
-      preview: {
-        isActive: isPreview,
-        activeRef: ref,
-      },
-      lang:{
-        currentLang,
-        isMyMainLanguage,
-      }
     },
   };
 }

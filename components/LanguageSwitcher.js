@@ -1,22 +1,28 @@
-import NextLink from 'next/link';
-import { linkResolver, hrefResolver } from 'prismic-configuration';
+import { PrismicLink } from "@prismicio/react";
 
-const AltLangs = ({ altLangs = [] }) =>
-  altLangs.map((altLang) => {
-    return (
-      <li className="language-switcher" key={altLang.id}>
-        <NextLink
-          locale={altLang.lang}
-          as={linkResolver(altLang)}
-          href={hrefResolver(altLang)}
-          passHref
-        >
-          <a className={`flag-icon-${altLang.lang.slice(-2)}`}>/</a>
-        </NextLink>
-      </li>
-    );
-  });
+import { linkResolver } from "../prismicio";
 
-const LanguageSwitcher = ({ altLangs }) => <AltLangs altLangs={altLangs} />;
+const LangIcon = ({ lang }) => {
+  const code = lang.substring(3).toLowerCase();
+
+  return <span className={`fi fi-${code}`} />;
+};
+
+export const LanguageSwitcher = ({ altLangs = [] }) => {
+  return (
+    <ul className="-ml-4 -mt-4 flex flex-wrap">
+      {altLangs.map((altLang) => {
+        return (
+          <li key={altLang.lang} className="" className="pl-4 pt-4">
+            <PrismicLink href={linkResolver(altLang)} locale={altLang.lang}>
+              <span className="sr-only">{altLang.lang}</span>
+              <LangIcon lang={altLang.lang} />
+            </PrismicLink>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 export default LanguageSwitcher;

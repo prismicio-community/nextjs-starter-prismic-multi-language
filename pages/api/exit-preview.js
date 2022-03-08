@@ -1,6 +1,5 @@
-export default async (_, res) => {
-  res.clearPreviewData();
+import * as prismicNext from "@prismicio/next";
 
-  res.writeHead(307, { Location: '/' });
-  res.end();
-};
+export default async function handler(req, res) {
+  prismicNext.exitPreview({ res, req });
+}

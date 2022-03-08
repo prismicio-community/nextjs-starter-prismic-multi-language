@@ -1,0 +1,28 @@
+{
+  "id": "homepage",
+  "label": "Homepage",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "display_title": {
+        "type": "StructuredText",
+        "config": { "single": "heading1", "label": "display_title" }
+      },
+      "body": {
+        "type": "Slices",
+        "fieldset": "Slice zone",
+        "config": {
+          "labels": {
+            "headline_with_button": [],
+            "full_width_image": [],
+            "info_with_image": [],
+            "text_info": [],
+            "email_signup": []
+          },
+          "choices": {}
+        }
+      }
+    }
+  }
+}
