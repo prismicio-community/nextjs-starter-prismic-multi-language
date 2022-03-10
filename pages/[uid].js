@@ -34,7 +34,7 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const documents = await client.getAllByType("page");
+  const documents = await client.getAllByType("page", { lang: "*" });
 
   return {
     paths: documents.map((doc) => {
