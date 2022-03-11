@@ -10,11 +10,9 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
       linkResolver={linkResolver}
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>
-            {children}
-          </a>
+      internalLinkComponent={({ href, children, locale, ...props }) => (
+        <Link href={href} locale={locale}>
+          <a {...props}>{children}</a>
         </Link>
       )}
     >
@@ -22,5 +20,5 @@ export default function App({ Component, pageProps }) {
         <Component {...pageProps} />
       </PrismicPreview>
     </PrismicProvider>
-  )
+  );
 }
