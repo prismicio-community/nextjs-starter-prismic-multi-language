@@ -2,7 +2,7 @@
   {
     "variation": "defaultSlice",
     "name": "Default slice",
-    "slice_type": "full_width_image",
+    "slice_type": "FullWidthImage",
     "items": [],
     "primary": {
       "backgroundPosition": "Left",

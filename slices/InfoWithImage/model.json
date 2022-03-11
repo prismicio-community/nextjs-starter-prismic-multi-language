@@ -36,9 +36,10 @@
         "sectionTitle": {
           "type": "StructuredText",
           "config": {
+            "label": "section_title",
             "placeholder": "A title for the section",
-            "single": "heading1, heading2",
-            "label": "section_title"
+            "allowTargetBlank": true,
+            "single": "heading1"
           }
         },
         "text": {

@@ -36,6 +36,12 @@
               "patternType": "HEADING",
               "blocks": 1
             }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
           }
         }
       }
@@ -54,11 +60,28 @@
         "primary": {
           "featuredImage": {
             "content": "https://images.unsplash.com/photo-1585399000684-d2f72660f092"
+          },
+          "sectionTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
           }
         }
       }
     },
-    "TextInfo": {},
+    "TextInfo": {
+      "default-slice": {
+        "primary": {
+          "rightColumnText": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
     "EmailSignup": {
       "DefaultSlice": {
         "primary": {
@@ -67,9 +90,16 @@
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
+          },
+          "sectionTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
           }
         }
       }
-    }
+    },
+    "MySlice": {}
   }
 }

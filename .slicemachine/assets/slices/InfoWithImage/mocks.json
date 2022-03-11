@@ -2,7 +2,7 @@
   {
     "variation": "default-slice",
     "name": "Default slice",
-    "slice_type": "info_with_image",
+    "slice_type": "InfoWithImage",
     "items": [],
     "primary": {
       "featuredImage": {
@@ -35,14 +35,14 @@
       "sectionTitle": [
         {
           "type": "heading1",
-          "text": "Cultivate cutting-edge e-business",
+          "text": "Extend impactful portals",
           "spans": []
         }
       ],
       "text": [
         {
           "type": "paragraph",
-          "text": "Magna non incididunt anim est nisi.",
+          "text": "Ad dolor magna adipisicing anim.",
           "spans": []
         }
       ]

@@ -2,41 +2,41 @@
   {
     "variation": "DefaultSlice",
     "name": "DefaultSlice",
-    "slice_type": "email_signup",
+    "slice_type": "EmailSignup",
     "items": [],
     "primary": {
       "sectionTitle": [
         {
           "type": "heading1",
-          "text": "Utilize mission-critical architectures",
+          "text": "Extend sticky interfaces",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Consectetur qui consectetur proident sit eu eiusmod. Mollit minim pariatur esse id enim nisi ad exercitation proident consequat dolor cillum incididunt commodo. Culpa enim ut eu qui ea ex nostrud laborum.",
+          "text": "Nostrud pariatur deserunt eu fugiat eu aliquip magna labore laborum. Consequat et esse ipsum consectetur officia adipisicing id excepteur. Voluptate sunt eu ipsum elit aliqua eiusmod duis esse sint quis sint et officia.",
           "spans": []
         }
       ],
       "inputLabel": [
         {
           "type": "paragraph",
-          "text": "Quis veniam duis ut sint incididunt anim veniam.",
+          "text": "Aliquip in fugiat sint enim fugiat. Eu eiusmod sint nulla in excepteur velit anim magna dolor sunt fugiat qui consequat. Tempor et cupidatat duis esse et magna fugiat voluptate.",
           "spans": []
         }
       ],
       "inputPlaceholder": [
         {
           "type": "paragraph",
-          "text": "Velit et exercitation elit adipisicing est enim eu duis ex. Eu enim nisi adipisicing in Lorem incididunt ut aliqua non aliquip. Culpa aliquip occaecat pariatur cillum incididunt.",
+          "text": "Sint laboris dolore et reprehenderit tempor occaecat incididunt. Proident dolore adipisicing cillum adipisicing ullamco nostrud ullamco elit velit duis aliquip. Dolor non pariatur deserunt est exercitation voluptate esse laborum adipisicing ex laboris et.",
           "spans": []
         }
       ],
       "buttonText": [
         {
           "type": "paragraph",
-          "text": "Est consequat do commodo exercitation pariatur deserunt laboris aliqua.",
+          "text": "Reprehenderit reprehenderit commodo aliqua quis fugiat consequat anim officia sunt aliqua labore ipsum ea.",
           "spans": []
         }
       ]

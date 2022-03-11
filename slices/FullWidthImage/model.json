@@ -14,12 +14,13 @@
         "backgroundPosition": {
           "type": "Select",
           "config": {
+            "label": "backgroundPosition",
+            "placeholder": "",
             "options": [
               "Left",
               "Right"
             ],
-            "default_value": "Left",
-            "label": "backgroundPosition"
+            "default_value": "Left"
           }
         },
         "image": {

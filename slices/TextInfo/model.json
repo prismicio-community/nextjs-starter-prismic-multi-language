@@ -35,7 +35,7 @@
             "label": "richColumnText",
             "placeholder": "Text in the right column",
             "allowTargetBlank": true,
-            "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item"
+            "multi": "paragraph"
           }
         }
       },

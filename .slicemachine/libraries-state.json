@@ -22,8 +22,10 @@
                 "sectionTitle": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1, heading2",
-                    "label": "sectionTitle"
+                    "label": "sectionTitle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "heading1"
                   }
                 },
                 "description": {
@@ -66,41 +68,41 @@
           "DefaultSlice": {
             "variation": "DefaultSlice",
             "name": "DefaultSlice",
-            "slice_type": "email_signup",
+            "slice_type": "EmailSignup",
             "items": [],
             "primary": {
               "sectionTitle": [
                 {
                   "type": "heading1",
-                  "text": "Utilize mission-critical architectures",
+                  "text": "Extend sticky interfaces",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Consectetur qui consectetur proident sit eu eiusmod. Mollit minim pariatur esse id enim nisi ad exercitation proident consequat dolor cillum incididunt commodo. Culpa enim ut eu qui ea ex nostrud laborum.",
+                  "text": "Nostrud pariatur deserunt eu fugiat eu aliquip magna labore laborum. Consequat et esse ipsum consectetur officia adipisicing id excepteur. Voluptate sunt eu ipsum elit aliqua eiusmod duis esse sint quis sint et officia.",
                   "spans": []
                 }
               ],
               "inputLabel": [
                 {
                   "type": "paragraph",
-                  "text": "Quis veniam duis ut sint incididunt anim veniam.",
+                  "text": "Aliquip in fugiat sint enim fugiat. Eu eiusmod sint nulla in excepteur velit anim magna dolor sunt fugiat qui consequat. Tempor et cupidatat duis esse et magna fugiat voluptate.",
                   "spans": []
                 }
               ],
               "inputPlaceholder": [
                 {
                   "type": "paragraph",
-                  "text": "Velit et exercitation elit adipisicing est enim eu duis ex. Eu enim nisi adipisicing in Lorem incididunt ut aliqua non aliquip. Culpa aliquip occaecat pariatur cillum incididunt.",
+                  "text": "Sint laboris dolore et reprehenderit tempor occaecat incididunt. Proident dolore adipisicing cillum adipisicing ullamco nostrud ullamco elit velit duis aliquip. Dolor non pariatur deserunt est exercitation voluptate esse laborum adipisicing ex laboris et.",
                   "spans": []
                 }
               ],
               "buttonText": [
                 {
                   "type": "paragraph",
-                  "text": "Est consequat do commodo exercitation pariatur deserunt laboris aliqua.",
+                  "text": "Reprehenderit reprehenderit commodo aliqua quis fugiat consequat anim officia sunt aliqua labore ipsum ea.",
                   "spans": []
                 }
               ]
@@ -114,9 +116,9 @@
         },
         "screenshotPaths": {
           "DefaultSlice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/EmailSignup/DefaultSlice/preview.png",
+            "path": "/Users/prismic/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/EmailSignup/DefaultSlice/preview.png",
             "width": 800,
-            "height": 308
+            "height": 538
           }
         }
       },
@@ -141,12 +143,13 @@
                 "backgroundPosition": {
                   "type": "Select",
                   "config": {
+                    "label": "backgroundPosition",
+                    "placeholder": "",
                     "options": [
                       "Left",
                       "Right"
                     ],
-                    "default_value": "Left",
-                    "label": "backgroundPosition"
+                    "default_value": "Left"
                   }
                 },
                 "image": {
@@ -169,7 +172,7 @@
           "defaultSlice": {
             "variation": "defaultSlice",
             "name": "Default slice",
-            "slice_type": "full_width_image",
+            "slice_type": "FullWidthImage",
             "items": [],
             "primary": {
               "backgroundPosition": "Left",
@@ -190,7 +193,13 @@
           "isDirectory": true,
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "defaultSlice": {
+            "path": "/Users/prismic/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/FullWidthImage/defaultSlice/preview.png",
+            "width": 800,
+            "height": 500
+          }
+        }
       },
       "HeadlineWithButton": {
         "library": "slices",
@@ -245,20 +254,20 @@
           "default-slice": {
             "variation": "default-slice",
             "name": "Default slice",
-            "slice_type": "headline_with_button",
+            "slice_type": "HeadlineWithButton",
             "items": [],
             "primary": {
               "headline": [
                 {
                   "type": "heading1",
-                  "text": "Empower viral partnerships",
+                  "text": "Aggregate holistic synergies",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor laboris culpa qui et dolore reprehenderit ullamco nulla magna cillum et esse consequat proident. Officia sit do mollit nostrud tempor in tempor velit labore magna. Dolor aliquip anim laborum ad adipisicing quis aute mollit tempor irure aliqua aute dolore duis.",
+                  "text": "Sit fugiat do aliqua consectetur ipsum.",
                   "spans": []
                 }
               ],
@@ -269,7 +278,7 @@
                 },
                 "alt": "Placeholder image",
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0?w=900&h=500&fit=crop"
               }
             }
           }
@@ -281,9 +290,9 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/HeadlineWithButton/default-slice/preview.png",
+            "path": "/Users/prismic/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/HeadlineWithButton/default-slice/preview.png",
             "width": 800,
-            "height": 724
+            "height": 626
           }
         }
       },
@@ -330,9 +339,10 @@
                 "sectionTitle": {
                   "type": "StructuredText",
                   "config": {
+                    "label": "section_title",
                     "placeholder": "A title for the section",
-                    "single": "heading1, heading2",
-                    "label": "section_title"
+                    "allowTargetBlank": true,
+                    "single": "heading1"
                   }
                 },
                 "text": {
@@ -353,7 +363,7 @@
           "default-slice": {
             "variation": "default-slice",
             "name": "Default slice",
-            "slice_type": "info_with_image",
+            "slice_type": "InfoWithImage",
             "items": [],
             "primary": {
               "featuredImage": {
@@ -386,14 +396,14 @@
               "sectionTitle": [
                 {
                   "type": "heading1",
-                  "text": "Cultivate cutting-edge e-business",
+                  "text": "Extend impactful portals",
                   "spans": []
                 }
               ],
               "text": [
                 {
                   "type": "paragraph",
-                  "text": "Magna non incididunt anim est nisi.",
+                  "text": "Ad dolor magna adipisicing anim.",
                   "spans": []
                 }
               ]
@@ -405,7 +415,13 @@
           "isDirectory": true,
           "extension": "js"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default-slice": {
+            "path": "/Users/prismic/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/InfoWithImage/default-slice/preview.png",
+            "width": 800,
+            "height": 687
+          }
+        }
       },
       "TextInfo": {
         "library": "slices",
@@ -449,7 +465,7 @@
                     "label": "richColumnText",
                     "placeholder": "Text in the right column",
                     "allowTargetBlank": true,
-                    "multi": "paragraph, heading3, strong, em, hyperlink, list-item, o-list-item"
+                    "multi": "paragraph"
                   }
                 }
               },
@@ -461,20 +477,27 @@
           "default-slice": {
             "variation": "default-slice",
             "name": "Default slice",
-            "slice_type": "text_info",
+            "slice_type": "TextInfo",
             "items": [],
             "primary": {
-              "title": [
+              "sectionTitle": [
                 {
                   "type": "heading1",
-                  "text": "Grow out-of-the-box partnerships",
+                  "text": "Incentivize B2C e-tailers",
                   "spans": []
                 }
               ],
-              "description": [
+              "leftColumnText": [
                 {
                   "type": "paragraph",
-                  "text": "Ut cupidatat aute nostrud laboris Lorem aliquip elit. Anim duis velit dolor officia ea culpa quis aliquip veniam laborum est laboris elit sunt.",
+                  "text": "Cillum irure nulla officia velit Lorem esse eiusmod esse esse Lorem aliqua voluptate aliquip aliquip. Eu cupidatat amet duis nostrud nulla aliqua.",
+                  "spans": []
+                }
+              ],
+              "rightColumnText": [
+                {
+                  "type": "paragraph",
+                  "text": "Ad ex eu ipsum Lorem consectetur est occaecat nulla. Commodo excepteur id reprehenderit consectetur duis sunt non duis cillum nostrud aliquip. Ex incididunt incididunt nulla commodo aliqua est sint dolor.",
                   "spans": []
                 }
               ]
@@ -488,9 +511,9 @@
         },
         "screenshotPaths": {
           "default-slice": {
-            "path": "/Users/philipsnow/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/TextInfo/default-slice/preview.png",
+            "path": "/Users/prismic/prismic/nextjs-sample-multi-language/.slicemachine/assets/slices/TextInfo/default-slice/preview.png",
             "width": 800,
-            "height": 66
+            "height": 415
           }
         }
       }
