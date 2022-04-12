@@ -1,26 +1,54 @@
-# Prismic & Next.js Multi-language website example
+# Prismic + Next.js Multi-Lang Starter
 
-> [Next.js](https://nextjs.org/) example Multi-language website with content managed in [Prismic](https://prismic.io)
+Want to see an example of a multi-language [Next.js][nextjs] website using [Prismic][prismic]? Look no further! In this project, we provide all the code you need for a website with a homepage, information pages, and navigation.
 
-## Check out the article to get this project up and running
+- **Demo**: [Open live demo][live-demo]
+- **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
 
-> [Prismic project guide](https://prismic.io/docs/technologies/prismic-example-projects-nextjs)
-## Next.js Internationalized Routing
+&nbsp;
 
-This sample is compatible with Next 10, which introduces support for i18n. It implements the sub-path routing strategy allowing you to build routes like /blog, /fr/blog /nl-nl/blog
+<img src="https://user-images.githubusercontent.com/8601064/162551854-c1eb0a14-ed99-4b55-b25f-f8587d54c381.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
-To learn more about Next.js Internationalized Routing, [read the official Next.js documentation](https://nextjs.org/docs/advanced-features/i18n-routing).
+&nbsp;
 
-### Learn more about using Prismic with Next.js
+## 🚀 Quick Start
 
-[Prismic + Next.js documentation](https://prismic.io/docs/technologies/nextjs).
+To start a new project using this starter, run the following command in your terminal:
 
-### License
+```sh
+npx prismic-cli@latest theme \
+  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-multi-language \
+  --conf sm.json
+```
 
-This software is licensed under the Apache 2 license, quoted below.
+This command will do the following:
 
-Copyright 2021 [Prismic](https://prismic.io).
+1. Ask you to log in to Prismic or [create an account][prismic-sign-up].
+2. Create a new Prismic content repository.
+3. Start a new Next.js project using this starter.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this project except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0.
+To learn more about working with Prismic, [**see the Prismic docs**][prismic-docs].
 
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
+## License
+
+```
+Copyright 2013-2022 Prismic <contact@prismic.io> (https://prismic.io)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
+
+[prismic]: https://prismic.io/
+[prismic-docs]: https://prismic.io/docs/technologies/nextjs
+[prismic-sign-up]: https://prismic.io/dashboard/signup
+[nextjs]: https://nextjs.org/
+[live-demo]: https://nextjs-multi-language-site.vercel.app/
