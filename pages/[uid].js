@@ -1,32 +1,43 @@
+import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
+import * as prismicH from "@prismicio/helpers";
 
 import { createClient } from "../prismicio";
-import { Layout } from "../components/Layout";
 import { components } from "../slices";
+import { Layout } from "../components/Layout";
 
-/**
- * posts component
- */
-const Page = ({ doc, menu }) => {
-  if (doc?.data) {
-    return (
-      <Layout altLangs={doc.alternate_languages} menu={menu}>
-        <SliceZone slices={doc.data.slices} components={components} />
-      </Layout>
-    );
-  }
+const Page = ({ page, navigation, settings }) => {
+  return (
+    <Layout
+      alternateLanguages={page.alternate_languages}
+      navigation={navigation}
+      settings={settings}
+    >
+      <Head>
+        <title>
+          {prismicH.asText(page.data.title)} |{" "}
+          {prismicH.asText(settings.data.siteTitle)}
+        </title>
+      </Head>
+      <SliceZone slices={page.data.slices} components={components} />
+    </Layout>
+  );
 };
 
-export async function getStaticProps({ params, locale }) {
-  const client = createClient();
+export default Page;
+
+export async function getStaticProps({ params, locale, previewData }) {
+  const client = createClient({ previewData });
 
   const page = await client.getByUID("page", params.uid, { lang: locale });
-  const menu = await client.getSingle("menu", { lang: locale });
+  const navigation = await client.getSingle("navigation", { lang: locale });
+  const settings = await client.getSingle("settings", { lang: locale });
 
   return {
     props: {
-      menu,
-      doc: page,
+      page,
+      navigation,
+      settings,
     },
   };
 }
@@ -34,14 +45,15 @@ export async function getStaticProps({ params, locale }) {
 export async function getStaticPaths() {
   const client = createClient();
 
-  const documents = await client.getAllByType("page", { lang: "*" });
+  const pages = await client.getAllByType("page", { lang: "*" });
 
   return {
-    paths: documents.map((doc) => {
-      return { params: { uid: doc.uid }, locale: doc.lang };
+    paths: pages.map((page) => {
+      return {
+        params: { uid: page.uid },
+        locale: page.lang,
+      };
     }),
     fallback: false,
   };
 }
-
-export default Page;

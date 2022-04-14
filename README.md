@@ -7,7 +7,7 @@ Want to see an example of a multi-language [Next.js][nextjs] website using [Pris
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/8601064/162551854-c1eb0a14-ed99-4b55-b25f-f8587d54c381.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+<img src="https://user-images.githubusercontent.com/8601064/163302147-4ab84353-db43-4ea7-9e3c-4d2710123f5d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
 &nbsp;
 
@@ -51,4 +51,4 @@ limitations under the License.
 [prismic-docs]: https://prismic.io/docs/technologies/nextjs
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [nextjs]: https://nextjs.org/
-[live-demo]: https://nextjs-multi-language-site.vercel.app/
+[live-demo]: https://nextjs-starter-prismic-multi-language.vercel.app/

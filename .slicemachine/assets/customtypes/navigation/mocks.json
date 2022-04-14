@@ -1,0 +1,48 @@
+{
+  "id": "4aea07fc-2bc2-427d-be9f-ad7456353e86",
+  "uid": "est-blanditiis-fuga",
+  "type": "navigation",
+  "data": {
+    "links": [
+      {
+        "label": [
+          {
+            "type": "heading3",
+            "text": "Transition distributed solutions",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "heading3",
+            "text": "Engage sexy synergies",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "label": [
+          {
+            "type": "heading3",
+            "text": "Productize collaborative e-markets",
+            "spans": []
+          }
+        ],
+        "link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      }
+    ]
+  }
+}

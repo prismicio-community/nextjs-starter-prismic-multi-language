@@ -1,0 +1,65 @@
+{
+  "id": "image",
+  "type": "SharedSlice",
+  "name": "Image",
+  "description": "Image",
+  "variations": [
+    {
+      "id": "white",
+      "name": "White",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Image",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "thumbnails": [],
+            "label": "Image"
+          }
+        },
+        "withAccent": {
+          "type": "Boolean",
+          "config": {
+            "label": "With Accent",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "lightSlate",
+      "name": "Light Slate",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Image",
+      "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "constraint": {},
+            "thumbnails": [],
+            "label": "Image"
+          }
+        },
+        "withAccent": {
+          "type": "Boolean",
+          "config": {
+            "label": "With Accent",
+            "placeholder_false": "No",
+            "placeholder_true": "Yes",
+            "default_value": true
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
+
