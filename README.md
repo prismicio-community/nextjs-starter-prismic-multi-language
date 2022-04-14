@@ -1,13 +1,13 @@
-# Prismic + Next.js Blog Starter
+# Prismic + Next.js Multi-Lang Starter
 
-This sample blog is an excellent starting point to explore [Next.js][nextjs] and [Prismic][prismic]. Get it up and running in minutes. Modify and adapt it to your liking; it's all yours!
+Want to see an example of a multi-language [Next.js][nextjs] website using [Prismic][prismic]? Look no further! In this project, we provide all the code you need for a website with a homepage, information pages, and navigation.
 
 - **Demo**: [Open live demo][live-demo]
 - **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/8601064/163122284-5b80a81e-a4fd-482e-9bd5-99b22f61175f.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+<img src="https://user-images.githubusercontent.com/8601064/163302147-4ab84353-db43-4ea7-9e3c-4d2710123f5d.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
 &nbsp;
 
@@ -17,7 +17,7 @@ To start a new project using this starter, run the following command in your ter
 
 ```sh
 npx prismic-cli@latest theme \
-  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-blog \
+  --theme-url https://github.com/prismicio-community/nextjs-starter-prismic-multi-language \
   --conf sm.json
 ```
 
@@ -51,4 +51,4 @@ limitations under the License.
 [prismic-docs]: https://prismic.io/docs/technologies/nextjs
 [prismic-sign-up]: https://prismic.io/dashboard/signup
 [nextjs]: https://nextjs.org/
-[live-demo]: https://nextjs-starter-prismic-blog.vercel.app/
+[live-demo]: https://nextjs-multi-language-site.vercel.app/
