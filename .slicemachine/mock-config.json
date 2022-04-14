@@ -1,43 +1,57 @@
 {
   "_cts": {
-    "new-custom-type": {},
-    "homepage": {
-      "displayTitle": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
-        }
-      }
-    },
-    "menu": {
-      "displayTitle": {
-        "config": {
-          "patternType": "HEADING",
-          "blocks": 1
+    "navigation": {
+      "links": {
+        "label": {
+          "config": {
+            "patternType": "HEADING",
+            "blocks": 1
+          }
         }
       }
     },
     "page": {
-      "displayTitle": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "article": {
+      "title": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      }
+    },
+    "settings": {
+      "newsletterDescription": {
         "config": {
           "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "newsletterDisclaimer": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      },
+      "siteTitle": {
+        "config": {
+          "patternType": "HEADING",
           "blocks": 1
         }
       }
     }
   },
   "slices": {
-    "NewSlice": {},
-    "HeadlineWithButton": {
-      "default-slice": {
+    "Text": {
+      "default": {
         "primary": {
-          "headline": {
-            "config": {
-              "patternType": "HEADING",
-              "blocks": 1
-            }
-          },
-          "description": {
+          "text": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
@@ -46,22 +60,15 @@
         }
       }
     },
-    "FullWidthImage": {
-      "defaultSlice": {
-        "primary": {
-          "image": {
-            "content": "https://images.unsplash.com/photo-1437622368342-7a3d73a34c8f"
-          }
-        }
+    "Image": {
+      "default": {
+        "primary": {}
       }
     },
-    "InfoWithImage": {
-      "default-slice": {
+    "Quote": {
+      "default": {
         "primary": {
-          "featuredImage": {
-            "content": "https://images.unsplash.com/photo-1585399000684-d2f72660f092"
-          },
-          "sectionTitle": {
+          "quote": {
             "config": {
               "patternType": "HEADING",
               "blocks": 1
@@ -70,10 +77,15 @@
         }
       }
     },
-    "TextInfo": {
-      "default-slice": {
+    "ContactForm": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TextWithImage": {
+      "default": {
         "primary": {
-          "rightColumnText": {
+          "text": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
@@ -82,24 +94,40 @@
         }
       }
     },
-    "EmailSignup": {
-      "DefaultSlice": {
+    "TextWithFeatures": {
+      "default": {
         "primary": {
-          "inputLabel": {
+          "text": {
             "config": {
               "patternType": "PARAGRAPH",
               "blocks": 1
             }
-          },
-          "sectionTitle": {
+          }
+        },
+        "items": {
+          "featureDescription": {
             "config": {
-              "patternType": "HEADING",
+              "patternType": "PARAGRAPH",
               "blocks": 1
             }
           }
         }
       }
     },
-    "MySlice": {}
+    "Hero": {
+      "default": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      },
+      "withButton": {
+        "primary": {}
+      }
+    }
   }
 }
