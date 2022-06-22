@@ -28,6 +28,11 @@ const TextWithFeatures = ({ slice }) => {
                     {children}
                   </Heading>
                 ),
+                heading2: ({ children }) => (
+                  <Heading as="h3" size="2xl" className="mb-2 last:mb-0">
+                    {children}
+                  </Heading>
+                ),
               }}
             />
           </div>
@@ -41,7 +46,7 @@ const TextWithFeatures = ({ slice }) => {
               <PrismicRichText
                 field={item.featureDescription}
                 components={{
-                  heading3: ({ children }) => (
+                  heading2: ({ children }) => (
                     <Heading as="h3" size="2xl" className="mb-2 last:mb-0">
                       {children}
                     </Heading>
@@ -53,7 +58,7 @@ const TextWithFeatures = ({ slice }) => {
         </ul>
       </div>
     </Bounded>
-  );
+  )
 };
 
 export default TextWithFeatures;
