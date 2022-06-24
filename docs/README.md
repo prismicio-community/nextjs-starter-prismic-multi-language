@@ -2,6 +2,15 @@
 
 This page covers how to use **Prismic + Next.js Multi-Lang Starter** with Prismic.
 
+- **Demo**: [Open live demo][live-demo]
+- **Learn more about Prismic and Next.js**: [Prismic Next.js Documentation][prismic-docs]
+
+&nbsp;
+
+<img src="https://user-images.githubusercontent.com/8601064/163303418-e72d7138-1bbd-4e2c-bc26-d8674a464438.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+
+&nbsp;
+
 ## 🚀 Quick Start
 
 To start a new project using this starter, run the following command in your terminal:
