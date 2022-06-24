@@ -45,8 +45,8 @@ To add a page to your navigation menu, go to the document list and open the **N
 In your repository, go to *Settings > Previews*. Under *Create a New Preview*, fill in the three fields:
 
 - a name (like **Development** or **Production**)
-- the domain where your app is running (like **http://localhost:3000** or **https://www.yoursite.com**)
-- **/api/preview** for the Link Resolver
+- the domain where your app is running (like http://localhost:3000 or https://www.yoursite.com)
+- `/api/preview` for the Link Resolver
 
 Now, go to a draft document and click the eye icon in the top-right corner.
 
@@ -56,9 +56,9 @@ To learn more about how to configure previews, read [Preview Drafts in Next.js]
 
 This website is preconfigured with Prismic. It has three Prismic packages installed:
 
-- **@prismicio/client** provides helpers for fetching content from Prismic
-- **@prismicio/react** provides React components for rendering content from Prismic
-- **@prismicio/next** provides a wrapper component to configure Prismic previews
+- `@prismicio/client` provides helpers for fetching content from Prismic
+- `@prismicio/react` provides React components for rendering content from Prismic
+- `@prismicio/next` provides a wrapper component to configure Prismic previews
 
 These packages are already integrated and employed in this app. Take a look at the code to see how they're used.
 
@@ -66,24 +66,24 @@ These packages are already integrated and employed in this app. Take a look at t
 
 There are two steps to rendering content from Prismic in your Next.js project:
 
-1. Fetch content from the Prismic API using **@prismicio/client**.
-2. Template the content using components from **@prismicio/react**.
+1. Fetch content from the Prismic API using `@prismicio/client`.
+2. Template the content using components from `@prismicio/react`.
 
 Here are some of the files in your project that you can edit:
 
-- **prismicio.js** - This file includes configuration for **@prismicio/client** and exports useful API helpers.
-- **pages/\_app.js** - This is your app component, which includes configuration for **@prismicio/react** and **@prismicio/next**.
-- **pages/index.js** - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
-- **pages/[uid].js** - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
-- **pages/api/sign-up.js** - This is the API endpoint for your form. To use the form, send a POST request to a back end from this endpoint.
-- **slices/\*/index.js** - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
+- `prismicio.js` - This file includes configuration for `@prismicio/client` and exports useful API helpers.
+- `pages/\_app.js` - This is your app component, which includes configuration for `@prismicio/react` and `@prismicio/next`.
+- `pages/index.js` - This is the app homepage. It queries and renders a page document with the UID (unique identifier) "home" from the Prismic API.
+- `pages/[uid].js` - This is the page component, which queries and renders a page document from your Prismic repository based on the UID.
+- `pages/api/sign-up.js` - This is the API endpoint for your form. To use the form, send a POST request to a back end from this endpoint.
+- `slices/\*/index.js` - Each Slice in your project has an index.js file that renders the Slice component. Edit this file to customize your Slices.
 
 These are important files that you should leave as-is:
 
-- **pages/api/exit-preview.js** - Do not edit or delete this file. This is the API endpoint to close a Prismic preview session.
-- **pages/api/preview.js** - Do not edit or delete this file. This is the API endpoint to launch a Prismic preview session.
-- **pages/slice-simulator.js** - Do not edit or delete this file. This file simulates your Slice components in development.
-- **slices/** - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's index.js file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
+- `pages/api/exit-preview.js` - Do not edit or delete this file. This is the API endpoint to close a Prismic preview session.
+- `pages/api/preview.js` - Do not edit or delete this file. This is the API endpoint to launch a Prismic preview session.
+- `pages/slice-simulator.js` - Do not edit or delete this file. This file simulates your Slice components in development.
+- `slices/` - This directory contains Slice components, which are generated programmatically by Slice Machine. To customize a Slice template, you can edit the Slice's index.js file. To add Slices, delete Slices, or edit Slice models, use Slice Machine (more info below).
 
 Learn more about how to edit your components with [Fetch Data in Next.js](https://prismic.io/docs/technologies/fetch-data-nextjs) and [Template Content in Next.js](https://prismic.io/docs/technologies/template-content-nextjs).
 
