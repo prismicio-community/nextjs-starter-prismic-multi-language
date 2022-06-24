@@ -1,5 +1,5 @@
-import NextImage from "next/image";
 import { PrismicLink, PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
 import { Bounded } from "../../components/Bounded";
@@ -24,23 +24,12 @@ const Hero = ({ slice }) => {
         </div>
         {prismicH.isFilled.image(slice.primary.buttonImage) && (
           <PrismicLink field={slice.primary.buttonLink}>
-            <NextImage
-              src={slice.primary.buttonImage.url}
-              alt={slice.primary.buttonImage.alt}
-              width={slice.primary.buttonImage.dimensions.width}
-              height={slice.primary.buttonImage.dimensions.height}
-            />
+            <PrismicNextImage field={slice.primary.buttonImage} />
           </PrismicLink>
         )}
         {prismicH.isFilled.image(slice.primary.image) && (
           <div className="w-full">
-            <NextImage
-              src={slice.primary.image.url}
-              alt={slice.primary.image.alt}
-              width={slice.primary.image.dimensions.width}
-              height={slice.primary.image.dimensions.height}
-              layout="responsive"
-            />
+            <PrismicNextImage field={slice.primary.image} layout="responsive" />
           </div>
         )}
       </div>

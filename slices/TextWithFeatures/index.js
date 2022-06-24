@@ -1,5 +1,5 @@
-import NextImage from "next/image";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
 import { Bounded } from "../../components/Bounded";
@@ -11,13 +11,7 @@ const TextWithFeatures = ({ slice }) => {
       <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-2 md:gap-10 lg:gap-28">
         <div className="grid grid-cols-1 gap-8">
           {prismicH.isFilled.image(slice.primary.icon) && (
-            <NextImage
-              src={slice.primary.icon.url}
-              alt={slice.primary.icon.alt}
-              width={slice.primary.icon.dimensions.width}
-              height={slice.primary.icon.dimensions.height}
-              layout="fixed"
-            />
+            <PrismicNextImage field={slice.primary.icon} layout="fixed" />
           )}
           <div className="leading-relaxed">
             <PrismicRichText
@@ -57,4 +51,3 @@ const TextWithFeatures = ({ slice }) => {
 };
 
 export default TextWithFeatures;
-

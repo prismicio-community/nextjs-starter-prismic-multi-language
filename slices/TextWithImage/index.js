@@ -1,5 +1,5 @@
-import NextImage from "next/image";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 
 import { Bounded } from "../../components/Bounded";
@@ -14,11 +14,8 @@ const TextWithImage = ({ slice }) => {
             <div className="aspect-w-1 aspect-h-1 bg-slate-100/50" />
           </div>
           {prismicH.isFilled.image(slice.primary.image) && (
-            <NextImage
-              src={slice.primary.image.url}
-              alt={slice.primary.image.alt}
-              width={slice.primary.image.dimensions.width}
-              height={slice.primary.image.dimensions.height}
+            <PrismicNextImage
+              field={slice.primary.image}
               layout="responsive"
               className="relative"
             />
@@ -47,4 +44,3 @@ const TextWithImage = ({ slice }) => {
 };
 
 export default TextWithImage;
-
