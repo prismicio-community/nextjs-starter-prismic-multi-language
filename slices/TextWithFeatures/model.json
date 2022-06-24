@@ -25,7 +25,7 @@
             "label": "Text",
             "placeholder": "Primary text with rich formatting",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading1,heading2,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         }
       },
@@ -36,7 +36,7 @@
             "label": "Feature Description",
             "placeholder": "Description of a feature",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading3,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl,heading2"
           }
         }
       },
