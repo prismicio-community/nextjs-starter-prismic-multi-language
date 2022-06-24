@@ -54,7 +54,7 @@ To add a page to your navigation menu, go to the document list and open the **N
 In your repository, go to *Settings > Previews*. Under *Create a New Preview*, fill in the three fields:
 
 - a name (like **Development** or **Production**)
-- the domain where your app is running (like http://localhost:3000 or https://www.yoursite.com)
+- the domain where your app is running (like <http://localhost:3000> or <https://www.yoursite.com>)
 - `/api/preview` for the Link Resolver
 
 Now, go to a draft document and click the eye icon in the top-right corner.
