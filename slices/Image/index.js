@@ -1,4 +1,4 @@
-import NextImage from "next/image";
+import { PrismicNextImage } from "@prismicio/next";
 import * as prismicH from "@prismicio/helpers";
 import clsx from "clsx";
 
@@ -20,11 +20,8 @@ const Image = ({ slice }) => {
           </div>
         )}
         {prismicH.isFilled.image(slice.primary.image) && (
-          <NextImage
-            src={slice.primary.image.url}
-            alt={slice.primary.image.alt}
-            width={slice.primary.image.dimensions.width}
-            height={slice.primary.image.dimensions.height}
+          <PrismicNextImage
+            field={slice.primary.image}
             layout="responsive"
             className="relative"
           />
@@ -35,4 +32,3 @@ const Image = ({ slice }) => {
 };
 
 export default Image;
-

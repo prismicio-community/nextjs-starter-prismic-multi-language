@@ -1,6 +1,6 @@
-import NextImage from "next/image";
 import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 
 import { linkResolver } from "../prismicio";
 import { Bounded } from "./Bounded";
@@ -17,13 +17,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
-            <NextImage
-              src={settings.data.logo.url}
-              alt={settings.data.logo.alt}
-              width={settings.data.logo.dimensions.width}
-              height={settings.data.logo.dimensions.height}
-              layout="fixed"
-            />
+            <PrismicNextImage field={settings.data.logo} layout="fixed" />
           )}
         </PrismicLink>
         <nav>
