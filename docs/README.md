@@ -33,12 +33,6 @@ To learn more about working with Prismic, [**see the Prismic docs**](https://pri
 
 To get started after creating your new project, go to [prismic.io/dashboard](https://prismic.io/dashboard), click on the repository for this website, and start editing.
 
-### Write an article
-
-To create a new article, click on the green pencil icon in the top-right corner of the screen, then select **Article**. After adding some content, click **Save** and then **Publish**.
-
-Your article will appear in the homepage feed.
-
 ### Create a page
 
 To create a page, click on the green pencil icon, then select **Page**.
