@@ -22,11 +22,15 @@ const Hero = ({ slice }) => {
             }}
           />
         </div>
-        {prismicH.isFilled.image(slice.primary.buttonImage) && (
-          <PrismicLink field={slice.primary.buttonLink}>
-            <PrismicNextImage field={slice.primary.buttonImage} />
-          </PrismicLink>
-        )}
+        {prismicH.isFilled.link(slice.primary.buttonLink) &&
+          prismicH.isFilled.keyText(slice.primary.buttonText) && (
+            <PrismicLink
+              field={slice.primary.buttonLink}
+              className="rounded bg-black px-7 py-3 font-bold text-white"
+            >
+              {slice.primary.buttonText}
+            </PrismicLink>
+          )}
         {prismicH.isFilled.image(slice.primary.image) && (
           <div className="w-full">
             <PrismicNextImage field={slice.primary.image} layout="responsive" />

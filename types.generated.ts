@@ -70,7 +70,7 @@ interface PageDocumentData {
      */
     title: prismicT.TitleField;
     /**
-     * Slice Zone (`slices`) field in *Page*
+     * Slice Zone field in *Page*
      *
      * - **Field Type**: Slice Zone
      * - **Placeholder**: *None*
@@ -82,7 +82,7 @@ interface PageDocumentData {
     slices: prismicT.SliceZone<PageDocumentDataSlicesSlice>;
 }
 /**
- * Slice for *Page → Slice Zone (`slices`)*
+ * Slice for *Page → Slice Zone*
  *
  */
 type PageDocumentDataSlicesSlice = HeroSlice | ImageSlice | TextWithFeaturesSlice | TextWithImageSlice;
@@ -205,6 +205,16 @@ interface HeroSliceWithButtonPrimary {
      */
     text: prismicT.RichTextField;
     /**
+     * Button Text field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero.primary.buttonText
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    buttonText: prismicT.KeyTextField;
+    /**
      * Button Link field in *Hero → Primary*
      *
      * - **Field Type**: Link
@@ -214,16 +224,6 @@ interface HeroSliceWithButtonPrimary {
      *
      */
     buttonLink: prismicT.LinkField;
-    /**
-     * Button Image field in *Hero → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: hero.primary.buttonImage
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    buttonImage: prismicT.ImageField<null>;
     /**
      * Image field in *Hero → Primary*
      *

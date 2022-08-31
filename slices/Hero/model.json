@@ -48,20 +48,19 @@
             "multi": "paragraph,em,strong,heading1,hyperlink"
           }
         },
+        "buttonText": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        },
         "buttonLink": {
           "type": "Link",
           "config": {
             "label": "Button Link",
             "placeholder": "",
             "select": null
-          }
-        },
-        "buttonImage": {
-          "type": "Image",
-          "config": {
-            "constraint": {},
-            "thumbnails": [],
-            "label": "Button Image"
           }
         },
         "image": {
