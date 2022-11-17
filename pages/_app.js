@@ -6,14 +6,6 @@ import { repositoryName, linkResolver } from "../prismicio";
 
 import "../styles/globals.css";
 
-const NextLinkShim = ({ href, children, locale, ...props }) => {
-  return (
-    <Link href={href} locale={locale}>
-      <a {...props}>{children}</a>
-    </Link>
-  );
-};
-
 const richTextComponents = {
   paragraph: ({ children }) => <p className="mb-7 last:mb-0">{children}</p>,
   oList: ({ children }) => (
@@ -49,8 +41,8 @@ const richTextComponents = {
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
+      internalLinkComponent={Link}
       linkResolver={linkResolver}
-      internalLinkComponent={NextLinkShim}
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>

@@ -22,8 +22,8 @@ const Image = ({ slice }) => {
         {prismicH.isFilled.image(slice.primary.image) && (
           <PrismicNextImage
             field={slice.primary.image}
-            layout="responsive"
-            className="relative"
+            sizes="100vw"
+            className="relative w-full"
           />
         )}
       </div>

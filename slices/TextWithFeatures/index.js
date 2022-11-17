@@ -11,7 +11,7 @@ const TextWithFeatures = ({ slice }) => {
       <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-2 md:gap-10 lg:gap-28">
         <div className="grid grid-cols-1 gap-8">
           {prismicH.isFilled.image(slice.primary.icon) && (
-            <PrismicNextImage field={slice.primary.icon} layout="fixed" />
+            <PrismicNextImage field={slice.primary.icon} />
           )}
           <div className="leading-relaxed">
             <PrismicRichText

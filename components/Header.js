@@ -17,7 +17,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicLink href="/">
           {prismicH.isFilled.image(settings.data.logo) && (
-            <PrismicNextImage field={settings.data.logo} layout="fixed" />
+            <PrismicNextImage field={settings.data.logo} />
           )}
         </PrismicLink>
         <nav>

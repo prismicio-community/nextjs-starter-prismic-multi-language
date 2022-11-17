@@ -5,8 +5,8 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"image","items":[],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=900&h=500&fit=crop"},"withAccent":true},"id":"_Default"}} />
-_Default.storyName = 'Default'
+export const _White = () => <MyComponent slice={{"variation":"white","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"},"withAccent":false},"slice_type":"image","id":"_White"}} />
+_White.storyName = ''
 
-export const _LightSlate = () => <MyComponent slice={{"variation":"lightSlate","name":"Light Slate","slice_type":"image","items":[],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1471897488648-5eae4ac6686b?w=900&h=500&fit=crop"},"withAccent":false},"id":"_LightSlate"}} />
-_LightSlate.storyName = 'Light Slate'
+export const _LightSlate = () => <MyComponent slice={{"variation":"lightSlate","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"},"withAccent":false},"slice_type":"image","id":"_LightSlate"}} />
+_LightSlate.storyName = ''

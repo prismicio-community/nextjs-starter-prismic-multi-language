@@ -33,7 +33,11 @@ const Hero = ({ slice }) => {
           )}
         {prismicH.isFilled.image(slice.primary.image) && (
           <div className="w-full">
-            <PrismicNextImage field={slice.primary.image} layout="responsive" />
+            <PrismicNextImage
+              field={slice.primary.image}
+              sizes="100vw"
+              className="w-full"
+            />
           </div>
         )}
       </div>
