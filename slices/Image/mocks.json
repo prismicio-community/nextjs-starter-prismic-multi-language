@@ -1,0 +1,76 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "white",
+    "primary": {
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+          "width": 3168,
+          "height": 4752
+        },
+        "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+        "width": 3168,
+        "height": 4752,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "withAccent": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "lightSlate",
+    "primary": {
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+          "width": 4000,
+          "height": 6000
+        },
+        "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+        "width": 4000,
+        "height": 6000,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "withAccent": {
+        "__TYPE__": "BooleanContent",
+        "value": false
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
