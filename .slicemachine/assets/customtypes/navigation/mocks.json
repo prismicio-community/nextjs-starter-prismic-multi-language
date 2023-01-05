@@ -1,47 +1,35 @@
 {
-  "id": "4aea07fc-2bc2-427d-be9f-ad7456353e86",
-  "uid": "est-blanditiis-fuga",
-  "type": "navigation",
-  "data": {
-    "links": [
+  "links": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "label": [
-          {
-            "type": "heading3",
-            "text": "Transition distributed solutions",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "label": [
-          {
-            "type": "heading3",
-            "text": "Engage sexy synergies",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "http://google.com"
-        }
-      },
-      {
-        "label": [
-          {
-            "type": "heading3",
-            "text": "Productize collaborative e-markets",
-            "spans": []
-          }
-        ],
-        "link": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "label",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Bridge"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://twitter.com"
+              }
+            }
+          ]
+        ]
       }
     ]
   }
