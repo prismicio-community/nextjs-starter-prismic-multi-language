@@ -17,16 +17,12 @@
             "label": "Text",
             "placeholder": "Introductory text for the page",
             "allowTargetBlank": true,
-            "multi": "paragraph,em,strong,heading1,hyperlink"
+            "multi": "paragraph,heading1,strong,em,hyperlink"
           }
         },
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
         }
       },
       "items": {},
@@ -50,10 +46,7 @@
         },
         "buttonText": {
           "type": "Text",
-          "config": {
-            "label": "Button Text",
-            "placeholder": ""
-          }
+          "config": { "label": "Button Text", "placeholder": "" }
         },
         "buttonLink": {
           "type": "Link",
@@ -65,11 +58,7 @@
         },
         "image": {
           "type": "Image",
-          "config": {
-            "label": "Image",
-            "constraint": {},
-            "thumbnails": []
-          }
+          "config": { "label": "Image", "constraint": {}, "thumbnails": [] }
         }
       },
       "items": {},
