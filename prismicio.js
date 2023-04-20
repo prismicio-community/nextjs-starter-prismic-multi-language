@@ -7,7 +7,8 @@ import sm from "./slicemachine.config.json";
 /**
  * The project's Prismic repository name.
  */
-const { repositoryName } = sm;
+export const { repositoryName } = sm;
+
 /**
  * The project's Prismic Link Resolver. This function determines the URL for a
  * given Prismic document.
@@ -43,5 +44,3 @@ export const createClient = ({ previewData, req, ...config } = {}) => {
 
   return client;
 };
-
-export { repositoryName };
