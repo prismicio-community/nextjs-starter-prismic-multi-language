@@ -20,7 +20,6 @@
     "@prismicio/react": "^2.6.1",
     "@prismicio/slice-simulator-react": "^0.2.3",
     "clsx": "^1.2.1",
-    "flag-icons": "^6.6.6",
     "next": "^13.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

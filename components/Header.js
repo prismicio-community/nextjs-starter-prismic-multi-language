@@ -4,13 +4,12 @@ import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "./Bounded";
 
-const FlagIcon = ({ lang }) => {
-  const code = lang.substring(3).toLowerCase();
-
-  return <span className={`fi fi-${code}`} />;
+const languageLabels = {
+  "en-us": "EN",
+  "fr-fr": "FR",
 };
 
-export const Header = ({ alternateLanguages = [], navigation, settings }) => {
+export const Header = ({ languages = [], navigation, settings }) => {
   return (
     <Bounded as="header" yPadding="sm">
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
@@ -19,7 +18,7 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             <PrismicNextImage field={settings.data.logo} />
           )}
         </PrismicLink>
-        <nav>
+        <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 md:gap-x-10">
           <ul className="flex flex-wrap gap-6 md:gap-10">
             {navigation.data?.links.map((item) => (
               <li
@@ -31,15 +30,23 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
                 </PrismicLink>
               </li>
             ))}
-            {alternateLanguages.map((lang) => (
-              <li key={lang.lang}>
-                <PrismicLink href={lang.url} locale={lang.lang}>
-                  <span className="sr-only">{lang.lang_name}</span>
-                  <FlagIcon lang={lang.lang} />
-                </PrismicLink>
-              </li>
-            ))}
           </ul>
+          <div className="flex flex-wrap gap-3">
+            <span aria-hidden={true}>🌐</span>
+            <ul className="flex flex-wrap gap-3">
+              {languages.map((lang) => (
+                <li key={lang.lang} className="first:font-semibold">
+                  <PrismicLink
+                    href={lang.url}
+                    locale={lang.lang}
+                    aria-label={`Change language to ${lang.lang_name}`}
+                  >
+                    {languageLabels[lang.lang] || lang.lang}
+                  </PrismicLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
       </div>
     </Bounded>

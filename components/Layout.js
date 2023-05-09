@@ -1,16 +1,11 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout = ({
-  alternateLanguages,
-  navigation,
-  settings,
-  children,
-}) => {
+export const Layout = ({ languages, navigation, settings, children }) => {
   return (
     <div className="text-slate-800">
       <Header
-        alternateLanguages={alternateLanguages}
+        languages={languages}
         navigation={navigation}
         settings={settings}
       />

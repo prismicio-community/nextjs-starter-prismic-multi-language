@@ -2,18 +2,14 @@ import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
-import { withAlternativeLanguages } from "../lib/withAlternativeLanguages";
+import { getLanguages } from "../lib/getLanguages";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
 
-const Page = ({ page, navigation, settings }) => {
+const Page = ({ page, navigation, settings, languages }) => {
   return (
-    <Layout
-      alternateLanguages={page.alternate_languages}
-      navigation={navigation}
-      settings={settings}
-    >
+    <Layout languages={languages} navigation={navigation} settings={settings}>
       <Head>
         <title>
           {prismicH.asText(page.data.title)} |{" "}
@@ -30,18 +26,18 @@ export default Page;
 export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await withAlternativeLanguages(
-    await client.getByUID("page", params.uid, { lang: locale }),
-    client
-  );
+  const page = await client.getByUID("page", params.uid, { lang: locale });
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
+
+  const languages = await getLanguages(page, client);
 
   return {
     props: {
       page,
       navigation,
       settings,
+      languages,
     },
   };
 }
