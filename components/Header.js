@@ -2,7 +2,6 @@ import * as prismicH from "@prismicio/helpers";
 import { PrismicLink, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 
-import { linkResolver } from "../prismicio";
 import { Bounded } from "./Bounded";
 
 const FlagIcon = ({ lang }) => {
@@ -34,8 +33,8 @@ export const Header = ({ alternateLanguages = [], navigation, settings }) => {
             ))}
             {alternateLanguages.map((lang) => (
               <li key={lang.lang}>
-                <PrismicLink href={linkResolver(lang)} locale={lang.lang}>
-                  <span className="sr-only">{lang.lang}</span>
+                <PrismicLink href={lang.url} locale={lang.lang}>
+                  <span className="sr-only">{lang.lang_name}</span>
                   <FlagIcon lang={lang.lang} />
                 </PrismicLink>
               </li>

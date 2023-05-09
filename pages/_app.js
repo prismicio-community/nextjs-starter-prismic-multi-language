@@ -2,7 +2,7 @@ import Link from "next/link";
 import { PrismicLink, PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
 
-import { repositoryName, linkResolver } from "../prismicio";
+import { repositoryName } from "../prismicio";
 
 import "../styles/globals.css";
 
@@ -42,7 +42,6 @@ export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider
       internalLinkComponent={Link}
-      linkResolver={linkResolver}
       richTextComponents={richTextComponents}
     >
       <PrismicPreview repositoryName={repositoryName}>

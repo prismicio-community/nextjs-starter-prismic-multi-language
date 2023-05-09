@@ -2,6 +2,7 @@ import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
 import * as prismicH from "@prismicio/helpers";
 
+import { withAlternativeLanguages } from "../lib/withAlternativeLanguages";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
 import { Layout } from "../components/Layout";
@@ -29,7 +30,10 @@ export default Page;
 export async function getStaticProps({ params, locale, previewData }) {
   const client = createClient({ previewData });
 
-  const page = await client.getByUID("page", params.uid, { lang: locale });
+  const page = await withAlternativeLanguages(
+    await client.getByUID("page", params.uid, { lang: locale }),
+    client
+  );
   const navigation = await client.getSingle("navigation", { lang: locale });
   const settings = await client.getSingle("settings", { lang: locale });
 
