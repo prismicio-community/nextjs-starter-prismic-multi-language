@@ -4,12 +4,12 @@ import { PrismicNextImage } from "@prismicio/next";
 
 import { Bounded } from "./Bounded";
 
-const languageLabels = {
+const localeLabels = {
   "en-us": "EN",
   "fr-fr": "FR",
 };
 
-export const Header = ({ languages = [], navigation, settings }) => {
+export const Header = ({ locales = [], navigation, settings }) => {
   return (
     <Bounded as="header" yPadding="sm">
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
@@ -34,14 +34,14 @@ export const Header = ({ languages = [], navigation, settings }) => {
           <div className="flex flex-wrap gap-3">
             <span aria-hidden={true}>🌐</span>
             <ul className="flex flex-wrap gap-3">
-              {languages.map((lang) => (
-                <li key={lang.lang} className="first:font-semibold">
+              {locales.map((locale) => (
+                <li key={locale.lang} className="first:font-semibold">
                   <PrismicLink
-                    href={lang.url}
-                    locale={lang.lang}
-                    aria-label={`Change language to ${lang.lang_name}`}
+                    href={locale.url}
+                    locale={locale.lang}
+                    aria-label={`Change language to ${locale.lang_name}`}
                   >
-                    {languageLabels[lang.lang] || lang.lang}
+                    {localeLabels[locale.lang] || locale.lang}
                   </PrismicLink>
                 </li>
               ))}
