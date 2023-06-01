@@ -1,24 +1,22 @@
 import Head from "next/head";
 import { SliceZone } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
-import { getLocales } from "../lib/getLocales";
-import { createClient } from "../prismicio";
-import { components } from "../slices/";
-import { Layout } from "../components/Layout";
+import { getLocales } from "@/lib/getLocales";
+import { createClient } from "@/prismicio";
+import { components } from "@/slices/";
+import { Layout } from "@/components/Layout";
 
-const Index = ({ page, navigation, settings, locales }) => {
+export default function Home({ page, navigation, settings, locales }) {
   return (
     <Layout locales={locales} navigation={navigation} settings={settings}>
       <Head>
-        <title>{prismicH.asText(page.data.title)}</title>
+        <title>{prismic.asText(page.data.title)}</title>
       </Head>
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
-};
-
-export default Index;
+}
 
 export async function getStaticProps({ locale, previewData }) {
   const client = createClient({ previewData });

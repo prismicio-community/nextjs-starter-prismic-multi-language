@@ -1,10 +1,12 @@
-import { PrismicLink, PrismicRichText, PrismicText } from "@prismicio/react";
-import * as prismicH from "@prismicio/helpers";
+import { PrismicText } from "@prismicio/react";
+import { PrismicNextLink } from "@prismicio/next";
+import * as prismic from "@prismicio/client";
 
 import { Bounded } from "./Bounded";
 import { Heading } from "./Heading";
+import { PrismicRichText } from "./PrismicRichText";
 
-const SignUpForm = ({ settings }) => {
+function SignUpForm({ settings }) {
   return (
     <div className="px-4">
       <form
@@ -12,7 +14,7 @@ const SignUpForm = ({ settings }) => {
         method="post"
         className="grid w-full max-w-xl grid-cols-1 gap-6"
       >
-        {prismicH.isFilled.richText(settings.data.newsletterDisclaimer) && (
+        {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
           <div className="text-center tracking-tight text-slate-300">
             <PrismicRichText
               field={settings.data.newsletterDescription}
@@ -47,13 +49,13 @@ const SignUpForm = ({ settings }) => {
             </label>
             <button
               type="submit"
-              className="absolute top-0 right-0 bottom-0 flex items-center justify-center px-3 text-2xl text-slate-400"
+              className="absolute bottom-0 right-0 top-0 flex items-center justify-center px-3 text-2xl text-slate-400"
             >
               <span className="sr-only">Submit</span>
               <span aria-hidden={true}>&rarr;</span>
             </button>
           </div>
-          {prismicH.isFilled.richText(settings.data.newsletterDisclaimer) && (
+          {prismic.isFilled.richText(settings.data.newsletterDisclaimer) && (
             <p className="text-center text-xs text-slate-400">
               <PrismicText field={settings.data.newsletterDisclaimer} />
             </p>
@@ -62,20 +64,20 @@ const SignUpForm = ({ settings }) => {
       </form>
     </div>
   );
-};
+}
 
-export const Footer = ({ settings }) => {
+export function Footer({ settings }) {
   return (
     <Bounded as="footer" className="bg-gray-800 pb-12 text-slate-300 md:pb-12">
       <div className="grid grid-cols-1 justify-items-center gap-20 md:gap-24">
         <SignUpForm settings={settings} />
         <div className="mx-auto w-full max-w-3xl text-center text-xs font-semibold tracking-tight">
           Proudly published using{" "}
-          <PrismicLink href="https://prismic.io" className="text-white">
+          <PrismicNextLink href="https://prismic.io" className="text-white">
             Prismic
-          </PrismicLink>
+          </PrismicNextLink>
         </div>
       </div>
     </Bounded>
   );
-};
+}

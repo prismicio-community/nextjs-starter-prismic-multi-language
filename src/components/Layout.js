@@ -1,7 +1,7 @@
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout = ({ locales, navigation, settings, children }) => {
+export function Layout({ locales, navigation, settings, children }) {
   return (
     <div className="text-slate-800">
       <Header locales={locales} navigation={navigation} settings={settings} />
@@ -9,4 +9,4 @@ export const Layout = ({ locales, navigation, settings, children }) => {
       <Footer settings={settings} />
     </div>
   );
-};
+}
