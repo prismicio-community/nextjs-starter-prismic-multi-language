@@ -1,11 +1,11 @@
 import clsx from "clsx";
 
-export const Heading = ({
+export function Heading({
   as: Comp = "h1",
   size = "8xl",
   children,
   className,
-}) => {
+}) {
   return (
     <Comp
       className={clsx(
@@ -19,4 +19,4 @@ export const Heading = ({
       {children}
     </Comp>
   );
-};
+}

@@ -1,16 +1,16 @@
-import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
+import { Bounded } from "@/components/Bounded";
+import { Heading } from "@/components/Heading";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const TextWithFeatures = ({ slice }) => {
   return (
     <Bounded collapsible={false} as="section" className="bg-slate-100">
       <div className="grid grid-cols-1 items-end gap-10 md:grid-cols-2 md:gap-10 lg:gap-28">
         <div className="grid grid-cols-1 gap-8">
-          {prismicH.isFilled.image(slice.primary.icon) && (
+          {prismic.isFilled.image(slice.primary.icon) && (
             <PrismicNextImage field={slice.primary.icon} />
           )}
           <div className="leading-relaxed">
@@ -34,7 +34,7 @@ const TextWithFeatures = ({ slice }) => {
         <ul className="grid gap-10">
           {slice.items.map((item) => (
             <li
-              key={prismicH.asText(item.featureDescription)}
+              key={prismic.asText(item.featureDescription)}
               className="leading-relaxed"
             >
               <PrismicRichText

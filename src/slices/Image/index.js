@@ -1,8 +1,8 @@
 import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 import clsx from "clsx";
 
-import { Bounded } from "../../components/Bounded";
+import { Bounded } from "@/components/Bounded";
 
 const Image = ({ slice }) => {
   return (
@@ -15,11 +15,11 @@ const Image = ({ slice }) => {
     >
       <div className="relative">
         {slice.primary.withAccent && (
-          <div className="absolute -top-4 -left-4 w-1/3">
-            <div className="aspect-w-1 aspect-h-1 bg-slate-200/50" />
+          <div className="absolute -left-4 -top-4 w-1/3">
+            <div className="aspect-h-1 aspect-w-1 bg-slate-200/50" />
           </div>
         )}
-        {prismicH.isFilled.image(slice.primary.image) && (
+        {prismic.isFilled.image(slice.primary.image) && (
           <PrismicNextImage
             field={slice.primary.image}
             sizes="100vw"

@@ -1,9 +1,9 @@
-import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import * as prismicH from "@prismicio/helpers";
+import * as prismic from "@prismicio/client";
 
-import { Bounded } from "../../components/Bounded";
-import { Heading } from "../../components/Heading";
+import { Bounded } from "@/components/Bounded";
+import { Heading } from "@/components/Heading";
+import { PrismicRichText } from "@/components/PrismicRichText";
 
 const TextWithImage = ({ slice }) => {
   return (
@@ -13,7 +13,7 @@ const TextWithImage = ({ slice }) => {
           <div className="absolute -left-6 -top-6 w-2/3">
             <div className="aspect-h-1 aspect-w-1 bg-slate-100/50" />
           </div>
-          {prismicH.isFilled.image(slice.primary.image) && (
+          {prismic.isFilled.image(slice.primary.image) && (
             <PrismicNextImage
               field={slice.primary.image}
               sizes="100vw"
