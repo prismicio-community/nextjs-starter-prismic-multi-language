@@ -1,8 +1,5 @@
 import { NextResponse } from 'next/server'
 import { createClient } from "@/prismicio";
-
-// Get the preferred locale, similar to above or using a library
-/* function getLocale(request) { ... } */
  
 export async function middleware(request) {
 
@@ -19,7 +16,7 @@ export async function middleware(request) {
     (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
   )
  
-  // Redirect to default locale if there is no supported locale
+  // Redirect to default locale if there is no supported locale prefix
   if (pathnameIsMissingLocale) {
     return NextResponse.rewrite(
       new URL(
