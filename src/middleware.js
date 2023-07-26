@@ -1,8 +1,7 @@
-import { NextResponse } from 'next/server'
+import { NextResponse } from 'next/server';
 import { createClient } from "@/prismicio";
  
 export async function middleware(request) {
-
   const client = createClient();
   const repository = await client.getRepository();
 
