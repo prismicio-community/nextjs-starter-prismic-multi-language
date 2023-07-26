@@ -4,9 +4,23 @@ import { PrismicPreview } from "@prismicio/next";
 
 import { repositoryName } from "@/prismicio";
 
-export default function App({ Component, pageProps }) {
+/**
+ * @param {{ children: React.ReactNode }}
+ */
+export default function RootLayout({ children }) {
   return (
-    <>
+    <html lang="en">
+    <head>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet"
+      />
+    </head>
+    <body className="overflow-x-hidden antialiased">
       {/* TODO: Remove the following element once you have read the documentation. */}
       {process.env.NODE_ENV === "development" && (
         <div
@@ -29,12 +43,13 @@ export default function App({ Component, pageProps }) {
             >
               see the documentation
             </a>
-            . Remove this bar in <code>pages/_app.js</code>.
+            . Remove this bar in <code>app/layout.js</code>.
           </p>
         </div>
       )}
-      <Component {...pageProps} />
+      { children }
       <PrismicPreview repositoryName={repositoryName} />
-    </>
+      </body>
+    </html>
   );
 }
