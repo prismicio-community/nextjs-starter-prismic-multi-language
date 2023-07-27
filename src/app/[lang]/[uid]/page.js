@@ -1,6 +1,6 @@
 import { SliceZone } from "@prismicio/react";
 
-import { getLocales } from "@/lib/getLocales"
+import { getLocales } from "@/lib/getLocales";
 import { createClient } from "@/prismicio";
 
 import { Layout } from "@/components/Layout";
@@ -14,15 +14,17 @@ export async function generateMetadata({ params }) {
   const page = await client.getByUID("page", params.uid, { lang: params.lang });
 
   return {
-    title: page.data.title
-  }
+    title: page.data.title,
+  };
 }
 
 export default async function Page({ params }) {
   const client = createClient();
 
   const page = await client.getByUID("page", params.uid, { lang: params.lang });
-  const navigation = await client.getSingle("navigation", { lang: params.lang });
+  const navigation = await client.getSingle("navigation", {
+    lang: params.lang,
+  });
   const settings = await client.getSingle("settings", { lang: params.lang });
 
   const locales = await getLocales(page, client);
@@ -40,9 +42,9 @@ export async function generateStaticParams() {
   const pages = await client.getAllByType("page", { lang: "*" });
 
   return pages.map((page) => {
-    return { 
+    return {
       uid: page.uid,
-      lang: page.lang
-     };
+      lang: page.lang,
+    };
   });
 }
