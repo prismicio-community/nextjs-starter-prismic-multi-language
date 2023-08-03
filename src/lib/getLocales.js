@@ -20,7 +20,7 @@ export async function getLocales(doc, client) {
             lang: "*",
             // Exclude all fields to speed up the query.
             fetch: `${doc.type}.__nonexistent-field__`,
-          }
+          },
         )
       : Promise.resolve([]),
   ]);

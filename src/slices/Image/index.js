@@ -10,7 +10,7 @@ const Image = ({ slice }) => {
       as="section"
       className={clsx(
         slice.variation === "lightSlate" && "bg-slate-100",
-        slice.variation === "white" && "bg-white"
+        slice.variation === "white" && "bg-white",
       )}
     >
       <div className="relative">

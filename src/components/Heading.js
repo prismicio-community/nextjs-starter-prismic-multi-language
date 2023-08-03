@@ -13,7 +13,7 @@ export function Heading({
         size === "8xl" && "text-5xl md:text-[5rem]",
         size === "6xl" && "text-4xl md:text-6xl",
         size === "2xl" && "text-2xl",
-        className
+        className,
       )}
     >
       {children}
