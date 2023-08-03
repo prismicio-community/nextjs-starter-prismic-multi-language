@@ -1,8 +1,8 @@
-import "@/styles/globals.css";
+import "./globals.css";
 
-import { Inter } from "next/font/google";
-
+import { Inter, Libre_Baskerville } from "next/font/google";
 import { PrismicPreview } from "@prismicio/next";
+import clsx from "clsx";
 
 import { repositoryName } from "@/prismicio";
 
@@ -11,18 +11,21 @@ const inter = Inter({
   display: "swap",
 });
 
+const libreBaskerville = Libre_Baskerville({
+  weight: ["400", "700"],
+  style: ["ital"],
+  display: "swap",
+});
+
 /**
  * @param {{ children: React.ReactNode }}
  */
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={inter.className}>
-      <head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html
+      lang="en"
+      className={clsx(inter.className, libreBaskerville.className)}
+    >
       <body className="overflow-x-hidden antialiased">
         {/* TODO: Remove the following element once you have read the documentation. */}
         {process.env.NODE_ENV === "development" && (
