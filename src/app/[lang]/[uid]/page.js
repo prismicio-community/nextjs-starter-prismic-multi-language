@@ -1,4 +1,5 @@
 import { SliceZone } from "@prismicio/react";
+import { notFound } from "next/navigation";
 
 import { getLocales } from "@/lib/getLocales";
 import { createClient } from "@/prismicio";
@@ -11,7 +12,9 @@ import { components } from "@/slices";
  */
 export async function generateMetadata({ params }) {
   const client = createClient();
-  const page = await client.getByUID("page", params.uid, { lang: params.lang });
+  const page = await client
+    .getByUID("page", params.uid, { lang: params.lang })
+    .catch(() => notFound());
 
   return {
     title: page.data.title,
@@ -21,7 +24,9 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const client = createClient();
 
-  const page = await client.getByUID("page", params.uid, { lang: params.lang });
+  const page = await client
+    .getByUID("page", params.uid, { lang: params.lang })
+    .catch(() => notFound());
   const navigation = await client.getSingle("navigation", {
     lang: params.lang,
   });
