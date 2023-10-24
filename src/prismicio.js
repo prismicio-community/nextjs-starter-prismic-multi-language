@@ -1,12 +1,11 @@
 import * as prismic from "@prismicio/client";
 import * as prismicNext from "@prismicio/next";
-
-import sm from "../slicemachine.config.json";
+import config from "../slicemachine.config.json";
 
 /**
  * The project's Prismic repository name.
  */
-export const { repositoryName } = sm;
+export const repositoryName = config.repositoryName;
 
 /**
  * A list of Route Resolver objects that define how a document's \`url\` field
@@ -34,7 +33,7 @@ export const routes = [
  *
  * @param config {prismicNext.CreateClientConfig} - A configuration object to
  */
-export const createClient = ({ previewData, req, ...config } = {}) => {
+export const createClient = (config = {}) => {
   const client = prismic.createClient(repositoryName, {
     routes,
     fetchOptions:
@@ -44,7 +43,7 @@ export const createClient = ({ previewData, req, ...config } = {}) => {
     ...config,
   });
 
-  prismicNext.enableAutoPreviews({ client, previewData, req });
+  prismicNext.enableAutoPreviews({ client });
 
   return client;
 };
