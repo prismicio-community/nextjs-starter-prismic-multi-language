@@ -20,11 +20,11 @@ export const routes = [
   {
     type: "page",
     uid: "home",
-    path: "/:lang?",
+    path: "/:lang",
   },
   {
     type: "page",
-    path: "/:lang?/:uid",
+    path: "/:lang/:uid",
   },
 ];
 

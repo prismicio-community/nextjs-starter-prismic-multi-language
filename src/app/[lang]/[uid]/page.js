@@ -1,5 +1,5 @@
 import { SliceZone } from "@prismicio/react";
-import { notFound } from "next/navigation";
+import * as prismic from "@prismicio/client";
 
 import { getLocales } from "@/lib/getLocales";
 import { createClient } from "@/prismicio";
@@ -10,27 +10,21 @@ import { components } from "@/slices";
 /**
  * @returns {Promise<import("next").Metadata>}
  */
-export async function generateMetadata({ params }) {
+export async function generateMetadata({ params: { uid, lang } }) {
   const client = createClient();
-  const page = await client
-    .getByUID("page", params.uid, { lang: params.lang })
-    .catch(() => notFound());
+  const page = await client.getByUID("page", uid, { lang });
 
   return {
-    title: page.data.title,
+    title: prismic.asText(page.data.title),
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params: { uid, lang } }) {
   const client = createClient();
 
-  const page = await client
-    .getByUID("page", params.uid, { lang: params.lang })
-    .catch(() => notFound());
-  const navigation = await client.getSingle("navigation", {
-    lang: params.lang,
-  });
-  const settings = await client.getSingle("settings", { lang: params.lang });
+  const page = await client.getByUID("page", uid, { lang });
+  const navigation = await client.getSingle("navigation", { lang });
+  const settings = await client.getSingle("settings", { lang });
 
   const locales = await getLocales(page, client);
 
@@ -44,7 +38,10 @@ export default async function Page({ params }) {
 export async function generateStaticParams() {
   const client = createClient();
 
-  const pages = await client.getAllByType("page", { lang: "*" });
+  const pages = await client.getAllByType("page", {
+    lang: "*",
+    filters: [prismic.filter.not("my.page.uid", "home")],
+  });
 
   return pages.map((page) => {
     return {

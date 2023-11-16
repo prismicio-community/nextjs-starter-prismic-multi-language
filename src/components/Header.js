@@ -14,8 +14,9 @@ export function Header({ locales = [], navigation, settings }) {
     <Bounded as="header" yPadding="sm">
       <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3 leading-none">
         <PrismicNextLink href="/">
+          <span className="sr-only">Go to homepage</span>
           {prismic.isFilled.image(settings.data.logo) && (
-            <PrismicNextImage field={settings.data.logo} />
+            <PrismicNextImage field={settings.data.logo} alt="" />
           )}
         </PrismicNextLink>
         <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 md:gap-x-10">

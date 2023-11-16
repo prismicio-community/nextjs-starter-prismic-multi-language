@@ -1,4 +1,5 @@
 import { SliceZone } from "@prismicio/react";
+import * as prismic from "@prismicio/client";
 
 import { getLocales } from "@/lib/getLocales";
 import { createClient } from "@/prismicio";
@@ -14,7 +15,7 @@ export async function generateMetadata({ params: { lang } }) {
   const page = await client.getByUID("page", "home", { lang });
 
   return {
-    title: page.data.title,
+    title: prismic.asText(page.data.title),
   };
 }
 
@@ -32,4 +33,19 @@ export default async function Page({ params: { lang } }) {
       <SliceZone slices={page.data.slices} components={components} />
     </Layout>
   );
+}
+
+export async function generateStaticParams() {
+  const client = createClient();
+
+  const pages = await client.getAllByType("page", {
+    lang: "*",
+    filters: [prismic.filter.at("my.page.uid", "home")],
+  });
+
+  return pages.map((page) => {
+    return {
+      lang: page.lang,
+    };
+  });
 }
