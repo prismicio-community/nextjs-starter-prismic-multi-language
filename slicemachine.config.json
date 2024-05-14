@@ -1,6 +1,7 @@
 {
   "libraries": ["./src/slices"],
   "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "nextjs-starter-prismic-multi-language",
+  "repositoryName": "i18n-lucie",
+  "apiEndpoint": "https://i18n-lucie.wroom.io/api/v2",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
