@@ -1,7 +1,6 @@
 {
   "libraries": ["./src/slices"],
   "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "i18n-lucie",
-  "apiEndpoint": "https://i18n-lucie.wroom.io/api/v2",
+  "repositoryName": "i18n-24",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
