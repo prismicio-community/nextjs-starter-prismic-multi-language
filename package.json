@@ -23,7 +23,7 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@slicemachine/adapter-next": "alpha.lh-slice-primary-group-mocks",
+    "@slicemachine/adapter-next": "^0.3.39",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
@@ -32,7 +32,7 @@
     "postcss": "^8.4.38",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "slice-machine-ui": "alpha.lh-slice-primary-group-mocks",
+    "slice-machine-ui": "^2.0.0",
     "tailwindcss": "^3.4.3"
   }
 }
