@@ -32,13 +32,13 @@ const TextWithFeatures = ({ slice }) => {
           </div>
         </div>
         <ul className="grid gap-10">
-          {slice.items.map((item) => (
+          {slice.primary.features.map((feature) => (
             <li
-              key={prismic.asText(item.featureDescription)}
+              key={prismic.asText(feature.description)}
               className="leading-relaxed"
             >
               <PrismicRichText
-                field={item.featureDescription}
+                field={feature.description}
                 components={{
                   heading2: ({ children }) => (
                     <Heading as="h3" size="2xl" className="mb-2 last:mb-0">

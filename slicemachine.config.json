@@ -1,6 +1,6 @@
 {
   "libraries": ["./src/slices"],
   "adapter": "@slicemachine/adapter-next",
-  "repositoryName": "nextjs-starter-prismic-multi-language",
+  "repositoryName": "i18n-24",
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator"
 }
