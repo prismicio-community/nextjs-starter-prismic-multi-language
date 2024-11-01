@@ -10,7 +10,8 @@ import { components } from "@/slices";
 /**
  * @returns {Promise<import("next").Metadata>}
  */
-export async function generateMetadata({ params: { lang } }) {
+export async function generateMetadata({ params }) {
+  const { lang } = await params;
   const client = createClient();
   const page = await client.getByUID("page", "home", { lang });
 
@@ -19,7 +20,8 @@ export async function generateMetadata({ params: { lang } }) {
   };
 }
 
-export default async function Page({ params: { lang } }) {
+export default async function Page({ params }) {
+  const { lang } = await params;
   const client = createClient();
 
   const page = await client.getByUID("page", "home", { lang });
