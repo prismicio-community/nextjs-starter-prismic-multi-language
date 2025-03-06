@@ -2,6 +2,7 @@ import { SliceZone } from "@prismicio/react";
 import * as prismic from "@prismicio/client";
 
 import { getLocales } from "@/lib/getLocales";
+import { reverseLocaleLookup } from "@/i18n";
 import { createClient } from "@/prismicio";
 
 import { Layout } from "@/components/Layout";
@@ -24,9 +25,15 @@ export default async function Page({ params }) {
   const { lang } = await params;
   const client = createClient();
 
-  const page = await client.getByUID("page", "home", { lang });
-  const navigation = await client.getSingle("navigation", { lang });
-  const settings = await client.getSingle("settings", { lang });
+  const page = await client.getByUID("page", "home", {
+    lang: reverseLocaleLookup(lang),
+  });
+  const navigation = await client.getSingle("navigation", {
+    lang: reverseLocaleLookup(lang),
+  });
+  const settings = await client.getSingle("settings", {
+    lang: reverseLocaleLookup(lang),
+  });
 
   const locales = await getLocales(page, client);
 

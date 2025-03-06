@@ -1,16 +1,11 @@
-import { createLocaleRedirect } from "@prismicio/next";
-import { createClient } from "@/prismicio";
+import { createLocaleRedirect, pathnameHasLocale } from "@/i18n";
 
 export async function middleware(request) {
-  const client = createClient();
-  const redirect = await createLocaleRedirect({ client, request });
-
-  if (redirect) {
-    return redirect;
+  if (!pathnameHasLocale(request)) {
+    return createLocaleRedirect(request);
   }
 }
 
 export const config = {
-  // Do not localize these paths
   matcher: ["/((?!_next|api|slice-simulator|icon.svg).*)"],
 };
