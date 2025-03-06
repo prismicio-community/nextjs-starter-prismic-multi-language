@@ -16,7 +16,7 @@ const Image = ({ slice }) => {
       <div className="relative">
         {slice.primary.withAccent && (
           <div className="absolute -left-4 -top-4 w-1/3">
-            <div className="aspect-h-1 aspect-w-1 bg-slate-200/50" />
+            <div className="aspect-square bg-slate-200/50" />
           </div>
         )}
         {prismic.isFilled.image(slice.primary.image) && (

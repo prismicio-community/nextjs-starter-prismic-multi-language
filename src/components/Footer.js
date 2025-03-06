@@ -44,7 +44,7 @@ function SignUpForm({ settings }) {
                 type="email"
                 placeholder="jane.doe@example.com"
                 required={true}
-                className="w-full rounded border border-slate-500 bg-slate-600 py-3 pl-3 pr-10 text-white placeholder-slate-400"
+                className="w-full rounded-sm border border-slate-500 bg-slate-600 py-3 pl-3 pr-10 text-white placeholder-slate-400"
               />
             </label>
             <button
